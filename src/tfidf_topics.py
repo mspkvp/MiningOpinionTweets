@@ -1,12 +1,17 @@
+# -*- coding: utf-8 -*-
+
 from collections import defaultdict
 import csv
 
 tweets = defaultdict(list)
-with open ("res/dump.csv", "r") as tweets_file:
-    reader = csv.reader(tweets_file, delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='§')
-    reader.next() # skip the first row (has the keys identifying the values
+with open ("José Mourinho.csv", "r") as tweets_file:
+    reader = csv.reader(tweets_file, delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    #reader.next() # skip the first row (has the keys identifying the values
     for row in reader:
-       tweets[row[0]].append(row[3])
+       #tweets[row[0]].append(row[3])
+        print row
+
+raise SystemExit(0)
 
 # text comes in a list as ['text'] and we need the 'text' only
 for entity, text in tweets.iteritems():
