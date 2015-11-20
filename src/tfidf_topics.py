@@ -2,9 +2,8 @@ from collections import defaultdict
 import csv
 
 tweets = defaultdict(list)
-with open ("josemourinho.csv", "r") as tweets_file:
+with open ("Jose Mourinho_filtered.csv", "r") as tweets_file:
     reader = csv.reader(tweets_file, delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    reader.next()
     for row in reader:
         tweets[row[0]].append(row[1])
 
@@ -22,15 +21,16 @@ tf = TfidfVectorizer(analyzer='word', ngram_range=(1,3), min_df = 0)
 tfidf_matrix =  tf.fit_transform(corpus)
 feature_names = tf.get_feature_names()
 
+print len(feature_names)
+
 dense = tfidf_matrix.todense()
 tweets_entity = dense[0].tolist()[0]
-phrase_scores = [pair for pair in zip(range(0, len(tweets_entity)), tweets_entity) if pair[1] > 0]
 
+phrase_scores = [pair for pair in zip(range(0, len(tweets_entity)), tweets_entity) if pair[1] > 0]
 sorted_phrase_scores = sorted(phrase_scores, key=lambda t: t[1] * -1)
 
-topics_ratings = {}
-for phrase, score in [(feature_names[word_id], score) for (word_id, score) in sorted_phrase_scores][:20]:
-    print(u'{0: <20} {1}'.format(phrase,score))
+for phrase, score in [(feature_names[word_id], score) for (word_id, score) in sorted_phrase_scores]:
+    print(u'{0: <25} {1}'.format(phrase,score))
 
 ############################################
 #   DEBUG
