@@ -22,7 +22,7 @@ file = csv.writer(open('{}.csv'.format(entity['name']), 'w'), delimiter="\t", qu
 file.writerow(entity['queries'])
 
 
-def get_tweets(page, q):
+def get_tweets( page, q):
     data = {
         "wt ": "json",
         "rows": rowsPerRequest,
