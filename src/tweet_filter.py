@@ -43,7 +43,7 @@ for tweet in tweets:
 
     text = re.sub(r'^https?:\/\/.*[\r\n]*', '', text) # remove all links from tweets
 
-    if len(text) >= 40: # only accept tweets that are at least 80 characters long after the filters
+    if len(text) >= 80: # only accept tweets that are at least 80 characters long after the filters
         file.writerow([tweet, text, tweets[tweet][1]])
         finaltweets +=1
 
