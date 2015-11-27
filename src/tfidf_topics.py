@@ -23,17 +23,21 @@ feature_names = tf.get_feature_names()
 
 print(len(feature_names))
 
-print(len(tfidf_matrix.toarray()))
-
 # sum values from all documents
-word_vals = [0.0]*len(tfidf_matrix.toarray())
+words_amount = len(tfidf_matrix.toarray()[0])
+word_rating = [0.0]*words_amount
 
-for idx, row in enumerate(tfidf_matrix.toarray()):
-    for col in row:
-        word_vals[idx] = (word_vals[idx] + col)/2.0
+print("Amount of Words: " + str(words_amount))
 
-# dense = tfidf_matrix.todense()
-tweets_entity = word_vals # tfidf_matrix.toarray()[0] # dense[0].tolist()[0]
+for row in tfidf_matrix.toarray():
+    for idx, col in enumerate(row):
+        word_rating[idx] += col
+
+for idx, val in enumerate(word_rating):
+    word_rating[idx] /= words_amount
+
+#
+tweets_entity = word_rating
 
 phrase_scores = [pair for pair in zip(range(0, len(tweets_entity)), tweets_entity) if pair[1] > 0]
 sorted_phrase_scores = sorted(phrase_scores, key=lambda t: t[1] * -1)
