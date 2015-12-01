@@ -26,15 +26,18 @@ print(len(feature_names))
 # sum values from all documents
 words_amount = len(tfidf_matrix.toarray()[0])
 word_rating = [0.0]*words_amount
+row_amount = len(tfidf_matrix.toarray())
 
+print("Amount of Tweets: "+str(row_amount))
 print("Amount of Words: " + str(words_amount))
 
 for row in tfidf_matrix.toarray():
     for idx, col in enumerate(row):
         word_rating[idx] += col
 
+
 for idx, val in enumerate(word_rating):
-    word_rating[idx] /= words_amount
+    word_rating[idx] /= row_amount
 
 #
 tweets_entity = word_rating
