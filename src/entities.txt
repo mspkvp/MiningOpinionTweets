@@ -1,0 +1,4 @@
+José Sócrates|jose_socrates|sócrates|
+Pedro Passos Coelho|passos_coelho|passos coelho|
+António Costa|antonio_costa|antonio costa|
+Partido Socialista|partido_socialista|partido socialista|ps|

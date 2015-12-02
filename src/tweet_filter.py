@@ -1,7 +1,11 @@
+# -*- coding: utf-8 -*-
+import os
 import csv
-from collections import defaultdict
 import unicodedata
 import re
+
+read_path = "extracted_tweets"
+write_path = "filtered_tweets"
 
 
 def remove_diacritic(input):
@@ -9,42 +13,42 @@ def remove_diacritic(input):
     # without any diacritical marks.
     return unicodedata.normalize('NFKD', input).encode('ASCII', 'ignore')
 
+if not os.path.exists("filtered_tweets"):
+    os.makedirs("filtered_tweets")
 
-tweets = defaultdict(list)
-queries = []
+for filename in os.listdir(read_path):
 
-file = csv.writer(open('José Mourinho_filtered.csv', 'w'), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL) #todo desmartelar isto
+    current_read_file = csv.reader(open(read_path + "/" + filename, 'rb'), delimiter="\t", quotechar='|',
+                                   quoting=csv.QUOTE_MINIMAL)
+    previous_timestamp = ""
+    queries = current_read_file.next()
+    i = 0
+    for query in queries:
+        queries[i] = remove_diacritic(query.decode('utf-8'))
+        i += 1
 
-with open ("José Mourinho.csv", "r") as tweets_file: #todo desmartelar isto
-    reader = csv.reader(tweets_file, delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    queries = next(reader)  # skip the first row (has the keys identifying the values
-    for row in reader:
-        tweets[row[0]].append(row[1])
-        tweets[row[0]].append(row[2])
+    for row in current_read_file:
+        current_timestamp = row[3].split("T", 1)[0]
+        text = row[1]
+        print "Tweet: " + text
+        if len(text) <= 80:  # only accept tweets that are at least 80 characters long
+            print "Discarded for being too short"
+            continue
 
-for i, query in enumerate(queries):
-    query = remove_diacritic(query)
-    queries[i] = query.decode('ascii')
+        print "Decoding tweet"
+        text = text.decode('utf-8')  # decode so we can perform operations
+        print "Converting to lower case"
+        text = text.lower()  # convert to lower case
+        print "Removing diacritics"
+        text = remove_diacritic(text)  # remove diacritics
+        print "Removing queries"
+        for query in queries:  # remove the queries from the tweets
+            text = text.replace(query, '')
+        print "Removing links"
+        text = re.sub(r'(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:\'".,<>?«»“”‘’]))', '', text)  # remove all links from tweets
 
-initialtweets = len(tweets)
-finaltweets = 0
-for tweet in tweets:
+        if row[3] != previous_timestamp:
+            current_write_file = open(write_path + "/" + filename.split(".", 1)[0] + current_timestamp + ".csv", 'w')
 
-    text = tweets[tweet][0]
-
-    text = text.lower() # convert to lower case
-
-    text = remove_diacritic(text) # remove diacritics
-
-    text = text.decode('ascii') # decode so we can perform the replace
-
-    for query in queries: # remove the queries from the tweets
-        text = text.replace(query, '')
-
-    text = re.sub(r'^https?:\/\/.*[\r\n]*', '', text) # remove all links from tweets
-
-    if len(text) >= 80: # only accept tweets that are at least 80 characters long after the filters
-        file.writerow([tweet, text, tweets[tweet][1]])
-        finaltweets +=1
-
-print("Filtered from {} to {} tweets".format(initialtweets, finaltweets))
+        print "Converted to " + text
+        current_write_file.write(text)
