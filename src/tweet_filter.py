@@ -45,10 +45,10 @@ for filename in os.listdir(read_path):
         for query in queries:  # remove the queries from the tweets
             text = text.replace(query, '')
         print "Removing links"
-        text = re.sub(r'(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:\'".,<>?«»“”‘’]))', '', text)  # remove all links from tweets
+        text = re.sub(r'https?://[^\s<>"]+|www\.[^\s<>"]+', '', text)  # remove all links from tweets
 
         if row[3] != previous_timestamp:
-            current_write_file = open(write_path + "/" + filename.split(".", 1)[0] + current_timestamp + ".csv", 'w')
+            current_write_file = open(write_path + "/" + filename.split(".", 1)[0] + current_timestamp + ".txt", 'w')
 
         print "Converted to " + text
         current_write_file.write(text)
