@@ -18,7 +18,7 @@ def get_tweets(page, q):
         "rows": rowsPerRequest,
         "start": page * rowsPerRequest,
         "q": q,
-        "sort": "timestamp asc"
+        "sort": "created_at asc"
     }
     print("Retrieving tweets from server")
     request = requests.get(url, auth=(username, password), params=data)
@@ -28,7 +28,7 @@ def get_tweets(page, q):
 def write_tweets(tweets, entity_file):
     for tweet in tweets:
         entity_file.writerow([tweet["id"], tweet["text"].replace('\n', ' ').encode('utf-8'), tweet["user_id"],
-                              tweet["timestamp"]])
+                              tweet["created_at"]])
 
 
 def process_entity(entity_line):
@@ -44,12 +44,13 @@ def process_entity(entity_line):
     for i in range(1, len(queries)):
         text_filter += ' OR "' + queries[i] + '"'
 
+    query = baseQuery.format(text_filter)
     current_page = 0
-    json_response = get_tweets(current_page, text_filter)
+    json_response = get_tweets(current_page, query)
 
     number_of_results = json_response['numFound']
 
-    print("Found {} tweets for {} with query {}".format(number_of_results, entity_attributes[0], text_filter))
+    print("Found {} tweets for {} with query {}".format(number_of_results, entity_attributes[0], query))
 
     tweets = json_response['docs']
     tweet_counter = len(tweets)
