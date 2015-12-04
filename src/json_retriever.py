@@ -18,7 +18,7 @@ def get_tweets(page, q):
         "rows": rowsPerRequest,
         "start": page * rowsPerRequest,
         "q": q,
-        "sort": "timestamp asc"
+        "sort": "created_at asc"
     }
     print("Retrieving tweets from server")
     request = requests.get(url, auth=(username, password), params=data)
@@ -28,7 +28,7 @@ def get_tweets(page, q):
 def write_tweets(tweets, entity_file):
     for tweet in tweets:
         entity_file.writerow([tweet["id"], tweet["text"].replace('\n', ' ').encode('utf-8'), tweet["user_id"],
-                              tweet["timestamp"]])
+                              tweet["created_at"]])
 
 
 def process_entity(entity_line):
