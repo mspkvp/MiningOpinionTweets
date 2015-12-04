@@ -3,7 +3,9 @@ import os
 import csv
 import unicodedata
 import re
+import logging
 
+logging.basicConfig(filename='filter.log', level=logging.DEBUG)
 read_path = "extracted_tweets"
 write_path = "filtered_tweets"
 
@@ -36,23 +38,23 @@ for filename in os.listdir(read_path):
         text = row[1]
         print "Tweet: " + text
         if len(text) <= 80:  # only accept tweets that are at least 80 characters long
-            print "Discarded for being too short"
+            logging.info("Discarded for being too short")
             continue
 
-        print "Decoding tweet"
+        logging.info("Decoding tweet")
         text = text.decode('utf-8')  # decode so we can perform operations
-        print "Converting to lower case"
+        logging.info("Converting to lower case")
         text = text.lower()  # convert to lower case
-        print "Removing diacritics"
+        logging.info("Removing diacritics")
         text = remove_diacritic(text)  # remove diacritics
-        print "Removing queries"
+        logging.info("Removing queries")
         for query in queries:  # remove the queries from the tweets
             text = text.replace(query, '')
-        print "Removing links"
+        logging.info("Removing links")
         text = re.sub(r'https?://[^\s<>"]+|www\.[^\s<>"]+', '', text)  # remove all links from tweets
         text += " "
         if row[3] != previous_timestamp:
             current_write_file = open(write_path + "/" + current_timestamp + "/" + entity_codename + ".txt", 'a')
 
-        print "Converted to " + text
+        logging.info("Converted to " + text)
         current_write_file.write(text)

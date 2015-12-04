@@ -1,12 +1,14 @@
 import requests
 import csv
 import os
+import logging
 
 url = "http://reaction.fe.up.pt/portugal/tweets/select"
 username = "popstar_pedrosaleiro"
 password = "p3dr0@2013!"
-rowsPerRequest = 500
-baseQuery = 'created_at:["2014-01-01T00:00:00Z" TO *] AND text:({})'
+rowsPerRequest = 1000
+baseQuery = "created_at:[\"2014-01-01T00:00:00Z\" TO *] AND text:({})"
+logging.basicConfig(filename='retriever.log', level=logging.DEBUG)
 
 if not os.path.exists("extracted_tweets"):
     os.makedirs("extracted_tweets")
@@ -51,6 +53,7 @@ def process_entity(entity_line):
     number_of_results = json_response['numFound']
 
     print("Found {} tweets for {} with query {}".format(number_of_results, entity_attributes[0], query))
+    logging.info("Found {} tweets for {} with query {}".format(number_of_results, entity_attributes[0], query))
 
     tweets = json_response['docs']
     tweet_counter = len(tweets)
@@ -58,11 +61,12 @@ def process_entity(entity_line):
 
     while tweet_counter < number_of_results:
         current_page += 1
-        json_response = get_tweets(current_page, text_filter)
+        json_response = get_tweets(current_page, query)
         tweets = json_response['docs']
         tweet_counter += len(tweets)
         write_tweets(tweets, current_entity_file)
         print("Done reading {}/{} tweets for {}".format(tweet_counter, number_of_results, entity_attributes[0]))
+        logging.info("Done reading {}/{} tweets for {}".format(tweet_counter, number_of_results, entity_attributes[0]))
 
 
 with open("entities.txt") as entities_file:
