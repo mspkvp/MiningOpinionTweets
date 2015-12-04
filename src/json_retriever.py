@@ -44,12 +44,13 @@ def process_entity(entity_line):
     for i in range(1, len(queries)):
         text_filter += ' OR "' + queries[i] + '"'
 
+    query = baseQuery.format(text_filter)
     current_page = 0
-    json_response = get_tweets(current_page, text_filter)
+    json_response = get_tweets(current_page, query)
 
     number_of_results = json_response['numFound']
 
-    print("Found {} tweets for {} with query {}".format(number_of_results, entity_attributes[0], text_filter))
+    print("Found {} tweets for {} with query {}".format(number_of_results, entity_attributes[0], query))
 
     tweets = json_response['docs']
     tweet_counter = len(tweets)
