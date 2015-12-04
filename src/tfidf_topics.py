@@ -1,22 +1,28 @@
 from collections import defaultdict
 import csv
+import os
+import datetime
 
-
-def retrieve_tfidf_scores( array_of_filenames ):
+def getfilenames( entities, date ):
+    print(date)
+    for i in os.listdir(os.getcwd()):
+        print(i)
+def retrieve_tfidf_scores( filenames ):
+    corpus = []
 
     tweets = defaultdict(list)
-    with open (u"Jose Mourinho_filtered.csv", "r") as tweets_file:
-        reader = csv.reader(tweets_file, delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        for row in reader:
-            tweets[row[0]].append(row[1])
+    for filename in filenames:
+        with open (filename, "r") as tweets_file:
+            reader = csv.reader(tweets_file, delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            for row in reader:
+                tweets[row[0]].append(row[1])
 
-    # text comes in a list as ['text'] and we need the 'text' only
-    for entity, text in tweets.items():
-        tweets[entity] = "".join(text)
+        # text comes in a list as ['text'] and we need the 'text' only
+        for entity, text in tweets.items():
+            tweets[entity] = "".join(text)
 
-    corpus = []
-    for entity, text in sorted(tweets.items(), key=lambda e: entity):
-        corpus.append(text)
+        for entity, text in sorted(tweets.items(), key=lambda e: entity):
+            corpus.append(text)
 
     from sklearn.feature_extraction.text import TfidfVectorizer
     tf = TfidfVectorizer(analyzer='word', ngram_range=(1,1), min_df = 0)
@@ -50,7 +56,9 @@ def retrieve_tfidf_scores( array_of_filenames ):
     for f, v in sorted_phrase_scores:
         print(u'{0: <25} {1}'.format(f, v))
 
-    return sorted_phrase_scores;
+    return sorted_phrase_scores
+
+getfilenames( datetime.datetime.now().strftime("%Y-%m-%d") )
 
 #phrase_scores = [pair for pair in zip(range(0, len(word_rating)), word_rating) if pair[1] > 0]
 #sorted_phrase_scores = sorted(feature_rate_list, key=lambda t: t[1] * -1)
