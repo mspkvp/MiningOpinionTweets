@@ -22,17 +22,19 @@ def retrieve_tfidf_scores():
     word_rating = [0.0]*n_features
     n_tweets = len(tfidf_matrix.indptr)-1
 
+    print(tfidf_matrix)
+
     from scipy.sparse import coo_matrix
     cx = coo_matrix(tfidf_matrix)
 
-    for i,j,v in zip(cx.row, cx.col, cx.data):
-        word_rating[j] += v
+    #for i,j,v in zip(cx.row, cx.col, cx.data):
+#    word_rating[j] += v
 
     #print("Amount of Tweets: "+str(n_tweets))
     #print("Amount of Words: " + str(n_features))
 
-    for idx, val in enumerate(word_rating):
-        word_rating[idx] /= n_tweets
+    #for idx, val in enumerate(word_rating):
+    #    word_rating[idx] /= n_tweets
 
     feature_rate_list = zip (feature_names, word_rating)
 

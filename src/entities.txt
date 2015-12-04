@@ -1,5 +1,76 @@
-José Sócrates|jose_socrates|sócrates|
-Pedro Passos Coelho|passos_coelho|passos coelho|
-Partido Socialista|partido_socialista|partido socialista|ps|
+José Mourinho|jose_mourinho|mourinho|
 Cristiano Ronaldo|cristiano_ronaldo|ronaldo|
-António Costa|antonio_costa|costa|
+Ruben Neves|ruben_neves|ruben neves|
+Bruno de Carvalho|bruno_de_carvalho|bruno de carvalho|bruno carvalho|
+Pinto da Costa|pinto_da_costa|pinto da costa|
+Jorge Jesus|jorge_jesus|jorge jesus|
+Lionel Messi|lionel_messi|messi|
+Eusébio|eusebio|eusebio|
+Luisão|luisao|lusiao|
+Paulo Bento|paulo_bento|paulo bento|
+Jorge Mendes|jorge_mendes|jorge mendes|
+João Moutinho|joao_moutinho|joao moutinho|
+Iker Casillas|iker_casillas|casillas|
+Julen Lopetegui|julen_lopetegui|lopetegui|
+Rui Vitória|rui_vitoria|rui vitoria|
+Ricardo Quaresma|ricardo quaresma|ricardo_quaresma|
+Luís Figo|luis_figo|figo|
+José Sócrates|jose_socrates|socrates|
+Passos Coelho|passos_coelho|passos coelho|
+António Costa|antonio_costa|antonio costa|
+Paulo Portas|paulo_portas|Paulo Portas|
+Cavaco Silva|cavaco_silva|cavaco|
+Barack Obama|barack_obama|obama|
+Vladimir Putin|vladimir_putin|putin|
+Donald Trump|donald_trump|trump|
+Catarina Martins|catarina_martins|catarina martins|
+Jerónimo de Sousa|jeronimo_sousa|jeronimo de sousa|jeronimo sousa|
+Marcelo Rebelo de Sousa|marcelo_rebelo_sousa|marcelo rebelo de sousa|marcelo rebelo sousa|
+Partido Socialista|partido_socialista|partido socialista|ps|
+Partido Social Democrata|partido_social_democrata|partido social democrata|psd|
+Partido Popular|partido_popular|pp|partido popular|cdspp|cds-pp|cds pp|
+Bloco de Esquerda|bloco_esquerda|be|bloco de esquerda|bloco esquerda|
+Partido Comunista|partido_comunista|pcp|partido comunista|
+Benfica|benfica|benfica|slb|
+Futebol Clube do Porto|futebol_porto|fcp|futebol clube do porto|
+Sporting|sporting|sporting|scp|
+Porto|porto|porto|oporto|
+Lisboa|lisboa|lisboa|
+Açores|acores|acores|
+Madeira|madeira|madeira|
+Algarve|algarve|algarve|
+Alentejo|alentejo|alentejo|
+Paris|paris|paris|
+Madrid|madrid|madrid|
+Londres|londres|londres|london|
+Portugal|portugal|portugal|
+Espanha|espanha|espanha|
+Inglaterra|inglaterra|inglaterra|
+Alemanha|alemanha|alemanha|
+Italia|italia|italia|
+Russia|russia|russia|
+Síria|siria|siria|
+Sonae|sonae|sonae|
+Continente|continente|continente|
+Pingo Doce|pingo_doce|pingo doce|
+Meo|meo|meo|
+Nos|nos|nos|
+Vodafone|vodafone|vodafone|
+Galp|galp|galp|
+Edp|edp|edp|
+Zara|zara|zara|
+Apple|apple|apple|
+BES|bes|banco espirito santo|espirito santo|
+Portugal Telecom|pt|pt|portugal telecom|
+Público|publico|publico|
+Diário de notícias|dn|diario de noticias|dn|
+Observador|observador|observador|
+Correio da manhã|correio_manha|corrio da manha|cm|cmjornal|cmtv|cm tv|cm jornal|
+Expresso|expresso|expresso|
+SIC|sic|sic|
+TVI|tvi|tvi|
+RTP|rtp|rtp|rtp1|rtp2|
+
+
+
+
