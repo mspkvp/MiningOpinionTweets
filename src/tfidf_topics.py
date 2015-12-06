@@ -1,63 +1,59 @@
-from collections import defaultdict
-import csv
 import os
+import logging
 
+logging.basicConfig(filename='tfidf_analyzer.log', level=logging.DEBUG)
 def retrieve_tfidf_scores():
-    corpus = []
 
+    entity_day_dict = dict()
+
+    # read all files and store their contents on a dictionary
     for i in os.listdir(os.getcwd() + "/filtered_tweets"):
         for filename in os.listdir(os.getcwd() + "/filtered_tweets" + "/" + i):
-            corpus.append(open(os.getcwd() + "/filtered_tweets" + "/" + i + "/" + filename, 'r').read())
+            entity_day_dict[i+" "+filename] = open(os.getcwd() + "/filtered_tweets" + "/" + i + "/" + filename, 'r').read()
+
+    corpus = []
+    entity_day_key_index = dict()
+    i = 0
+    for key in entity_day_dict:
+        entity_day_key_index[i] = key
+        corpus.append(entity_day_dict[key])
+        i += 1
 
     from sklearn.feature_extraction.text import TfidfVectorizer
-    tf = TfidfVectorizer(analyzer='word', ngram_range=(1,1), min_df = 0)
+    tf = TfidfVectorizer(analyzer='word', ngram_range=(1,1), min_df=0.01)
 
     tfidf_matrix = tf.fit_transform(corpus)
     feature_names = tf.get_feature_names()
 
-    #print("Feature Names: " + str(len(feature_names)))
-
-    # sum values from all documents
-    n_features = len(feature_names)
-    word_rating = [0.0]*n_features
-    n_tweets = len(tfidf_matrix.indptr)-1
-
-    print(tfidf_matrix)
-
     from scipy.sparse import coo_matrix
     cx = coo_matrix(tfidf_matrix)
 
-    #for i,j,v in zip(cx.row, cx.col, cx.data):
-#    word_rating[j] += v
 
-    #print("Amount of Tweets: "+str(n_tweets))
-    #print("Amount of Words: " + str(n_features))
+    logging.info("Organizing words per entity a day...")
+    words_entity_day = []
 
-    #for idx, val in enumerate(word_rating):
-    #    word_rating[idx] /= n_tweets
+    for i,j,v in zip(cx.row, cx.col, cx.data):
+        try:
+            words_entity_day[i]
+        except IndexError:
+            words_entity_day.append([])
+        words_entity_day[i].append((feature_names[j], v))
 
-    feature_rate_list = zip (feature_names, word_rating)
+    logging.info("Sorting words on each entity/day...")
+    for idx, ed in enumerate(words_entity_day):
+        words_entity_day[idx] = sorted(ed, key=lambda t: t[1], reverse=True)
 
-    sorted_phrase_scores = sorted(feature_rate_list, key=lambda t: t[1] * -1)
+    if not os.path.exists("./tfidf_scores/"):
+        os.makedirs("./tfidf_scores/")
 
-    for f, v in sorted_phrase_scores:
-        print(u'{0: <25} {1}'.format(f, v))
+    logging.info("Writing to files...")
+    for idx, ed in enumerate(words_entity_day):
+        logging.info('\tWriting to {0}'.format(entity_day_key_index[idx]))
+        f = open("./tfidf_scores/" + entity_day_key_index[idx], 'w')
+        for word, rating in ed:
+            f.write(u'{0: <25} {1}\n'.format(word, rating))
+        f.close()
 
-    return sorted_phrase_scores
+    return
 
 retrieve_tfidf_scores()
-#phrase_scores = [pair for pair in zip(range(0, len(word_rating)), word_rating) if pair[1] > 0]
-#sorted_phrase_scores = sorted(feature_rate_list, key=lambda t: t[1] * -1)
-
-#for phrase, score in [(feature_names[word_id], score) for (word_id, score) in sorted_phrase_scores]:
-#    print(u'{0: <25} {1}'.format(phrase,score))
-
-############################################
-#   DEBUG
-###########################################
-#"""for entity in tweets.keys()[0:5]:
-#    print entity
-#    print tweets[entity]
-
-#raise SystemExit(0)
-#"""
