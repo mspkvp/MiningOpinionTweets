@@ -21,7 +21,7 @@ def retrieve_tfidf_scores():
         i += 1
 
     from sklearn.feature_extraction.text import TfidfVectorizer
-    tf = TfidfVectorizer(analyzer='word', ngram_range=(1,1), min_df=0)
+    tf = TfidfVectorizer(analyzer='word', ngram_range=(1,1), min_df=0.01)
 
     tfidf_matrix = tf.fit_transform(corpus)
     feature_names = tf.get_feature_names()
