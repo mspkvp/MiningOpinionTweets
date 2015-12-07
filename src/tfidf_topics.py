@@ -41,8 +41,8 @@ def retrieve_tfidf_scores():
         words_entity_day[i].append((feature_names[j], v))
 
     logging.info("Sorting words on each entity/day...")
-    for idx, ed in enumerate(words_entity_day):
-        words_entity_day[idx] = sorted(ed, key=lambda t: t[1], reverse=True)
+    for key, value in words_entity_day:
+        words_entity_day[key] = sorted(value, key=lambda t: t[1], reverse=True)
 
     if not os.path.exists("./tfidf_scores/"):
         os.makedirs("./tfidf_scores/")
