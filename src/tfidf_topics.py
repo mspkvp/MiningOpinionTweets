@@ -1,5 +1,6 @@
 import os
 import logging
+from collections import defaultdict 
 
 logging.basicConfig(filename='tfidf_analyzer.log', level=logging.DEBUG)
 def retrieve_tfidf_scores():
@@ -20,7 +21,7 @@ def retrieve_tfidf_scores():
         i += 1
 
     from sklearn.feature_extraction.text import TfidfVectorizer
-    tf = TfidfVectorizer(analyzer='word', ngram_range=(1,1), min_df=0.01)
+    tf = TfidfVectorizer(analyzer='word', ngram_range=(1,1), min_df=0)
 
     tfidf_matrix = tf.fit_transform(corpus)
     feature_names = tf.get_feature_names()
@@ -30,13 +31,13 @@ def retrieve_tfidf_scores():
 
 
     logging.info("Organizing words per entity a day...")
-    words_entity_day = []
+    words_entity_day = defaultdict(list)
 
     for i,j,v in zip(cx.row, cx.col, cx.data):
         try:
             words_entity_day[i]
-        except IndexError:
-            words_entity_day.append([])
+        except KeyError:	
+            words_entity_day[i] = []
         words_entity_day[i].append((feature_names[j], v))
 
     logging.info("Sorting words on each entity/day...")
