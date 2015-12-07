@@ -41,17 +41,17 @@ def retrieve_tfidf_scores():
         words_entity_day[i].append((feature_names[j], v))
 
     logging.info("Sorting words on each entity/day...")
-    for key, value in words_entity_day:
+    for key, value in words_entity_day.iteritems():
         words_entity_day[key] = sorted(value, key=lambda t: t[1], reverse=True)
 
     if not os.path.exists("./tfidf_scores/"):
         os.makedirs("./tfidf_scores/")
 
     logging.info("Writing to files...")
-    for idx, ed in enumerate(words_entity_day):
-        logging.info('\tWriting to {0}'.format(entity_day_key_index[idx]))
-        f = open("./tfidf_scores/" + entity_day_key_index[idx], 'w')
-        for word, rating in ed:
+    for key, value in words_entity_day.iteritems():
+        logging.info('\tWriting to {0}'.format(entity_day_key_index[key]))
+        f = open("./tfidf_scores/" + entity_day_key_index[key], 'w')
+        for word, rating in value:
             f.write(u'{0: <25} {1}\n'.format(word, rating))
         f.close()
 
