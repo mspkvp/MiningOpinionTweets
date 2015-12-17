@@ -16,10 +16,6 @@ def print_top_words(model, feature_names, n_top_words):
 
 entity_day_dict = dict()
 
-n_features = 1000
-n_topics = 10
-n_top_words = 20
-
 # read all files and store their contents on a dictionary
 for i in os.listdir(os.getcwd() + "/filtered_tweets"):
     for filename in os.listdir(os.getcwd() + "/filtered_tweets" + "/" + i):
@@ -33,10 +29,9 @@ for key in entity_day_dict:
     corpus.append(entity_day_dict[key])
     i += 1
 
-# Load the 20 newsgroups dataset and vectorize it. We use a few heuristics
-# to filter out useless terms early on: the posts are stripped of headers,
-# footers and quoted replies, and common English words, words occurring in
-# only one document or in at least 95% of the documents are removed.
+n_features = 2000
+n_topics = len(corpus)
+n_top_words = 25
 
 # Use tf (raw term count) features for LDA.
 print("Extracting tf features for LDA...")
@@ -47,7 +42,7 @@ tf = tf_vectorizer.fit_transform(corpus)
 print("done in %0.3fs." % (time() - t0))
 
 print("Fitting LDA models with tf features, n_samples=%d and n_features=%d..."
-      % (n_samples, n_features))
+      % (2000, n_features))
 lda = LatentDirichletAllocation(n_topics=n_topics, max_iter=5,
                                 learning_method='online', learning_offset=50.,
                                 random_state=0)
