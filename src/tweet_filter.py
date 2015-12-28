@@ -25,7 +25,8 @@ def remove_diacritic(input):
 
 
 def remove_nonalphanumeric(x):
-    return re.sub('[^0-9a-zA-Z]+', '', x)
+    return re.sub('[^0-9a-zA-Z#]+', '', x)
+
 
 pt_stopwords, en_stopwords = load_stopwords()
 
@@ -51,7 +52,7 @@ for filename in os.listdir(read_path):
         if not os.path.exists(write_path + "/" + current_timestamp):
             os.makedirs(write_path + "/" + current_timestamp)
         text = row[1]
-        print "Tweet: " + text
+        logging.info("Tweet: " + text)
         if len(text) <= 80:  # only accept tweets that are at least 80 characters long
             logging.info("Discarded for being too short")
             continue
@@ -68,22 +69,22 @@ for filename in os.listdir(read_path):
         tokens = text.split(" ")
         
         logging.info("Removing links")
-        tokens = [token for token in tokens if not token.startswith("http:") and not token.startswith("https:")] #remove links
-
-        logging.info("Removing non-alphanumeric")
-        tokens = map(remove_nonalphanumeric, tokens) 
+        tokens = [remove_nonalphanumeric(token) for token in tokens if not token.startswith("http:") and not token.startswith("https:")] #remove links and alphanumerics
 
 
         logging.info("Removing queries")
-        tokens = set(tokens) - set(queries) #remove the queries use to search
+        tokens = [token for token in tokens if not token in queries and not token in pt_stopwords and not token in en_stopwords]
+        #tokens = set(tokens) - set(queries) #remove the queries use to search
 
 
         logging.info("Removing stopwords")
-        tokens = tokens - set(pt_stopwords) #remove portuguese stopwords
-        tokens = tokens - set(en_stopwords) #remove english stopwords
+        #tokens = tokens - set(pt_stopwords) #remove portuguese stopwords
+        #tokens = tokens - set(en_stopwords) #remove english stopwords
 
         if row[3] != previous_timestamp:
             current_write_file = open(write_path + "/" + current_timestamp + "/" + entity_codename + ".txt", 'w')
         
         current_write_file.write(" ")
-        current_write_file.write(" ".join(tokens))
+        tokens_string = " ".join(tokens)
+        current_write_file.write(tokens_string)
+        logging.info("Converted to :" + tokens_string)
