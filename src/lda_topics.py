@@ -1,9 +1,10 @@
 
 from __future__ import print_function
 from time import time
+import csv
 
-from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-from sklearn.decomposition import NMF, LatentDirichletAllocation
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.decomposition import LatentDirichletAllocation
 
 import os
 
@@ -17,9 +18,16 @@ def print_top_words(model, feature_names, n_top_words):
 entity_day_dict = dict()
 
 # read all files and store their contents on a dictionary
-for i in os.listdir(os.getcwd() + "/filtered_tweets"):
-    for filename in os.listdir(os.getcwd() + "/filtered_tweets" + "/" + i):
-        entity_day_dict[i+" "+filename] = open(os.getcwd() + "/filtered_tweets" + "/" + i + "/" + filename, 'r').read()
+tfidif_top_topics = csv.reader(open("tfidf_scores.csv", 'rb'), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
+
+#for i in os.listdir(os.getcwd() + "/filtered_tweets"):
+#    for filename in os.listdir(os.getcwd() + "/filtered_tweets" + "/" + i):
+#        entity_day_dict[i+" "+filename] = open(os.getcwd() + "/filtered_tweets" + "/" + i + "/" + filename, 'r').read()
+
+for row in tfidif_top_topics:
+    print (row)
+
+raise SystemExit(0)
 
 corpus = []
 entity_day_key_index = dict()
@@ -29,8 +37,8 @@ for key in entity_day_dict:
     corpus.append(entity_day_dict[key])
     i += 1
 
-n_features = 2000
-n_topics = len(corpus)
+n_features = 10000
+n_topics = 30
 n_top_words = 25
 
 # Use tf (raw term count) features for LDA.
