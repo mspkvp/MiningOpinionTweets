@@ -15,27 +15,25 @@ def print_top_words(model, feature_names, n_top_words):
                         for i in topic.argsort()[:-n_top_words - 1:-1]]))
     print()
 
-entity_day_dict = dict()
-
-# read all files and store their contents on a dictionary
+corpus = []
 tfidif_top_topics = csv.reader(open("tfidf_scores.csv", 'rb'), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
+for row in tfidif_top_topics:
+    corpus.append(row[0].split(",")[2:])
+
+#entity_day_dict = dict()
+
+# read all files and store their contents on a dictionary
 #for i in os.listdir(os.getcwd() + "/filtered_tweets"):
 #    for filename in os.listdir(os.getcwd() + "/filtered_tweets" + "/" + i):
 #        entity_day_dict[i+" "+filename] = open(os.getcwd() + "/filtered_tweets" + "/" + i + "/" + filename, 'r').read()
 
-for row in tfidif_top_topics:
-    print (row)
-
-raise SystemExit(0)
-
-corpus = []
-entity_day_key_index = dict()
-i = 0
-for key in entity_day_dict:
-    entity_day_key_index[i] = key
-    corpus.append(entity_day_dict[key])
-    i += 1
+#entity_day_key_index = dict()
+#i = 0
+#for key in entity_day_dict:
+#    entity_day_key_index[i] = key
+#    corpus.append(entity_day_dict[key])
+#    i += 1
 
 n_features = 10000
 n_topics = 30
@@ -49,10 +47,9 @@ t0 = time()
 tf = tf_vectorizer.fit_transform(corpus)
 print("done in %0.3fs." % (time() - t0))
 
-print("Fitting LDA models with tf features, n_samples=%d and n_features=%d..."
-      % (2000, n_features))
+print("Fitting LDA models with tf")
 lda = LatentDirichletAllocation(n_topics=n_topics, max_iter=5,
-                                learning_method='online', learning_offset=50.,
+                                learning_method='online', #learning_offset=50.,
                                 random_state=0)
 t0 = time()
 lda.fit(tf)
