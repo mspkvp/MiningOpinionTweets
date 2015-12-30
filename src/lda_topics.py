@@ -7,19 +7,22 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 
 import os
+import logging
+
+logging.basicConfig(filename='lda_analyser.log', level=logging.DEBUG)
 
 def print_top_words(model, feature_names, n_top_words, dictionary):
     file = csv.writer(open('lda_topics.csv', 'wb'))
 
     for topic_idx, topic in enumerate(model.components_):
-        print("Topic #%d:" % topic_idx)
+        logging.info("Topic #%d:" % topic_idx)
         topic_words = " ".join([feature_names[i] for i in topic.argsort()[:-n_top_words - 1:-1]])
-        print(topic_words)
+        logging.info(topic_words)
         array_to_write = dictionary[topic_idx]
         for item in topic_words.split(" "):
             array_to_write.append(item)
         file.writerow(array_to_write)
-    print()
+    #print()
 
 
 entity_day_dict = dict()
@@ -62,21 +65,21 @@ n_topics = len(corpus)
 n_top_words = 10
 
 # Use tf (raw term count) features for LDA.
-print("Extracting tf features for LDA...")
+logging.info("Extracting tf features for LDA...")
 tf_vectorizer = CountVectorizer(max_df=0.95, min_df=2, max_features=n_features,
                                 stop_words='english')
 t0 = time()
 tf = tf_vectorizer.fit_transform(corpus)
-print("done in %0.3fs." % (time() - t0))
+logging.info("done in %0.3fs." % (time() - t0))
 
-print("Fitting LDA models with tf")
+logging.info("Fitting LDA models with tf")
 lda = LatentDirichletAllocation(n_topics=n_topics, max_iter=5,
                                 learning_method='online', #learning_offset=50.,
                                 random_state=0)
 t0 = time()
 lda.fit(tf)
-print("done in %0.3fs." % (time() - t0))
+logging.info("done in %0.3fs." % (time() - t0))
 
-print("\nTopics in LDA model:")
+logging.info("\nTopics in LDA model:")
 tf_feature_names = tf_vectorizer.get_feature_names()
 print_top_words(lda, tf_feature_names, n_top_words, entity_day_dict)
