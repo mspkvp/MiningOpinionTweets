@@ -1,0 +1,2125 @@
+{"topics":[
+  {
+    "name": "ajudado",
+    "count": 10,
+    "forms": "ajudado",
+    "sentiment": "positive",
+    "id": 0,
+    "comment_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "name": "protesto",
+    "count": 10,
+    "forms": "protesto",
+    "sentiment": "negative",
+    "id": 1,
+    "comment_ids": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ]
+  },
+  {
+    "name": "aberto",
+    "count": 9,
+    "forms": "Aberta",
+    "sentiment": "positive",
+    "id": 2,
+    "comment_ids": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ]
+  },
+  {
+    "name": "mal",
+    "count": 5,
+    "forms": "mal",
+    "sentiment": "negative",
+    "id": 3,
+    "comment_ids": [
+      34,
+      40,
+      41,
+      42,
+      49,
+      52,
+      99
+    ]
+  },
+  {
+    "name": "odiar",
+    "count": 5,
+    "forms": "odiaram",
+    "sentiment": "negative",
+    "id": 4,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "problema",
+    "count": 4,
+    "forms": "problemas",
+    "sentiment": "negative",
+    "id": 5,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "culpar",
+    "count": 3,
+    "forms": "Culpa",
+    "sentiment": "negative",
+    "id": 6,
+    "comment_ids": [
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ]
+  },
+  {
+    "name": "sucesso",
+    "count": 3,
+    "forms": "sucessos",
+    "sentiment": "positive",
+    "id": 7,
+    "comment_ids": [
+      78
+    ]
+  },
+  {
+    "name": "sofrer",
+    "count": 3,
+    "forms": "sofrer",
+    "sentiment": "negative",
+    "id": 8,
+    "comment_ids": [
+      79
+    ]
+  },
+  {
+    "name": "evitar",
+    "count": 3,
+    "forms": "evita",
+    "sentiment": "negative",
+    "id": 9,
+    "comment_ids": [
+      80,
+      81,
+      82,
+      83,
+      84
+    ]
+  },
+  {
+    "name": "duro",
+    "count": 2,
+    "forms": "dura",
+    "sentiment": "negative",
+    "id": 10,
+    "comment_ids": [
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92
+    ]
+  },
+  {
+    "name": "indignado",
+    "count": 2,
+    "forms": "indignado",
+    "sentiment": "negative",
+    "id": 11,
+    "comment_ids": [
+      93
+    ]
+  },
+  {
+    "name": "piada",
+    "count": 2,
+    "forms": "piada",
+    "sentiment": "negative",
+    "id": 12,
+    "comment_ids": [
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ]
+  },
+  {
+    "name": "chorar",
+    "count": 2,
+    "forms": "chorar",
+    "sentiment": "negative",
+    "id": 13,
+    "comment_ids": [
+      101
+    ]
+  },
+  {
+    "name": "cair",
+    "count": 2,
+    "forms": "cai",
+    "sentiment": "negative",
+    "id": 14,
+    "comment_ids": [
+      72
+    ]
+  },
+  {
+    "name": "bancarrota",
+    "count": 2,
+    "forms": "bancarrota",
+    "sentiment": "negative",
+    "id": 15,
+    "comment_ids": [
+      102,
+      103
+    ]
+  },
+  {
+    "name": "verdade",
+    "count": 2,
+    "forms": "verdades",
+    "sentiment": "positive",
+    "id": 16,
+    "comment_ids": [
+      93,
+      104,
+      105
+    ]
+  },
+  {
+    "name": "disciplina",
+    "count": 2,
+    "forms": "Disciplina",
+    "sentiment": "positive",
+    "id": 17,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "agradecer",
+    "count": 2,
+    "forms": "Agradece",
+    "sentiment": "positive",
+    "id": 18,
+    "comment_ids": [
+      1,
+      2,
+      106,
+      107,
+      108,
+      109
+    ]
+  },
+  {
+    "name": "votar",
+    "count": 1,
+    "forms": "voto",
+    "sentiment": "positive",
+    "id": 19,
+    "comment_ids": [
+      110,
+      111,
+      112
+    ]
+  },
+  {
+    "name": "franco",
+    "count": 1,
+    "forms": "Franca",
+    "sentiment": "positive",
+    "id": 20,
+    "comment_ids": [
+      113
+    ]
+  },
+  {
+    "name": "gostar",
+    "count": 1,
+    "forms": "Gostava",
+    "sentiment": "positive",
+    "id": 21,
+    "comment_ids": [
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ]
+  },
+  {
+    "name": "apoiar",
+    "count": 1,
+    "forms": "apoiar",
+    "sentiment": "positive",
+    "id": 22,
+    "comment_ids": [
+      83
+    ]
+  },
+  {
+    "name": "capaz",
+    "count": 1,
+    "forms": "capaz",
+    "sentiment": "positive",
+    "id": 23,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "brilhante",
+    "count": 1,
+    "forms": "Brilhante",
+    "sentiment": "positive",
+    "id": 24,
+    "comment_ids": [
+      121,
+      122,
+      123,
+      124
+    ]
+  },
+  {
+    "name": "eficiência",
+    "count": 1,
+    "forms": "eficiencia",
+    "sentiment": "positive",
+    "id": 25,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "golo",
+    "count": 1,
+    "forms": "golos",
+    "sentiment": "positive",
+    "id": 26,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "segurança",
+    "count": 1,
+    "forms": "seguranca",
+    "sentiment": "positive",
+    "id": 27,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "velho",
+    "count": 1,
+    "forms": "velho",
+    "sentiment": "negative",
+    "id": 28,
+    "comment_ids": [
+      125,
+      126,
+      127
+    ]
+  },
+  {
+    "name": "seco",
+    "count": 1,
+    "forms": "secos",
+    "sentiment": "negative",
+    "id": 29,
+    "comment_ids": [
+      128
+    ]
+  },
+  {
+    "name": "preocupado",
+    "count": 1,
+    "forms": "preocupado",
+    "sentiment": "negative",
+    "id": 30,
+    "comment_ids": [
+      129,
+      130,
+      131
+    ]
+  },
+  {
+    "name": "pobre",
+    "count": 1,
+    "forms": "pobres",
+    "sentiment": "negative",
+    "id": 31,
+    "comment_ids": [
+      10,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137
+    ]
+  },
+  {
+    "name": "merda",
+    "count": 1,
+    "forms": "merda",
+    "sentiment": "negative",
+    "id": 32,
+    "comment_ids": [
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145
+    ]
+  },
+  {
+    "name": "luto",
+    "count": 1,
+    "forms": "luto",
+    "sentiment": "negative",
+    "id": 33,
+    "comment_ids": [
+      146,
+      147,
+      148
+    ]
+  },
+  {
+    "name": "livrar-se",
+    "count": 1,
+    "forms": "livrar",
+    "sentiment": "negative",
+    "id": 34,
+    "comment_ids": [
+      126,
+      149
+    ]
+  },
+  {
+    "name": "insulto",
+    "count": 1,
+    "forms": "insulto",
+    "sentiment": "negative",
+    "id": 35,
+    "comment_ids": [
+      150,
+      151
+    ]
+  },
+  {
+    "name": "fora",
+    "count": 1,
+    "forms": "fora",
+    "sentiment": "negative",
+    "id": 36,
+    "comment_ids": [
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173
+    ]
+  },
+  {
+    "name": "decepção",
+    "count": 1,
+    "forms": "decepcao",
+    "sentiment": "negative",
+    "id": 37,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "assassino",
+    "count": 1,
+    "forms": "assassina",
+    "sentiment": "negative",
+    "id": 38,
+    "comment_ids": [
+      79,
+      174
+    ]
+  },
+  {
+    "name": "usar",
+    "count": 1,
+    "forms": "USA",
+    "sentiment": "negative",
+    "id": 39,
+    "comment_ids": [
+      175,
+      176,
+      177
+    ]
+  },
+  {
+    "name": "parvo",
+    "count": 1,
+    "forms": "Parvo",
+    "sentiment": "negative",
+    "id": 40,
+    "comment_ids": [
+      178
+    ]
+  }
+],"comments":[
+  {
+    "text": "Passos diz que Alemanha tem <a>ajudado</a> Portugal e espera que Merkel seja bem recebida .",
+    "id": 0,
+    "created_at": "2012-11-07T19:51:00Z",
+    "topic_ids": [
+      0
+    ]
+  },
+  {
+    "text": "[Jornal de Negocios] Passos <a>agradece</a> a \"Merkel pela forma como tem <a>ajudado</a> Portugal\" http://t.co/UO3Ian47",
+    "id": 1,
+    "created_at": "2012-11-12T16:13:01Z",
+    "topic_ids": [
+      18,
+      0
+    ]
+  },
+  {
+    "text": "Passos <a>agradece</a> a \"Merkel pela forma como tem <a>ajudado</a> Portugal\" http://t.co/YRab8o6a",
+    "id": 2,
+    "created_at": "2012-11-12T15:58:18Z",
+    "topic_ids": [
+      18,
+      0
+    ]
+  },
+  {
+    "text": "Pode contar comigo. \n\n\nPassos diz que Alemanha tem <a>ajudado</a> Portugal e espera que Merkel seja bem recebida... http://t.co/nbsEdUYY",
+    "id": 3,
+    "created_at": "2012-11-07T23:18:31Z",
+    "topic_ids": [
+      0
+    ]
+  },
+  {
+    "text": "Passos diz que Alemanha tem <a>ajudado</a> Portugal e espera que Merkel seja bem recebida http://t.co/JUO8F3wd",
+    "id": 4,
+    "created_at": "2012-11-07T21:15:24Z",
+    "topic_ids": [
+      0
+    ]
+  },
+  {
+    "text": "Passos diz que Alemanha tem <a>ajudado</a> Portugal e espera que Merkel seja bem recebida http://t.co/XFP9pDpx",
+    "id": 5,
+    "created_at": "2012-11-07T21:15:24Z",
+    "topic_ids": [
+      0
+    ]
+  },
+  {
+    "text": "#visao Passos Coelho defende que Alemanha tem <a>ajudado</a> Portugal e espera que Merkel seja bem… http://t.co/v8LFmuYa",
+    "id": 6,
+    "created_at": "2012-11-07T19:16:00Z",
+    "topic_ids": [
+      0
+    ]
+  },
+  {
+    "text": "Passos Coelho defende que Alemanha tem <a>ajudado</a> Portugal e espera que Merkel seja bem recebida:  http://t.co/T1y0iWNM",
+    "id": 7,
+    "created_at": "2012-11-07T19:26:11Z",
+    "topic_ids": [
+      0
+    ]
+  },
+  {
+    "text": "[VISAO]: Passos Coelho defende que Alemanha tem <a>ajudado</a> Portugal e espera que Merkel seja bem recebida:  http://t.co/cClN0XQE",
+    "id": 8,
+    "created_at": "2012-11-07T19:21:58Z",
+    "topic_ids": [
+      0
+    ]
+  },
+  {
+    "text": "#sol Passos diz que Alemanha tem <a>ajudado</a> Portugal e espera que Merkel seja bem recebida http://t.co/MDFuz8ma",
+    "id": 9,
+    "created_at": "2012-11-07T19:47:04Z",
+    "topic_ids": [
+      0
+    ]
+  },
+  {
+    "text": "a sermos mais <a>pobres</a>!\"@Publico: Passos diz que Alemanha tem <a>ajudado</a> Portugal e espera que Merkel seja bem recebida http://t.co/ubG176Oz\"",
+    "id": 10,
+    "created_at": "2012-11-07T21:17:29Z",
+    "topic_ids": [
+      31,
+      0
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> \"A Merkel não manda aqui!\" http://t.co/WvnZL8LI",
+    "id": 11,
+    "created_at": "2012-11-11T20:09:02Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> \"A Merkel não manda aqui!\" http://t.co/NUDH3mAp",
+    "id": 12,
+    "created_at": "2012-11-11T20:09:02Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> “Merkel não manda aqui” http://t.co/LZlNKcaV",
+    "id": 13,
+    "created_at": "2012-11-12T22:08:04Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> “Merkel não manda aqui” http://t.co/j225hZAd",
+    "id": 14,
+    "created_at": "2012-11-12T22:08:04Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> “Merkel não manda aqui” | Bloco Lisboa http://t.co/1cwe8CgB",
+    "id": 15,
+    "created_at": "2012-11-13T14:55:35Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "[JN] <a>Protesto</a> contra Merkel desvaloriza alertas sobre violência durante visita: Os organizadores do <a>protesto</a> de ... http://t.co/puOMISX7",
+    "id": 16,
+    "created_at": "2012-11-06T18:28:31Z",
+    "topic_ids": [
+      1,
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> contra Merkel desvaloriza alertas sobre violência durante visita: Os organizadores do <a>protesto</a> de segun... http://t.co/xCqZ0oCM",
+    "id": 17,
+    "created_at": "2012-11-06T18:51:31Z",
+    "topic_ids": [
+      1,
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> \"A Merkel Não Manda Aqui\" desvaloriza alertas sobre violência durante visita  http://t.co/ADutrq1I",
+    "id": 18,
+    "created_at": "2012-11-07T09:47:03Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> \"A Merkel Não Manda Aqui\" desvaloriza alertas sobre violência durante visita  (http://t.co/U7dadInF)",
+    "id": 19,
+    "created_at": "2012-11-06T17:57:03Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> “A Merkel Não Manda Aqui” desvaloriza alertas sobre violência durante visita http://t.co/MPRzu7Z8",
+    "id": 20,
+    "created_at": "2012-11-06T18:28:14Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> contra Merkel desvaloriza alertas sobre violência durante visita: Os organizadores… http://t.co/cDSVxkOn",
+    "id": 21,
+    "created_at": "2012-11-06T18:28:46Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "<a>Protesto</a> contra Merkel desvaloriza alertas sobre violência durante visita - http://t.co/yxcvPRYc",
+    "id": 22,
+    "created_at": "2012-11-06T18:24:48Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "Mete cuspo e pontapés? \"@catarina_mart: Eurodeputadas recebem Merkel com <a>protesto</a> http://t.co/jIJ35Uzz\"",
+    "id": 23,
+    "created_at": "2012-11-07T21:45:43Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "Merkel recebida com manifestação de <a>protesto</a> no Parlamento Europeu http://t.co/ByRllLKn #win",
+    "id": 24,
+    "created_at": "2012-11-07T21:05:39Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "Esta semana decidi não fazer #FF pra ninguém. Estou em <a>protesto</a> contra a Merkel. bjdç <3",
+    "id": 25,
+    "created_at": "2012-11-10T01:36:22Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "PCP apela ao <a>protesto</a> durante a visita de Angela Merkel http://t.co/Ah3wxJaN",
+    "id": 26,
+    "created_at": "2012-11-11T17:36:04Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "[RTP Noticias] PCP apela ao <a>protesto</a> durante a visita de Angela Merkel http://t.co/TPIHUT4d",
+    "id": 27,
+    "created_at": "2012-11-11T18:03:17Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "Passos fica contente por estar ao lado de Merkel nos cartazes de <a>protesto</a>! Sente-se importante",
+    "id": 28,
+    "created_at": "2012-11-12T16:26:13Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "Hoje vamos receber a Chanceler Merkel de preto como forma de <a>protesto</a>. http://t.co/2syQpImZ",
+    "id": 29,
+    "created_at": "2012-11-12T00:30:25Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "#merkel Mais um registo de iconografia de <a>protesto</a> http://t.co/5zKBRprZ",
+    "id": 30,
+    "created_at": "2012-11-12T15:05:34Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "Centenas de pessoas em <a>protesto</a> nas ruas de Lisboa contra visita de Merkel http://t.co/aLxrf03M",
+    "id": 31,
+    "created_at": "2012-11-12T15:00:03Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "Centenas de pessoas em <a>protesto</a> nas ruas de Lisboa contra visita de Merkel http://t.co/JrQOaf0K",
+    "id": 32,
+    "created_at": "2012-11-12T15:00:09Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "@anaf_maia e reparaste na Merkel e no Passos reunidos \"num almoço de <a>protesto</a>\"? :)",
+    "id": 33,
+    "created_at": "2012-11-12T14:37:43Z",
+    "topic_ids": [
+      1
+    ]
+  },
+  {
+    "text": "Estou a gostar de ver como os jornalistas dizem <a>mal</a> o nome da Merkel em <a>protesto</a>.",
+    "id": 34,
+    "created_at": "2012-11-12T12:26:33Z",
+    "topic_ids": [
+      3,
+      1
+    ]
+  },
+  {
+    "text": "Carta <a>Aberta</a> a Angela Merkel http://t.co/wG8UU3S9",
+    "id": 35,
+    "created_at": "2012-11-07T18:47:30Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "CARTA <a>ABERTA</a> A ANGELA MERKEL http://t.co/hPHYQ8al",
+    "id": 36,
+    "created_at": "2012-11-07T16:14:37Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Carta <a>Aberta</a> a Angela Merkel http://t.co/RcxR7c43",
+    "id": 37,
+    "created_at": "2012-11-07T15:40:33Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Exma. Sra. Merkel, vá-se! (Carta <a>aberta</a> curta mas pertinente!)",
+    "id": 38,
+    "created_at": "2012-11-12T11:24:13Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Carta <a>Aberta</a> afirma que Merkel não é bem-vinda | Esquerda http://t.co/aNUgooWu",
+    "id": 39,
+    "created_at": "2012-11-07T16:20:41Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Carta <a>aberta</a> a Merkel: «Seja <a>mal</a>-vinda a Portugal» http://t.co/fZV27BWw",
+    "id": 40,
+    "created_at": "2012-11-08T14:25:32Z",
+    "topic_ids": [
+      2,
+      3
+    ]
+  },
+  {
+    "text": "Carta <a>aberta</a> a Merkel: «Seja <a>mal</a>-vinda a Portugal» http://t.co/KkKZgMSY",
+    "id": 41,
+    "created_at": "2012-11-08T14:25:33Z",
+    "topic_ids": [
+      2,
+      3
+    ]
+  },
+  {
+    "text": "Carta <a>Aberta</a> a Merkel: chanceler &quot;é <a>mal</a>-vinda&quot; a Portugal http://t.co/SH07kQgo",
+    "id": 42,
+    "created_at": "2012-11-08T12:31:14Z",
+    "topic_ids": [
+      2,
+      3
+    ]
+  },
+  {
+    "text": "Carta <a>Aberta</a> avisa Merkel que não é bem-vinda: Imagem: http://t.co/5FpaQwx4  \n ... http://t.co/goexifcM",
+    "id": 43,
+    "created_at": "2012-11-08T03:25:21Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Porque parece que é moda também vou escrever uma carta <a>aberta</a> à Merkel",
+    "id": 44,
+    "created_at": "2012-11-12T11:22:52Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Hoje tenho estado a assistir a Merkel na sua Presidência <a>Aberta</a>.",
+    "id": 45,
+    "created_at": "2012-11-12T18:46:10Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Cara Chanceler Merkel: CARTA <a>ABERTA</a> A ANGELA MERKEL http://t.co/EI45ffGx",
+    "id": 46,
+    "created_at": "2012-11-12T12:55:14Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Pedro Abrunhosa escreve carta <a>aberta</a> a Angela Merkel\nhttp://t.co/2doGFcq0",
+    "id": 47,
+    "created_at": "2012-11-13T14:21:25Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Carta <a>Aberta</a> avisa Merkel que não é bem-vinda: Mais de uma centena de portugueses e… http://t.co/KxtDeGJi",
+    "id": 48,
+    "created_at": "2012-11-07T14:46:49Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "Subscritores de Carta <a>Aberta</a> a Merkel dizem que a chanceler \"é <a>mal</a>-vinda\" a Portugal http://t.co/KhaURaTG",
+    "id": 49,
+    "created_at": "2012-11-07T16:20:11Z",
+    "topic_ids": [
+      2,
+      3
+    ]
+  },
+  {
+    "text": "O Verde perdido como no Sporting Clube de Lisboa.  \nCarta Biligual <a>Aberta</a> a Angela Merkel:\n\nSie... http://t.co/V9KugbvX",
+    "id": 50,
+    "created_at": "2012-11-12T20:56:42Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "[JN] Carta <a>Aberta</a> avisa Merkel que não é bem-vinda: Mais de uma centena de portugueses e estrangeiros subscrever... http://t.co/zZngxqlW",
+    "id": 51,
+    "created_at": "2012-11-07T14:46:38Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "A Carta <a>Aberta</a> dirigida à chanceler alemã é clara na sua mensagem:\n\"Acordámos, senhora Merkel. Seja <a>mal</a>-vinda a... http://t.co/3ac195uh",
+    "id": 52,
+    "created_at": "2012-11-07T19:22:55Z",
+    "topic_ids": [
+      2,
+      3
+    ]
+  },
+  {
+    "text": "Carta <a>aberta</a> a Merkel: A senhora vem aos saldos.\nNum mundo que se forma, cada vez mais a dois, a poderosa China ... http://t.co/Qu9hzjna",
+    "id": 53,
+    "created_at": "2012-11-12T08:07:49Z",
+    "topic_ids": [
+      2
+    ]
+  },
+  {
+    "text": "@PaulaNevesD <a>Culpa</a> da #Merkel então...",
+    "id": 54,
+    "created_at": "2012-11-12T13:56:55Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "@atsilverhill É <a>culpa</a> da Merkel :o",
+    "id": 55,
+    "created_at": "2012-11-12T15:15:52Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "\"a <a>culpa</a> é da Merkel!\", LOL?",
+    "id": 56,
+    "created_at": "2012-11-12T13:30:31Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Nao, nao é <a>culpa</a> da Merkel... \n :(( http://t.co/np3jLAv4",
+    "id": 57,
+    "created_at": "2012-11-12T10:31:13Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "O q Louçã devia ter feito, ha muito, era um mea <a>culpa</a> e demissão. Culpar a Merkel não o livra da sua <a>culpa</a> pelo gov Passos.",
+    "id": 58,
+    "created_at": "2012-11-10T09:00:31Z",
+    "topic_ids": [
+      6,
+      6
+    ]
+  },
+  {
+    "text": "Pues acabo de llegar ahora a casa por <a>culpa</a> de la señorita angela merkel, por su <a>culpa</a> ha cortado las calles y no pasaba bus.. -.-",
+    "id": 59,
+    "created_at": "2012-11-12T16:22:29Z",
+    "topic_ids": [
+      6,
+      6
+    ]
+  },
+  {
+    "text": "[Económico] Merkel “não tem <a>culpa</a>” do estado do País http://t.co/mp07cbxI",
+    "id": 60,
+    "created_at": "2012-11-11T11:53:57Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Merkel “não tem <a>culpa</a>” do estado do País http://t.co/VXGzDJZn #Economia",
+    "id": 61,
+    "created_at": "2012-11-11T11:53:55Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Recentes Merkel “não tem <a>culpa</a>” do estado do País http://t.co/dg3e1I9U",
+    "id": 62,
+    "created_at": "2012-11-11T11:53:55Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Merkel “não tem <a>culpa</a>” do estado do País http://t.co/e83u91hs #economia",
+    "id": 63,
+    "created_at": "2012-11-11T11:53:56Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "A sério que hoje nada corre como deveria correr??? A <a>culpa</a> só pode ser da Merkel!",
+    "id": 64,
+    "created_at": "2012-11-12T11:50:56Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Dizerem que Merkel não tem <a>culpa</a> na situação económica portuguesa é de uma desonestidade assombrosa.",
+    "id": 65,
+    "created_at": "2012-11-11T08:57:56Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "É, é isso, a <a>culpa</a> é da Merkel... Willkommen Frau Merkel - Dinheiro Vivo http://t.co/RL1FKPCo",
+    "id": 66,
+    "created_at": "2012-11-12T17:11:42Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "a electricidade na cozinha foi-se... a <a>culpa</a> é da Merkel!!",
+    "id": 67,
+    "created_at": "2012-11-12T13:00:20Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "vem merkel estás perdoada e estás a fazer uma excelente gestão desta crise, a <a>culpa</a> toda é do marcelo",
+    "id": 68,
+    "created_at": "2012-11-11T17:21:21Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Aquela sensação de frio. Pés gelados. Mãos frias. Doente? Oxalá que não. #Merkel a <a>culpa</a> é tua.",
+    "id": 69,
+    "created_at": "2012-11-12T16:03:28Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "@martamfln oh merkel estamos de relaçoes cortadas... Cheguei 1h depois do suposto a casa por tua <a>culpa</a>",
+    "id": 70,
+    "created_at": "2012-11-12T20:03:13Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Então, quem dos meus amigos é que me explica por que razão a <a>culpa</a> é da Merkel? Vá, aguardo ansiosamente.",
+    "id": 71,
+    "created_at": "2012-11-13T00:54:59Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Pelo que percebi nesta reportagem da SIC, quando <a>cai</a> um gato da janela ou há um acidente na estrada, a <a>culpa</a> é da Merkel.",
+    "id": 72,
+    "created_at": "2012-11-07T20:27:27Z",
+    "topic_ids": [
+      14,
+      6
+    ]
+  },
+  {
+    "text": "\"É errado concentrar culpas na Sra merkel, pq mta coisa é <a>culpa</a> do gov e não de Merkel\"-JPPereira #sicn #quadratura",
+    "id": 73,
+    "created_at": "2012-11-08T23:10:58Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Merkel “não tem <a>culpa</a>” do estado do País: Os partidos dividem-se entre o repúdio e o agrado face à visita da cha... http://t.co/b4GZV9S7",
+    "id": 74,
+    "created_at": "2012-11-11T11:49:07Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Merkel “não tem <a>culpa</a>” do estado do País: Os partidos dividem-se entre o repúdio e o agrado face à visita da cha... http://t.co/x2985N7h",
+    "id": 75,
+    "created_at": "2012-11-11T11:53:56Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Bom dia e bom domingo! :)\n\n PSD diz que chanceler Angela Merkel não tem <a>culpa</a> do estado do país.\n\nO que achas? http://t.co/aLRE544A",
+    "id": 76,
+    "created_at": "2012-11-11T10:44:12Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "@Joana_EA agora se quiseres perder mais uns followers basta dizeres que a Merkel não tem <a>culpa</a> do país estar neste estado",
+    "id": 77,
+    "created_at": "2012-11-12T12:16:48Z",
+    "topic_ids": [
+      6
+    ]
+  },
+  {
+    "text": "Radar - Merkel diz que reformas em países como Portugal já estão a mostrar primeiros <a>sucessos</a>: \n      Autor(... http://t.co/6gz8mZxj #fb",
+    "id": 78,
+    "created_at": "2012-11-07T15:57:35Z",
+    "topic_ids": [
+      7
+    ]
+  },
+  {
+    "text": "Angela Merkel terá em Portugal uma resposta à ALTURA dela!\nUma <a>assassina</a> destas tem de <a>sofrer</a>... http://t.co/9MgjzVaO",
+    "id": 79,
+    "created_at": "2012-11-07T20:39:20Z",
+    "topic_ids": [
+      38,
+      8
+    ]
+  },
+  {
+    "text": "Autoeuropa vence braço de ferro com Merkel e <a>evita</a> visita desta às suas instalações.",
+    "id": 80,
+    "created_at": "2012-11-06T17:50:41Z",
+    "topic_ids": [
+      9
+    ]
+  },
+  {
+    "text": "A Merkel diz que <a>evita</a> falar outras línguas para além do alemão. Excesso de nacionalismo, não ?",
+    "id": 81,
+    "created_at": "2012-11-12T14:07:44Z",
+    "topic_ids": [
+      9
+    ]
+  },
+  {
+    "text": "Segurança máxima não <a>evita</a> mensagens a Merkel. “Hitler go home” http://t.co/njanEnqj",
+    "id": 82,
+    "created_at": "2012-11-12T10:41:37Z",
+    "topic_ids": [
+      9
+    ]
+  },
+  {
+    "text": "Merkel quer eficiência na despesa europeia mas <a>evita</a> <a>apoiar</a> Cameron no corte do orçamento  (http://t.co/U7dadInF)",
+    "id": 83,
+    "created_at": "2012-11-07T22:59:54Z",
+    "topic_ids": [
+      9,
+      22
+    ]
+  },
+  {
+    "text": "[ECONOMICO]: Espaço aéreo fechado e lanchas no Tejo devido a Merkel: PSP pede apoio às Forças Armadas para <a>evita</a>... http://t.co/33FH0kxe",
+    "id": 84,
+    "created_at": "2012-11-09T11:00:20Z",
+    "topic_ids": [
+      9
+    ]
+  },
+  {
+    "text": "[VISAO]: Merkel/visita: Programa <a>dura</a> cerca de cinco horas e inclui encontros com PR, PM e empresários:  http://t.co/xF1b7xs4",
+    "id": 85,
+    "created_at": "2012-11-09T18:27:52Z",
+    "topic_ids": [
+      10
+    ]
+  },
+  {
+    "text": "Visita de Merkel <a>dura</a> cerca de cinco horas e inclui encontros com Cavaco, Passos e empresários\nhttp://t.co/QxLiRSlK",
+    "id": 86,
+    "created_at": "2012-11-09T18:27:55Z",
+    "topic_ids": [
+      10
+    ]
+  },
+  {
+    "text": "Visita de Merkel <a>dura</a> cerca de cinco horas e inclui encontros com Presidente, primeiro-ministro e empresários  http://t.co/rYUVjGaC",
+    "id": 87,
+    "created_at": "2012-11-09T18:28:13Z",
+    "topic_ids": [
+      10
+    ]
+  },
+  {
+    "text": "Merkel/visita: Programa <a>dura</a> cerca de cinco horas e inclui encontros com PR, PM e empresários http://t.co/sMXj2bfO",
+    "id": 88,
+    "created_at": "2012-11-09T18:13:13Z",
+    "topic_ids": [
+      10
+    ]
+  },
+  {
+    "text": "#visao Merkel/visita: Programa <a>dura</a> cerca de cinco horas e inclui encontros com PR, PM e… http://t.co/E0LDdrU3",
+    "id": 89,
+    "created_at": "2012-11-09T18:22:55Z",
+    "topic_ids": [
+      10
+    ]
+  },
+  {
+    "text": "#visao Merkel/visita: Programa <a>dura</a> cerca de cinco horas e inclui encontros com PR, PM e… http://t.co/fZDLiWnl",
+    "id": 90,
+    "created_at": "2012-11-09T18:23:02Z",
+    "topic_ids": [
+      10
+    ]
+  },
+  {
+    "text": "Programa da visita de Merkel <a>dura</a> cerca de cinco horas e inclui encontros com PR, PM e empresários  (http://t.co/U7dadInF)",
+    "id": 91,
+    "created_at": "2012-11-09T18:41:41Z",
+    "topic_ids": [
+      10
+    ]
+  },
+  {
+    "text": "Já Passos Coelho, depois do encontro amigo com Merkel, volta hoje à <a>dura</a> realidade de Bruxelas. Para a cimeira dos Países da Coesão.",
+    "id": 92,
+    "created_at": "2012-11-13T12:22:45Z",
+    "topic_ids": [
+      10
+    ]
+  },
+  {
+    "text": "Estou <a>indignado</a> com Merkel. Está a dizer <a>verdades</a>.",
+    "id": 93,
+    "created_at": "2012-11-07T15:48:11Z",
+    "topic_ids": [
+      11,
+      16
+    ]
+  },
+  {
+    "text": "Merkel já aterrou. Nilton fez <a>piada</a> do cheiro?",
+    "id": 94,
+    "created_at": "2012-11-12T11:53:08Z",
+    "topic_ids": [
+      12
+    ]
+  },
+  {
+    "text": "@omalestafeito e agora, só porque suspeito que vais achar <a>piada</a>, #Merkel no carnaval : http://t.co/a74SgGoJ",
+    "id": 95,
+    "created_at": "2012-11-12T14:39:10Z",
+    "topic_ids": [
+      12
+    ]
+  },
+  {
+    "text": "@Claratakedavasc so achei <a>piada</a> ao 'do merkel' sendo merkel uma mulher... Ahaha",
+    "id": 96,
+    "created_at": "2012-11-12T21:56:35Z",
+    "topic_ids": [
+      12
+    ]
+  },
+  {
+    "text": "<a>Piada</a> do dia by Merkel: \"A situação social em Portugal está óptima\".",
+    "id": 97,
+    "created_at": "2012-11-12T22:43:52Z",
+    "topic_ids": [
+      12
+    ]
+  },
+  {
+    "text": "O Nilton já fez mais alguma \"<a>piada</a>\" sobre a Merkel? A minha segunda feira não aguenta \"piadas\" do Nilton.",
+    "id": 98,
+    "created_at": "2012-11-12T18:46:11Z",
+    "topic_ids": [
+      12
+    ]
+  },
+  {
+    "text": "ia achar imensa <a>piada</a> se as pessoas que falam <a>mal</a> da Angela Merkel soubessem do que estão a falar!",
+    "id": 99,
+    "created_at": "2012-11-12T21:23:39Z",
+    "topic_ids": [
+      12,
+      3
+    ]
+  },
+  {
+    "text": "@bifeahcasa \"Vale e Azevedo foi detido em Londres e deverá chegar hoje a Lisboa.\" Só teria <a>piada</a> se viesse no mesmo avião da Merkel.",
+    "id": 100,
+    "created_at": "2012-11-12T08:27:11Z",
+    "topic_ids": [
+      12
+    ]
+  },
+  {
+    "text": "Ok, voltei a rir que nem perdido... A #Merkel a falar português é de <a>chorar</a> a rir...",
+    "id": 101,
+    "created_at": "2012-11-12T15:43:47Z",
+    "topic_ids": [
+      13
+    ]
+  },
+  {
+    "text": "LIMPAR OS OUVIDINHOS, SFF:\nPassos: \"Espero que Merkel seja sempre bem-vinda a Portugal\" porque ajudou o País a evitar a <a>bancarrota</a>",
+    "id": 102,
+    "created_at": "2012-11-07T19:18:09Z",
+    "topic_ids": [
+      15
+    ]
+  },
+  {
+    "text": "Vale e Azevedo chega finalmente a Portugal no dia em que Merkel veio de visita por causa da <a>bancarrota</a>.. há com cada ironia",
+    "id": 103,
+    "created_at": "2012-11-12T19:29:11Z",
+    "topic_ids": [
+      15
+    ]
+  },
+  {
+    "text": "giro giro era a senhora Merkel ouvir umas <a>verdades</a> dos estudantes universitários portugueses",
+    "id": 104,
+    "created_at": "2012-11-11T12:03:48Z",
+    "topic_ids": [
+      16
+    ]
+  },
+  {
+    "text": "#merkel Um artigo de opinião com as <a>verdades</a> ditas tal como elas são: Uma visita de cosmética ... http://t.co/9w5kSuIC",
+    "id": 105,
+    "created_at": "2012-11-12T23:35:08Z",
+    "topic_ids": [
+      16
+    ]
+  },
+  {
+    "text": "passos <a>agradece</a> a bondade de merkel",
+    "id": 106,
+    "created_at": "2012-11-12T15:27:24Z",
+    "topic_ids": [
+      18
+    ]
+  },
+  {
+    "text": "A isabel jonet <a>agradece</a> à merkel por ter dado aos tugas um novo tema de conversa.",
+    "id": 107,
+    "created_at": "2012-11-12T09:22:26Z",
+    "topic_ids": [
+      18
+    ]
+  },
+  {
+    "text": "Passos Coelho <a>agradece</a> a Merkel apoio dado a Portugal e sublinha caminho da austeridade http://t.co/iqqEEOHv",
+    "id": 108,
+    "created_at": "2012-11-12T17:09:57Z",
+    "topic_ids": [
+      18
+    ]
+  },
+  {
+    "text": "Passos Coelho <a>agradece</a> a Merkel apoio dado a Portugal e sublinha caminho da austeridade http://t.co/GQvXSiqB",
+    "id": 109,
+    "created_at": "2012-11-12T18:17:34Z",
+    "topic_ids": [
+      18
+    ]
+  },
+  {
+    "text": "António Portela: Era importante um <a>voto</a> de confiança adicional de Merkel http://t.co/u2G0xeHn",
+    "id": 110,
+    "created_at": "2012-11-12T16:20:07Z",
+    "topic_ids": [
+      19
+    ]
+  },
+  {
+    "text": "#Empresas António Portela: Era importante um <a>voto</a> de confiança adicional de Merkel http://t.co/SYYrjb0h",
+    "id": 111,
+    "created_at": "2012-11-12T16:19:23Z",
+    "topic_ids": [
+      19
+    ]
+  },
+  {
+    "text": "António Portela: Era importante um <a>voto</a> de confiança adicional de Merkel: O primeiro medicamento de investigação... http://t.co/ftJWomx3",
+    "id": 112,
+    "created_at": "2012-11-12T16:26:01Z",
+    "topic_ids": [
+      19
+    ]
+  },
+  {
+    "text": "Hoje fomos Todos Kadhafi! ... Já sabem o que aconteceu a Kadhafi ...CORAGEM! #Portugal #Merkel #<a>Franca</a> #Alemanha #UK #Espana #Itália #Grecia",
+    "id": 113,
+    "created_at": "2012-11-12T22:01:45Z",
+    "topic_ids": [
+      20
+    ]
+  },
+  {
+    "text": "a Merkel <a>gostava</a> de vestir como a Lagarde, acho que é isso",
+    "id": 114,
+    "created_at": "2012-11-11T20:56:37Z",
+    "topic_ids": [
+      21
+    ]
+  },
+  {
+    "text": "<a>Gostava</a> de ver a Merkel a pedir ao Gomes Ferreira para repetir a questão.",
+    "id": 115,
+    "created_at": "2012-11-12T16:00:19Z",
+    "topic_ids": [
+      21
+    ]
+  },
+  {
+    "text": "<a>Gostava</a> de saber qual vai ser o almoço da Merkel em Portugal. Deviamos dar-lhe Nestum...",
+    "id": 116,
+    "created_at": "2012-11-12T11:30:37Z",
+    "topic_ids": [
+      21
+    ]
+  },
+  {
+    "text": "<a>Gostava</a> de interpelar #Merkel sobre a crise e confrontá-la com a opinião dos prémios Nobel da economia  @TheProgressives @Hannes_Swoboda",
+    "id": 117,
+    "created_at": "2012-11-07T13:49:04Z",
+    "topic_ids": [
+      21
+    ]
+  },
+  {
+    "text": "Ok, já percebi, parem de falar da Merkel ! Acabei de jantar e <a>gostava</a> de não vomitar tudo.",
+    "id": 118,
+    "created_at": "2012-11-12T21:05:55Z",
+    "topic_ids": [
+      21
+    ]
+  },
+  {
+    "text": "boa entrevista até agora da isabel. <a>gostava</a> q perguntasse a merkel s vai pedir desculpa aos portugueses pelas mentiras q disse sobre eles",
+    "id": 119,
+    "created_at": "2012-11-11T20:58:14Z",
+    "topic_ids": [
+      21
+    ]
+  },
+  {
+    "text": "eu <a>gostava</a> de saber, mas quem é que teve o topete de convidar a Merkel? ou ela fez-se de convidada?",
+    "id": 120,
+    "created_at": "2012-11-12T23:56:05Z",
+    "topic_ids": [
+      21
+    ]
+  },
+  {
+    "text": "\"@fvicentedasilva: O cão do Obama e o cão da Merkel são portugueses! Viva o Bo e o Passos!\" <a>Brilhante</a>!",
+    "id": 121,
+    "created_at": "2012-11-07T17:50:22Z",
+    "topic_ids": [
+      24
+    ]
+  },
+  {
+    "text": "Antes da Merkel chegar,1 português gestor -que afinal era um químico <a>brilhante</a> na Secundária- ganha o prémio de melhor funcionário da Bayer.",
+    "id": 122,
+    "created_at": "2012-11-10T13:39:27Z",
+    "topic_ids": [
+      24
+    ]
+  },
+  {
+    "text": "Antes da Merkel chegar,um português gestor, que afinal era um químico <a>brilhante</a> na Secundária,ganha o prémio de melhor funcionário da Bayer.",
+    "id": 123,
+    "created_at": "2012-11-10T13:30:58Z",
+    "topic_ids": [
+      24
+    ]
+  },
+  {
+    "text": "Antes da Merkel chegarum português gestor -que afinal era um químico <a>brilhante</a> na Secundária- ganha o prémio de melhor funcionário da Bayer.",
+    "id": 124,
+    "created_at": "2012-11-10T13:33:44Z",
+    "topic_ids": [
+      24
+    ]
+  },
+  {
+    "text": "Angela Merkel veio a Portugal, pois alegou não querer morrer sem antes conhecer o Prior <a>Velho</a>.",
+    "id": 125,
+    "created_at": "2012-11-12T16:43:11Z",
+    "topic_ids": [
+      28
+    ]
+  },
+  {
+    "text": "& now..., a ver s Obama nos ajuda - <a>velho</a> continente - a <a>livrar</a> d Bashar al-Assad, ups...perdão, Angela Dorothea Merkel.",
+    "id": 126,
+    "created_at": "2012-11-07T09:27:37Z",
+    "topic_ids": [
+      28,
+      34
+    ]
+  },
+  {
+    "text": "Parece o <a>velho</a> costume do chefe da casa. Benfica ganha à cerveja e bifanas. Benfica perde bate na mulher. A Merkel tem o mesmo efeito.",
+    "id": 127,
+    "created_at": "2012-11-12T15:36:31Z",
+    "topic_ids": [
+      28
+    ]
+  },
+  {
+    "text": "na minha cidade ha mais mercedes que papo-<a>secos</a>...deve ser para equlibrar a balança de pagamentos com a srº Merkel",
+    "id": 128,
+    "created_at": "2012-11-07T22:50:36Z",
+    "topic_ids": [
+      29
+    ]
+  },
+  {
+    "text": "O sr. Macedo, chefe das polícias, está <a>preocupado</a> com a segurança da sra Merkel. Porque será?...",
+    "id": 129,
+    "created_at": "2012-11-07T15:22:17Z",
+    "topic_ids": [
+      30
+    ]
+  },
+  {
+    "text": "A Merkel começou hoje a seguir-me no twitter. Fico <a>preocupado</a> ?",
+    "id": 130,
+    "created_at": "2012-11-12T19:41:13Z",
+    "topic_ids": [
+      30
+    ]
+  },
+  {
+    "text": "Vejo toda a gente preocupada com os gastos da escolta da visita da Merkel mas ng <a>preocupado</a> com a escolta permanente do Soares...",
+    "id": 131,
+    "created_at": "2012-11-12T12:08:08Z",
+    "topic_ids": [
+      30
+    ]
+  },
+  {
+    "text": "Há espera de Merkel a sopa dos <a>pobres</a> http://t.co/edFgVjMJ",
+    "id": 132,
+    "created_at": "2012-11-10T22:17:08Z",
+    "topic_ids": [
+      31
+    ]
+  },
+  {
+    "text": "E também acho que o Bibi podia renegociar politicamente com a Merkel a permanência da Rainha dos <a>Pobres</a> no Banco.",
+    "id": 133,
+    "created_at": "2012-11-09T23:47:22Z",
+    "topic_ids": [
+      31
+    ]
+  },
+  {
+    "text": "Enquanto a Angela Merkel ca estive, escondam tudo o que tiverem de valor. Hoje somos todos muito <a>pobres</a>!!",
+    "id": 134,
+    "created_at": "2012-11-12T16:24:14Z",
+    "topic_ids": [
+      31
+    ]
+  },
+  {
+    "text": "A querida da Merkel em vez de ir almoçar rodeada de seguranças lá no Forte de São Julião podia ir almoçar junto com os <a>pobres</a>. #js",
+    "id": 135,
+    "created_at": "2012-11-12T15:40:03Z",
+    "topic_ids": [
+      31
+    ]
+  },
+  {
+    "text": "Padre Manuel Morujão pede que Merkel pense nos mais <a>pobres</a>: Porta-voz da Conferência Episcopal espera que vinda ... http://t.co/XpQ90WVl",
+    "id": 136,
+    "created_at": "2012-11-12T13:05:16Z",
+    "topic_ids": [
+      31
+    ]
+  },
+  {
+    "text": "Quando Merkel se for embora já não teremos os CTT, nem a ANA... tudo ao seu dispor para não se falar mais na EDP... e nós ficamos <a>pobres</a>…",
+    "id": 137,
+    "created_at": "2012-11-12T12:39:18Z",
+    "topic_ids": [
+      31
+    ]
+  },
+  {
+    "text": "<a>Merda</a>, nome comum, provém do latim \"merkel\"",
+    "id": 138,
+    "created_at": "2012-11-12T14:45:21Z",
+    "topic_ids": [
+      32
+    ]
+  },
+  {
+    "text": "@omalestafeito nem a <a>merda</a> do combóio parte por causa da <a>merda</a> da Merkel",
+    "id": 139,
+    "created_at": "2012-11-12T17:58:18Z",
+    "topic_ids": [
+      32,
+      32
+    ]
+  },
+  {
+    "text": "Incrível como a <a>merda</a> da notícia do regresso do Vale e Azevedo a Portugal se sobrepõe à <a>merda</a> da notícia da visita da Merkel ao país. #<a>merda</a>",
+    "id": 140,
+    "created_at": "2012-11-12T11:35:19Z",
+    "topic_ids": [
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "text": "@AfonsoFGarcia merkl, merkel. A <a>merda</a> é a mesma-",
+    "id": 141,
+    "created_at": "2012-11-12T11:37:41Z",
+    "topic_ids": [
+      32
+    ]
+  },
+  {
+    "text": "<a>Merda</a>…“@RogerioSantini: O k tera o Cavaco pra dizer a Merkel durante 35minutos?”",
+    "id": 142,
+    "created_at": "2012-11-12T12:25:40Z",
+    "topic_ids": [
+      32
+    ]
+  },
+  {
+    "text": "tanta <a>merda</a> por causa da Merkel que só cá esteve 5 horas (o que já foi demasiado tempo)...",
+    "id": 143,
+    "created_at": "2012-11-12T21:15:48Z",
+    "topic_ids": [
+      32
+    ]
+  },
+  {
+    "text": "\"@pach211: Sr. Passos Coelho durante as 6 horas da visita da chanceler Merkel vamos todos agradecer a <a>merda</a> que ela está a fazer na UE...\"",
+    "id": 144,
+    "created_at": "2012-11-07T20:10:09Z",
+    "topic_ids": [
+      32
+    ]
+  },
+  {
+    "text": "Ironia ou não, hoje sem querer em vez de Merkel, li \"<a>Merda</a> em Portugal.\" Verídico. Ri-me sozinha e depois percebi que até faz sentido.",
+    "id": 145,
+    "created_at": "2012-11-12T13:45:14Z",
+    "topic_ids": [
+      32
+    ]
+  },
+  {
+    "text": "En Portugal, ¿<a>luto</a> anti-Merkel? - Deutsche Welle Español http://t.co/2tkfoSxv #Portugal",
+    "id": 146,
+    "created_at": "2012-11-10T21:00:39Z",
+    "topic_ids": [
+      33
+    ]
+  },
+  {
+    "text": "Estendam a passadeira vermelha a Merkel, mas vistam-se de <a>luto</a> pelos Portugueses e por Portugal. #angelamerkel",
+    "id": 147,
+    "created_at": "2012-11-07T20:48:47Z",
+    "topic_ids": [
+      33
+    ]
+  },
+  {
+    "text": "Não vou dizer nomes mas há doidinhos que mudaram fotos de perfil no Facebook/Twitter para expressar <a>luto</a> pela vinda de Merkel.",
+    "id": 148,
+    "created_at": "2012-11-08T20:17:51Z",
+    "topic_ids": [
+      33
+    ]
+  },
+  {
+    "text": "s querem <a>livrar</a>-se da merkel, em vez d lhe mostrar panos pretos, dêem-lhe chouriças e farinheira, q é ela é uma espécie de 'bubu de berlim'",
+    "id": 149,
+    "created_at": "2012-11-06T16:15:36Z",
+    "topic_ids": [
+      34
+    ]
+  },
+  {
+    "text": "Merkel, sobre Portugal: “Hace falta tiempo para que las medidas resulten”  http://t.co/DRrXkZbv un <a>insulto</a> a la inteligencia",
+    "id": 150,
+    "created_at": "2012-11-12T13:22:24Z",
+    "topic_ids": [
+      35
+    ]
+  },
+  {
+    "text": "A pensar que é um <a>insulto</a> os milhares de euros gastos na segurança da #Merkel... Ela só cá fica meia dúzia de horas...",
+    "id": 151,
+    "created_at": "2012-11-12T15:26:20Z",
+    "topic_ids": [
+      35
+    ]
+  },
+  {
+    "text": "@ExpressoOnline <a>Fora</a> Merkel.",
+    "id": 152,
+    "created_at": "2012-11-10T16:30:57Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "MERKEL <a>FORA</a> DAQUIIIIIIIIIII  !!!!!!!!!!!!!!1",
+    "id": 153,
+    "created_at": "2012-11-12T15:40:23Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "<a>Fora</a> de campo - Merkel: «Portugal cumpriu muito bem os compromissos» http://t.co/pcLlLwLU",
+    "id": 154,
+    "created_at": "2012-11-11T21:51:31Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Merkel vestida baseado num ovo kinder invertido, preto por dentro branco por <a>fora</a>",
+    "id": 155,
+    "created_at": "2012-11-12T16:07:31Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "<a>Fora</a> de campo - Merkel reforça necessidade de \"\"orçamentos sólidos\" http://t.co/i3dPe3Xv",
+    "id": 156,
+    "created_at": "2012-11-12T16:56:16Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Merkel deixa Belém. Vai para o Forte São Julião da Barra. \nMuitos manifestantes lá <a>fora</a>...",
+    "id": 157,
+    "created_at": "2012-11-12T13:23:59Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Do Lado de <a>fora</a> do ccb parece que estamos numa cidade fantasma..#merkel",
+    "id": 158,
+    "created_at": "2012-11-12T10:51:44Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "<a>Fora</a> de campo - Merkel: «Povo sente impacto das medidas» http://t.co/fZ8gZdmm",
+    "id": 159,
+    "created_at": "2012-11-12T19:21:15Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "A Merkel já chegou e continua um bonito dia de sol lá <a>fora</a>...",
+    "id": 160,
+    "created_at": "2012-11-12T12:21:10Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "<a>Fora</a> de campo - Angela Merkel já está em Portugal http://t.co/OdV7Ofj3",
+    "id": 161,
+    "created_at": "2012-11-12T12:01:15Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Merkel recomenda Portugal a buscar mercados <a>fora</a> da Europa - Jornal do Brasil http://t.co/wGIvWcoS",
+    "id": 162,
+    "created_at": "2012-11-12T20:49:51Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "@manuelparreira @JLMpt A Merkel assume o roll over, presumo. Os Fundos de Pensões euorpeus saltam todos <a>fora</a> mas pronto",
+    "id": 163,
+    "created_at": "2012-11-07T22:17:56Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Desporto - <a>Fora</a> de campo:  Merkel: «Portugal cumpriu muito bem os compromissos»: A chanceler Angela Merkel afirm... http://t.co/0BpORlTP",
+    "id": 164,
+    "created_at": "2012-11-11T22:16:49Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "A Merkel é mesmo <a>fora</a>-de-série. Até conseguiu encontrar o CAVACO! Ãhn?? Estes alemães, não brincam.",
+    "id": 165,
+    "created_at": "2012-11-12T13:26:03Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "@L_Ervalho Também eu :))) A Merkel chega amanhã e vai estar cá mais ou menos 5h (não há um bonequinho a dentar a lingua de <a>fora</a>?)Beahhh!!",
+    "id": 166,
+    "created_at": "2012-11-12T00:42:20Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Q se lixe a #troika #governo #Merkel ponham-se todos na alheta, daqui p <a>fora</a>. Posta a minha indignação, tudo a postos p um #PES12",
+    "id": 167,
+    "created_at": "2012-11-12T15:29:28Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Portugueses lembram Merkel de que NÃO MANDA em Portugal: É a notícia que se ouve lá <a>fora</a>: os portugueses uniram-... http://t.co/V8RFnbt5",
+    "id": 168,
+    "created_at": "2012-11-12T17:51:40Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "@sandriinaalves a merkel estava no ccb. E isto lá <a>fora</a> parecia o carnaval de torres/são martinho. Mascarados, fogueira para assar castanhas",
+    "id": 169,
+    "created_at": "2012-11-12T18:16:02Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Desporto - Fotos - <a>Fora</a> de campo:  Manifestações marcaram visita de Merkel: Record Online é o site do Record, ór... http://t.co/AJR8aQd9",
+    "id": 170,
+    "created_at": "2012-11-12T20:03:09Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "#merkel carrinhas pretas chegam ao Palácio e uma centena de pessoas assobiam e gritam: \"a polícia está cá <a>fora</a> e os ladrões estão lá dentro\"",
+    "id": 171,
+    "created_at": "2012-11-12T12:25:07Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Num blogue perto de si: A chancelerina\nMerkel em Lisboa: nove <a>fora</a> nada, Luis Salgado de Matos, em O Economista ... http://t.co/Jfm0B6Rg",
+    "id": 172,
+    "created_at": "2012-11-13T09:10:57Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "Num blogue perto de si: A chancelerina\nMerkel em Lisboa: nove <a>fora</a> nada, Luis Salgado de Matos, em O Economista ... http://t.co/GBTlAXxb",
+    "id": 173,
+    "created_at": "2012-11-13T09:10:57Z",
+    "topic_ids": [
+      36
+    ]
+  },
+  {
+    "text": "odeio a angela merkel - fascista <a>assassina</a> hitleriana",
+    "id": 174,
+    "created_at": "2012-11-12T20:11:33Z",
+    "topic_ids": [
+      38
+    ]
+  },
+  {
+    "text": "#EUROPE must #Help Grecks fast.........#GREECE in #CIVIL #WAR, #MERKEL #EU #<a>USA</a> #BARROSO #DRAGHI",
+    "id": 175,
+    "created_at": "2012-11-07T21:35:08Z",
+    "topic_ids": [
+      39
+    ]
+  },
+  {
+    "text": "@ArturAnjos enquanto a Merkel aqui estive <a>usa</a> copinho, depois podes deixar a água a correr!",
+    "id": 176,
+    "created_at": "2012-11-12T10:17:30Z",
+    "topic_ids": [
+      39
+    ]
+  },
+  {
+    "text": "Mostraram uma reportagem sobre o vestuário da Angela Merkel e ela tem casacos de todos os tons possíveis e imaginários e só <a>usa</a> aquilo.",
+    "id": 177,
+    "created_at": "2012-11-11T12:10:43Z",
+    "topic_ids": [
+      39
+    ]
+  },
+  {
+    "text": "Rindo muito com o sorriso <a>parvo</a> do Cavaco para a Merkel. LOL",
+    "id": 178,
+    "created_at": "2012-11-12T13:04:20Z",
+    "topic_ids": [
+      40
+    ]
+  }
+],"trends":[
+  {
+    "timestamp": "2012-11-07T00:00:00Z",
+    "value": 5
+  },
+  {
+    "timestamp": "2012-11-07T01:00:00Z",
+    "value": 2
+  },
+  {
+    "timestamp": "2012-11-07T02:00:00Z",
+    "value": 0
+  },
+  {
+    "timestamp": "2012-11-07T03:00:00Z",
+    "value": 3
+  },
+  {
+    "timestamp": "2012-11-07T04:00:00Z",
+    "value": 1
+  },
+  {
+    "timestamp": "2012-11-07T05:00:00Z",
+    "value": 0
+  },
+  {
+    "timestamp": "2012-11-07T06:00:00Z",
+    "value": 0
+  },
+  {
+    "timestamp": "2012-11-07T07:00:00Z",
+    "value": 1
+  },
+  {
+    "timestamp": "2012-11-07T08:00:00Z",
+    "value": 14
+  },
+  {
+    "timestamp": "2012-11-07T09:00:00Z",
+    "value": 21
+  },
+  {
+    "timestamp": "2012-11-07T10:00:00Z",
+    "value": 7
+  },
+  {
+    "timestamp": "2012-11-07T11:00:00Z",
+    "value": 4
+  },
+  {
+    "timestamp": "2012-11-07T12:00:00Z",
+    "value": 7
+  },
+  {
+    "timestamp": "2012-11-07T13:00:00Z",
+    "value": 8
+  },
+  {
+    "timestamp": "2012-11-07T14:00:00Z",
+    "value": 5
+  },
+  {
+    "timestamp": "2012-11-07T15:00:00Z",
+    "value": 25
+  },
+  {
+    "timestamp": "2012-11-07T16:00:00Z",
+    "value": 16
+  },
+  {
+    "timestamp": "2012-11-07T17:00:00Z",
+    "value": 19
+  },
+  {
+    "timestamp": "2012-11-07T18:00:00Z",
+    "value": 4
+  },
+  {
+    "timestamp": "2012-11-07T19:00:00Z",
+    "value": 29
+  },
+  {
+    "timestamp": "2012-11-07T20:00:00Z",
+    "value": 53
+  },
+  {
+    "timestamp": "2012-11-07T21:00:00Z",
+    "value": 11
+  },
+  {
+    "timestamp": "2012-11-07T22:00:00Z",
+    "value": 7
+  },
+  {
+    "timestamp": "2012-11-07T23:00:00Z",
+    "value": 2
+  }
+]}

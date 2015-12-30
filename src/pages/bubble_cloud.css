@@ -1,0 +1,149 @@
+#g-chart {
+  overflow: hidden;
+  position: relative;
+  width: 512px;
+  height: 512px;
+  border: 1px dotted #666;
+  margin: 20px 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#g-footer {
+  border-top: 1px dotted #666;
+  text-align: right;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+/* Color palette: http://www.colourlovers.com/palette/1098589/coup_de_grâce */
+.g-node {
+  fill: #FECEA8;
+}
+
+.g-node.g-hover.positive {
+  fill: #99B898;
+}
+
+.g-node.g-hover.negative {
+  fill: #FF847C;
+}
+
+.g-node.g-selected.positive {
+  fill: #99B898;
+}
+.g-node.g-selected.negative {
+  fill: #FF847C;
+}
+
+a.g-label {
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1em;
+  position: absolute;
+}
+
+.g-label .g-value {
+  font: 11px sans-serif;
+  white-space: nowrap;
+}
+
+.g-overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.g-mentions {
+  display: inline-block;
+  width: 50%;
+  min-height: 370px;
+  overflow: hidden;
+}
+
+.g-mentions.left {
+  float: left;
+}
+
+.g-mentions.right {
+  float: right;
+}
+
+.g-mention {
+  padding: 10px 20px;
+}
+
+.g-mention p.date {
+  color: #aaa;
+  font-size: 10px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.g-mention p.mention {
+  line-height: 22px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.g-mention p.mention:before,
+.g-mention p.mention:after {
+  color: #ddd;
+  font-size: 36px;
+  font-family: sans-serif;
+  position: absolute;
+}
+
+.g-mention p.mention:before {
+  content: "“";
+  margin: .25em 0 0 -20px;
+}
+
+.g-mention p.mention:after {
+  content: "”";
+  margin: .25em 0 0 0.1em;
+}
+
+.g-mention a {
+  border-bottom: 2px solid transparent;
+  color: #000;
+  text-decoration: none;
+  padding: 1px;
+}
+
+.g-mention a.positive {
+  border-color: #99B898;
+}
+
+.g-mention a.negative {
+  border-color: #FF847C;
+}
+
+.g-mention a.g-hover,
+.g-mention a.active {
+  border-radius: 2px;
+}
+
+.g-mention a.positive.g-hover {
+  background-color: #99B898;
+}
+
+.g-mention a.negative.g-hover {
+  background-color: #FF847C;
+}
+
+.g-mention a.positive.active {
+  background-color: #99B898;
+}
+
+.g-mention a.negative.active {
+  background-color: #FF847C;
+}
+
+
+#trendline-tooltip {
+  line-height: 20px;
+  color: #444;
+  font-size: 80%;
+}

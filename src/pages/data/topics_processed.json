@@ -1,0 +1,394 @@
+[
+  {
+    "name": "gamar",
+    "count": 27,
+    "forms": "game",
+    "sentiment": "negative",
+    "id": 0,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "usar",
+    "count": 24,
+    "forms": "Use",
+    "sentiment": "negative",
+    "id": 1,
+    "comment_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "name": "direto",
+    "count": 17,
+    "forms": "direto",
+    "sentiment": "positive",
+    "id": 2,
+    "comment_ids": [
+      12,
+      13,
+      14
+    ]
+  },
+  {
+    "name": "directo",
+    "count": 10,
+    "forms": "directo",
+    "sentiment": "positive",
+    "id": 3,
+    "comment_ids": [
+      15,
+      16
+    ]
+  },
+  {
+    "name": "interessante",
+    "count": 8,
+    "forms": "interessante",
+    "sentiment": "positive",
+    "id": 4,
+    "comment_ids": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ]
+  },
+  {
+    "name": "lindo",
+    "count": 7,
+    "forms": "lindo",
+    "sentiment": "positive",
+    "id": 5,
+    "comment_ids": [
+      19,
+      23,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "name": "mudo",
+    "count": 7,
+    "forms": "muda",
+    "sentiment": "negative",
+    "id": 6,
+    "comment_ids": [
+      28
+    ]
+  },
+  {
+    "name": "aberto",
+    "count": 6,
+    "forms": "Aberto",
+    "sentiment": "positive",
+    "id": 7,
+    "comment_ids": [
+      29,
+      30,
+      31,
+      32,
+      33
+    ]
+  },
+  {
+    "name": "medo",
+    "count": 6,
+    "forms": "medo",
+    "sentiment": "negative",
+    "id": 8,
+    "comment_ids": [
+      34
+    ]
+  },
+  {
+    "name": "perder",
+    "count": 6,
+    "forms": "perder",
+    "sentiment": "negative",
+    "id": 9,
+    "comment_ids": [
+      35,
+      36
+    ]
+  },
+  {
+    "name": "macareno",
+    "count": 5,
+    "forms": "Macarena",
+    "sentiment": "negative",
+    "id": 10,
+    "comment_ids": [
+      26,
+      37,
+      38,
+      39
+    ]
+  },
+  {
+    "name": "certo",
+    "count": 4,
+    "forms": "certo",
+    "sentiment": "positive",
+    "id": 11,
+    "comment_ids": [
+      27,
+      40
+    ]
+  },
+  {
+    "name": "acreditar",
+    "count": 4,
+    "forms": "Acredito",
+    "sentiment": "positive",
+    "id": 12,
+    "comment_ids": [
+      21,
+      41
+    ]
+  },
+  {
+    "name": "promissor",
+    "count": 3,
+    "forms": "promissores",
+    "sentiment": "positive",
+    "id": 13,
+    "comment_ids": [
+      42
+    ]
+  },
+  {
+    "name": "fora",
+    "count": 3,
+    "forms": "fora",
+    "sentiment": "negative",
+    "id": 14,
+    "comment_ids": [
+      43,
+      44,
+      45
+    ]
+  },
+  {
+    "name": "problema",
+    "count": 3,
+    "forms": "problemas",
+    "sentiment": "negative",
+    "id": 15,
+    "comment_ids": [
+      46,
+      47
+    ]
+  },
+  {
+    "name": "vender-se",
+    "count": 3,
+    "forms": "venda",
+    "sentiment": "negative",
+    "id": 16,
+    "comment_ids": [
+      48,
+      49
+    ]
+  },
+  {
+    "name": "gostar",
+    "count": 3,
+    "forms": "gosto",
+    "sentiment": "positive",
+    "id": 17,
+    "comment_ids": [
+      50
+    ]
+  },
+  {
+    "name": "atento",
+    "count": 3,
+    "forms": "atentos",
+    "sentiment": "positive",
+    "id": 18,
+    "comment_ids": [
+      51
+    ]
+  },
+  {
+    "name": "criatividade",
+    "count": 2,
+    "forms": "criatividade",
+    "sentiment": "positive",
+    "id": 19,
+    "comment_ids": [
+      52
+    ]
+  },
+  {
+    "name": "salvar",
+    "count": 2,
+    "forms": "salvou",
+    "sentiment": "positive",
+    "id": 20,
+    "comment_ids": [
+      53
+    ]
+  },
+  {
+    "name": "feliz",
+    "count": 2,
+    "forms": "feliz",
+    "sentiment": "positive",
+    "id": 21,
+    "comment_ids": [
+      54
+    ]
+  },
+  {
+    "name": "perfeito",
+    "count": 2,
+    "forms": "Perfeito",
+    "sentiment": "positive",
+    "id": 22,
+    "comment_ids": [
+      55,
+      56
+    ]
+  },
+  {
+    "name": "agradecer",
+    "count": 2,
+    "forms": "agradece",
+    "sentiment": "positive",
+    "id": 23,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "caridoso",
+    "count": 2,
+    "forms": "caridosa",
+    "sentiment": "positive",
+    "id": 24,
+    "comment_ids": [
+      57
+    ]
+  },
+  {
+    "name": "safar-se",
+    "count": 2,
+    "forms": "safe",
+    "sentiment": "positive",
+    "id": 25,
+    "comment_ids": [
+      58
+    ]
+  },
+  {
+    "name": "pior",
+    "count": 2,
+    "forms": "pior",
+    "sentiment": "negative",
+    "id": 26,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "mal",
+    "count": 2,
+    "forms": "mal",
+    "sentiment": "negative",
+    "id": 27,
+    "comment_ids": [
+      59
+    ]
+  },
+  {
+    "name": "falta",
+    "count": 2,
+    "forms": "falta",
+    "sentiment": "negative",
+    "id": 28,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "chorar",
+    "count": 2,
+    "forms": "chorei",
+    "sentiment": "negative",
+    "id": 29,
+    "comment_ids": [
+
+    ]
+  },
+  {
+    "name": "brutal",
+    "count": 2,
+    "forms": "brutal",
+    "sentiment": "negative",
+    "id": 30,
+    "comment_ids": [
+      60,
+      61
+    ]
+  },
+  {
+    "name": "brincar",
+    "count": 2,
+    "forms": "brincar",
+    "sentiment": "negative",
+    "id": 31,
+    "comment_ids": [
+      62,
+      63
+    ]
+  },
+  {
+    "name": "aproveitar-se",
+    "count": 2,
+    "forms": "aproveitar",
+    "sentiment": "negative",
+    "id": 32,
+    "comment_ids": [
+      64
+    ]
+  },
+  {
+    "name": "erro",
+    "count": 2,
+    "forms": "Erro",
+    "sentiment": "negative",
+    "id": 33,
+    "comment_ids": [
+      65,
+      66
+    ]
+  },
+  {
+    "name": "apanhado",
+    "count": 2,
+    "forms": "Apanhado",
+    "sentiment": "negative",
+    "id": 34,
+    "comment_ids": [
+      67
+    ]
+  }
+]

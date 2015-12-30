@@ -1,0 +1,1068 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head><title>
+	Passos Coelho pôs as redes sociais a ferver - Tecnologia - PUBLICO.PT
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="googlebot" content="noarchive" /><link rel="stylesheet" href="http://static.publico.pt/files/home/css/blueprint.css" type="text/css" /><link rel="stylesheet" href="http://static.publico.pt/files/home/css/headerHome.css" type="text/css" /><link rel="stylesheet" href="http://static.publico.pt/files/home/css/style.css" type="text/css" /><link rel="stylesheet" href="http://static.publico.pt/files/home/css/style-alteracoes.css" type="text/css" /><link rel="stylesheet" href="http://static.publico.pt/files/home/css/caixaServicos.css" type="text/css" /><link rel="stylesheet" href="http://static.publico.pt/files/home/css/jquery.fancybox.css" type="text/css" /><link rel="stylesheet" href="http://static.publico.pt/files/home/css/style-numero.css" type="text/css" /><link rel="stylesheet" href="http://static.publico.pt/files/home/css/15anosOnline.css" type="text/css" />
+	<!--[if lt IE 7]><link rel="stylesheet" href="http://static.publico.pt/files/home/css/style_ie.css" type="text/css" /><![endif]-->
+    <link rel="stylesheet" href="http://static.publico.pt/files/home/css/style_print.css" type="text/css" media="print" />
+
+
+
+
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">
+        GS_googleAddAdSenseService("ca-pub-3828975654388241");
+        GS_googleEnableAllServices();
+    </script>
+
+    <script type='text/javascript' src='http://comunique.clix.pt/dfpsb/PublicoUltimaHora.js'></script>
+
+
+
+    <script type="text/javascript">
+        function getPub() {
+            //ord = Math.random() * 10000000000000000;
+            //document.write('<script language="JavaScript" src="http://ad.pt.doubleclick.net/adj/ppt_ulthora/;dcopt=ist;sz=10x10;ord=' + ord + '?" type="text/javascript"><\/script>');
+            try { Comunique.tag("PublicoUltimaHora10x10"); } catch (e) { }
+        }
+
+        function setCounter(id, Origin, type, section, title) {
+            var ord = Math.random() * 10000000000000000;
+            if (!isNaN(id)) {
+                if (!document.getElementById("statPic")) {
+                    var pic1 = new Image(1, 1);
+                    pic1.id = "statPic";
+                } else {
+                    var pic1 = document.getElementById("statPic");
+                }
+                var params = "&id=" + id + "&Origin=" + Origin + "&type=" + type + "&section=" + section + "&title=" + title + "&url=" + escape(document.location.href) + "&ord=" + ord;
+                pic1.src = "http://www.publico.pt/includes/lib/statistics.aspx?" + params;
+            }
+        }
+
+        var doReload = true;
+        var timerRefresh = setTimeout("go()", 300000);
+
+        function go() {
+            if (doReload)
+                document.location.reload();
+        }
+    </script>
+    <script src="http://data.publico.pt/?loadCss=0&newWays=1&loadScript=jquery.jcarousel.min,jquery.scrollTo-1.4.2-min,jquery.serialScroll-1.2.2-min,MeteoHP,jquery.fancybox-1.2.1.min,jquery.inputlabel.min,Comentarios,Utils,News,Login,jQuery.color.min,Tops" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/Scripts/jquery.shadow.js"></script>
+    <link rel="alternate" href="http://feeds.feedburner.com/Publicotecnologia" type="application/rss+xml" title="Notícias de Tecnologia do PUBLICO.PT" />
+    <style type="text/css">
+        #fancy_frame
+        {
+            height: 420px !important;
+        }
+    </style>
+    <script type="text/javascript">
+        var maisNoticiasCounter = false;
+        var addthis_exclude = 'print,email';
+        var addthis_config = {
+            ui_language: "pt"
+        }
+        tw_pageSize = 5;
+        tw_alwaysShowPager = false;
+        tw_useNextPrev = true;
+        var tw_conf_id = "publico";
+        var tw_language = "portuguese";
+        var videoHeight = 378;
+
+        $(document).ready(function () {
+            $(".multi-photo ul li").eq(1).addClass("on");
+            $(".multi-photo ul li a").click(function () {
+                var imgID = parseInt(this.innerHTML);
+                if (isNaN(imgID)) {
+                    if ($(this).attr("title") == "Seguinte") {
+                        if (parseInt($(".multi-photo ul li.on a").html()) < $(".multi-photo ul li").length - 2)
+                            $(".multi-photo ul li a").eq(parseInt($(".multi-photo ul li.on a").html()) + 1).click();
+                        else
+                            $(".multi-photo ul li a").eq(1).click();
+                    } else {
+                        if (parseInt($(".multi-photo ul li.on a").html()) == 1)
+                            $(".multi-photo ul li a").eq($(".multi-photo ul li a").length - 2).click();
+                        else
+                            $(".multi-photo ul li a").eq(parseInt($(".multi-photo ul li.on a").html()) - 1).click();
+                    }
+                    return;
+                }
+
+                $(".multi-photo img:first").attr("src", this.href);
+                $(".multi-photo span:first").html($(this).attr("alt"));
+                $(".multi-photo ul li.on").removeClass("on");
+                $(this).parent().addClass("on");
+                //doPageCount("GALERIA_NOTICIA");
+                return false;
+            })
+
+            var activar = false;
+            var maisNoticiasPub = false;
+
+            function setNoticiasPub() {
+                if (maisNoticiasPub) return;
+
+                maisNoticiasPub = true;
+                //var ord = Math.random() * 10000000000000000;
+                //$('#pubOnDemand').attr('src', 'http://ad.doubleclick.net/adi/ppt_bolsa/;sz=380x40;ord=' + ord + '?');
+                $('#maisNoticiasDestaSeccao').addClass('pub');
+                $('#maisNoticiasDestaSeccao div.pub').fadeIn();
+            }
+
+            $(window).bind('scroll', function () {
+                var totalHeight = $("#main-content .options").position().top - $(window).height(); // $("#main-content").height();
+                if ($(this).scrollTop() > totalHeight && activar == false) {
+                    setNoticiasPub();
+                    if (maisNoticiasCounter == false)
+                        try { CountViewFromMaisNoticia() } catch (e) { };
+                    mostraMaisNoticiasFooter();
+                } else if ($(this).scrollTop() < totalHeight && activar == true) {
+                    escondeMaisNoticiasFooter();
+                }
+            });
+
+            function escondeMaisNoticiasFooter() {
+                $("#maisNoticiasDestaSeccao").animate({ "right": "-400px" }, 500);
+                activar = false;
+            }
+            function mostraMaisNoticiasFooter() {
+                $("#maisNoticiasDestaSeccao").animate({ "right": "0px" }, 500);
+                activar = true;
+            }
+            function desactivaMaisNoticiasFooter() {
+                $("#maisNoticiasDestaSeccao").animate({ "right": "-400px" }, 500);
+                $(window).unbind('scroll');
+            }
+
+            $("#maisNoticiasDestaSeccao > a.close").click(desactivaMaisNoticiasFooter);
+        });
+    </script>
+    <script type="text/javascript" language="javascript" src="http://www2.twingly.com/scripts/widget/twingly.widget.1.2.2.pack.js"></script>
+    <link href="http://static.publico.pt/files/home/css/twingly.css" rel="stylesheet" type="text/css" />
+
+        <meta property="og:image" content="http://imagens.publico.pt/imagens.aspx/713694?tp=UH&amp;db=IMAGENS&amp;w=350&t=1347896586,7313"/>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Passos Coelho p&#244;s as redes sociais a ferver" />
+        <meta property="og:description" content="Na sexta-feira, quando Passos Coelho anunciou as novas medidas de austeridade, o n&#250;mero total de tweets superou a m&#233;dia di&#225;ria. Foram 31.400 as mensagens partilhadas no Twitter por utilizadores portugueses. Durante o fim-de-semana a discuss&#227;o manteve-se." />
+        <meta property="og:url" content="http://publico.pt/1562316" />
+    </head>
+<body>
+
+
+
+
+<script type="text/javascript">
+
+    Comunique.setSection('Tecnologia');
+
+</script>
+
+
+    <div style="margin: 0 auto; width: 990px;text-align:center;">
+        <div>
+        <script type="text/javascript">
+            //ord=Math.random()*10000000000000000;
+            //document.write('<script language="JavaScript" src="http://ad.pt.doubleclick.net/adj/publicohome/;dcopt=ist;sz=990x20;ord=' + ord + '?" type="text/javascript"><\/script>');
+            try { Comunique.tag("PublicoUltimaHora990x20"); } catch (e) { }
+        </script>
+        </div>
+        <div style="width:728px;margin:0 auto;">
+        <script language="JavaScript" type="text/javascript">
+            //ord=Math.random()*10000000000000000;
+            //document.write('<script language="JavaScript" src="http://ad.pt.doubleclick.net/adj/ppt_ulthora/Seccao_4870;dcopt=ist;sz=728x90;ord=' + ord + '?" type="text/javascript"><\/script>');
+            try { Comunique.tag("PublicoUltimaHora728x90"); } catch (e) { }
+        </script>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+    var hideMenu;
+    $(document).ready(function() {
+        $("#subMenu-float").hide();
+
+        $("#More").hover(function() {
+            $("#subMenu-float").show('fast');
+            $("#More").parent().removeClass().addClass("item on red");
+        }, function() {
+            hideMenu = setTimeout('hideContent()', 100);
+            $("#More").parent().removeClass().addClass("item red");
+        });
+
+        $("#subMenu-float").hover(function() {
+            try {
+                clearTimeout(hideMenu);
+                $("#More").parent().removeClass().addClass("item on red");
+            } catch (e) { }
+        }, function() {
+            $("#subMenu-float").hide('fast');
+            $("#More").parent().removeClass().addClass("item red");
+        });
+    });
+
+    function hideContent() {
+        $("#subMenu-float").hide('fast');
+    }
+</script>
+<div class="pptHeader">
+    <div class="pubTextual">
+        <script type="text/javascript">
+
+			try { Comunique.tag("PublicoEconomia10x10"); } catch (e) { }
+			try { Comunique.tag("PublicoHomepage10x10"); } catch (e) { }
+			try { Comunique.tag("PublicoUltimaHora10x10"); } catch (e) { }
+			try { Comunique.tag("PublicoJornal10x10"); } catch (e) { }
+        </script>
+    </div>
+    <div class="weather">
+        <ul>
+            <li>17 de Setembro de 2012</li>
+
+
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="topBar">
+        <div class="left">
+            <ul>
+                            <li class="item"><a target="_blank" href="http://lifestyle.publico.pt/">Life&Style</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://fugas.publico.pt/">Fugas</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://ipsilon.publico.pt">Ípsilon</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://lazer.publico.pt/">Guia do lazer</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://cinecartaz.publico.pt">Cinecartaz</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://inimigo.publico.pt">Inimigo Público</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://p3.publico.pt/">P3</a></li>
+                            <li class="spaceBar">|</li>
+
+            </ul>
+        </div>
+
+
+<div class="right">
+    <ul class="header-follow">
+      <li class="siga-nos">Siga-nos:</li>
+      <li class="facebook"><a href="http://www.facebook.com/publico" title="O Público no Facebook">Facebook</a></li>
+      <li class="twitter"><a href="http://www.twitter.com/publico" title="O Público no Twitter">Twitter</a></li>
+      <li class="rss"><a href="http://www.publico.pt/homepage/site/rss/" title="Feeds RSS do Público">RSS</a></li>
+      <li class="mobile"><a href="http://static.publico.pt/digital/publico-mobile.php" title="O Público mobile">Mobile</a></li>
+      <li class="iphone"><a href="http://static.publico.pt/digital/publico-iphone.php" title="O Público no iPhone">iPhone</a></li>
+    </ul>
+    <div class="formHeader">
+      <input type="text" id="searchBox" value="Pesquisa" class="text">
+      <input type="button" onclick="document.location = 'http://www.publico.pt/Search/1/?q=' + document.getElementById('searchBox').value;" value=" ok " class="button">
+    </div>
+</div>
+
+<!--        <div class="right">
+            <ul>
+                <li class="formHeader">
+                    <input type="text" class="text" value="Pesquisa" id="searchBox" />
+                    <input type="button" class="button" value=" ok " onclick="document.location = 'http://www.publico.pt/Search/1/?q=' + document.getElementById('searchBox').value;" />
+                </li>
+                <li class="spaceBar">|</li>
+                <li class="item"><a target="_self" href="http://static.publico.pt/digital/publico-iphone.php"><img src="http://static.publico.pt/files/home/images/icon-apple.gif" width="14" height="10" alt="Iphone" title="Iphone" /></a></li>
+                <li class="spaceBar">|</li>
+                <li class="item"><a target="_self" href="http://static.publico.pt/digital/publico-mobile.php"><img src="http://static.publico.pt/files/home/images/icon-mobile.gif" width="14" height="10" alt="Mobile" title="Mobile" /></a></li>
+                <li class="spaceBar">|</li>
+                <li class="item"><a target="_self" href="http://www.publico.pt/homepage/site/rss/"><img src="http://static.publico.pt/files/home/images/icon-rss.gif" width="14" height="10" alt="RSS" title="RSS" /></a></li>
+                <li class="spaceBar">|</li>
+                <li class="item"><a target="_self" href="http://www.twitter.com/publico"><img src="http://static.publico.pt/files/home/images/icon-twitter.png" width="14" height="10" alt="Twitter" title="Twitter" /></a></li>
+                <li class="spaceBar">|</li>
+                <li class="item"><a target="_self" href="http://www.facebook.com/publico"><img src="http://static.publico.pt/files/home/images/icon-facebook.gif" width="14" height="10" alt="Facebook" title="Facebook" /></a></li>
+                <li class="item siga-nos">Siga-nos em:</li>
+            </ul>
+        </div>
+        -->
+        <div class="clear"></div>
+    </div>
+
+    <div class="mainBar">
+        <div class="logo"><a href="http://www.publico.pt"><img src="http://static.publico.pt/files/header/img/publico.png" border="0" alt="" /></a></div>
+        <div class="topStories">
+            <ul>
+                            <li class="img3"><a href="http://www.publico.pt/Media/publico-bate-recorde-de-pageviews-a-menos-de-um-mes-do-lancamento-do-novo-site-1562926"><img src="http://imagens.publico.pt/imagens.aspx/1469482?tp=UH&amp;db=DESTAQUES" border="0" alt="" /></a></li><li class="textBox"><div class="alignBottom"><div class="title edImpressa"><a href="http://www.publico.pt/Media/publico-bate-recorde-de-pageviews-a-menos-de-um-mes-do-lancamento-do-novo-site-1562926">Vem aí o novo site</a></div><div class="text">PÚBLICO bate recorde de <i>pageviews</i></div></div></li>
+
+                            <li class="img3"><a href="http://lifestyle.publico.pt/artigos/310334_as-ruas-de-nova-iorque-sao-uma-passerelle"><img src="http://imagens.publico.pt/imagens.aspx/1469714?tp=UH&amp;db=DESTAQUES" border="0" alt="" /></a></li><li class="textBox"><div class="alignBottom"><div class="title edImpressa"><a href="http://lifestyle.publico.pt/artigos/310334_as-ruas-de-nova-iorque-sao-uma-passerelle">Moda</a></div><div class="text">As ruas de Nova Iorque são uma passerelle</div></div></li>
+
+                            <li class="img3"><a href="http://p3.publico.pt/actualidade/economia/4590/milhares-nas-ruas-para-resgatar-vidas-perdidas"><img src="http://imagens.publico.pt/imagens.aspx/1469617?tp=UH&amp;db=DESTAQUES" border="0" alt="" /></a></li><li class="textBox"><div class="alignBottom"><div class="title edImpressa"><a href="http://p3.publico.pt/actualidade/economia/4590/milhares-nas-ruas-para-resgatar-vidas-perdidas">Instagram</a></div><div class="text">Milhares nas ruas para resgatar as vidas perdidas</div></div></li>
+
+            </ul>
+        </div>
+        <div class="pubHeader">
+            <ul>
+                <li class="disclaimer"><img src="http://static.publico.pt/files/header/img/pubMain.gif" border="0" alt="" /></li>
+                <li class="img">
+
+		    <script type="text/javascript">
+			var ord = Math.random()*10000000000000000;
+			document.write('<script language="JavaScript" src="http://static.publico.pt/files/header/js/clix.js?ord=' + ord + '" type="text/javascript"><\/script>');
+		    </script>
+
+
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="subBar">
+        <div class="left">
+            <ul>
+                            <li class="item"><a target="_self" href="http://jornal.publico.pt">Jornal do Dia</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_self" href="http://videos.publico.pt/">Vídeos</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_self" href="http://multimedia.publico.pt/FotoGalerias">Multimédia</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_self" href="http://static.publico.pt/homepage/infografia/">Infografias</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_self" href="http://blogs.publico.pt/">Blogues</a></li>
+                            <li class="spaceBar">|</li>
+                </ul>
+        </div>
+        <div class="right">
+            <ul>
+                            <li class="item"><a target="_blank" href="http://tempo.publico.pt/">METEO</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://coleccoes.publico.pt">Iniciativas</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://static.publico.pt/Classificados">Classificados</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://static.publico.pt/homepage/nos/contactos.aspx">Contactos</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://static.publico.pt/assinaturas">Assinaturas</a></li>
+                            <li class="spaceBar">|</li>
+
+                            <li class="item"><a target="_blank" href="http://loja.publico.pt/"><font color="red">Loja</font></a></li>
+                            <li class="spaceBar">|</li>
+                </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="mainMenu">
+        <ul>
+            <li class="item home "><a href="http://www.publico.pt"><img src="http://static.publico.pt/files/header/img/home.png" width="13" height="13" border="0" alt="Home" /></a></li>
+
+                        <li class="item "><a href="http://www.publico.pt/Mundo">Mundo</a></li>
+
+                        <li class="item "><a href="http://www.publico.pt/Política">Política</a></li>
+
+                        <li class="item "><a href="http://economia.publico.pt">Economia</a></li>
+
+                        <li class="item "><a href="http://desporto.publico.pt">Desporto</a></li>
+
+                        <li class="item "><a href="http://www.publico.pt/Sociedade">Sociedade</a></li>
+
+                        <li class="item "><a href="http://www.publico.pt/Educação">Educação</a></li>
+
+                        <li class="item "><a href="http://www.publico.pt/Ciências">Ciências</a></li>
+
+                        <li class="item "><a href="http://ecosfera.publico.pt">Ecosfera</a></li>
+
+                        <li class="item "><a href="http://www.publico.pt/Cultura">Cultura</a></li>
+
+                        <li class="item "><a href="http://www.publico.pt/Local">Local</a></li>
+
+                        <li class="item "><a href="http://www.publico.pt/Media">Media</a></li>
+
+                        <li class="item on"><a href="http://www.publico.pt/Tecnologia">Tecnologia</a></li>
+
+            <li class="item red"><a id="More" href="javascript:void();">Mais</a></li>
+        </ul>
+        <div class="clear"></div>
+		<div class="subMenu-float off" id="subMenu-float">
+            <ul>
+                <li class="header">Mais canais no PUBLICO.PT</li>
+                <li>
+                    <a href="http://www.publico.pt/Mundo/iraque" title="Regresso ao Iraque">
+                        <h6>Regresso ao Iraque</h6>
+                        <span>Reportagens de Sofia Lorena e Nuno Ferreira Santos</span>
+                    </a>
+                </li><li>
+                    <a href="http://www.publico.pt/mundo/africadosul" title="Especial &#193;frica do Sul">
+                        <h6>Especial África do Sul</h6>
+                        <span>As reportagens de Alexandra Lucas Coelho e Pedro Cunha</span>
+                    </a>
+                </li><li>
+                    <a href="http://static.publico.pt/docs/Cultura/especialSaramago/" title="Especial Saramago">
+                        <h6>Especial Saramago</h6>
+                        <span>Tudo sobre a vida e obra do Nobel da Literatura</span>
+                    </a>
+                </li><li>
+                    <a href="http://ultraleve.publico.pt/" title="Edi&#231;&#227;o Ultra-leve">
+                        <h6>Edição Ultra-leve</h6>
+                        <span>Versão ultra-leve das notícias de última hora do Publico.pt</span>
+                    </a>
+                </li><li>
+                    <a href="http://jornal.publico.pt/magoo/" title="P&#250;blico para Cegos">
+                        <h6>Público para Cegos</h6>
+                        <span>Edição digital do Público para cegos</span>
+                    </a>
+                </li><li>
+                    <a href="http://projectopne.blogspot.com/" title="P&#250;blico na Escola">
+                        <h6>Público na Escola</h6>
+                        <span>Projecto de incentivo ao uso dos media na escola</span>
+                    </a>
+                </li><li>
+                    <a href="http://tempo.publico.pt/" title="Meteorologia">
+                        <h6>Meteorologia</h6>
+                        <span>Previsão do tempo para os próximos dias</span>
+                    </a>
+                </li>
+            </ul>
+		</div>
+    </div>
+
+    <div style="height:10px;"></div>
+
+</div>
+
+
+
+    <div id="content-wrap" class="wrap">
+        <div id="content" class="content-noticia">
+
+            <div class="content-noticia-title">
+                <div class="noticia-title entry noborder">
+                        <p class="author">
+                            </p>
+                        <h2>
+                            Passos Coelho pôs as redes sociais a ferver
+                            <a style="cursor: default" href="http://10.38.1.194/admin/editaNoticiaHTM.asp?idNot=1562316&id=10"
+                                target="_blank">
+                                <img alt="" border="0" class="pxTrans" src="/includes/img/vazio.gif?t=1347896586,7313" /></a></h2>
+                        <p class="date">
+                            09.09.2012 - 16:43
+                            Por Victor Ferreira, Raquel Albuquerque</p>
+                        <div class="options">
+                            <ul class="options-votar"><li>Votar&nbsp;</li><li class="star"><img class="stars" alt="" value="1" item="1562316" name="star1562316" src="/images/starOff.png?t=1347896586,7313" width="9" /></li><li class="star"><img class="stars" alt="" value="2" name="star1562316" item="1562316" src="/images/starOff.png?t=1347896586,7313" width="9" /></li><li class="star"><img class="stars" alt="" value="3" name="star1562316" item="1562316" src="/images/starOff.png?t=1347896586,7313" width="9" /></li><li class="star"><img class="stars" alt="" value="4" item="1562316" name="star1562316" src="/images/starOff.png?t=1347896586,7313" width="9" /></li><li class="star"><img class="stars" alt="" value="5" name="star1562316" item="1562316" src="/images/starOff.png?t=1347896586,7313" width="9" /></li><li>&nbsp;|&nbsp;</li><li>&nbsp;0 votos&nbsp;</li><li class="star"><img src="/images/starOff.png?t=1347896586,7313" alt="" width="9" height="10" /></li><li class="star"><img src="/images/starOff.png?t=1347896586,7313" alt="" width="9" height="10" /></li><li class="star"><img src="/images/starOff.png?t=1347896586,7313" alt="" width="9" height="10" /></li><li class="star"><img src="/images/starOff.png?t=1347896586,7313" alt="" width="9" height="10" /></li><li class="star"><img src="/images/starOff.png?t=1347896586,7313" alt="" width="9" height="10" /></li></ul>
+
+                            <ul class="options-social">
+	                            <li class="options-social-gplus">
+		                            <div class="g-plusone" data-size="small"></div>
+	                            </li>
+	                            <li class="options-social-fb">
+                                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+                                </li>
+                            </ul>
+
+                            <ul class="options-nav">
+                                <li>
+                                    1
+                                    de
+                                    1
+                                    not&iacute;cias em
+                                    Tecnologia</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                <div class="content-noticia-feature">
+                </div>
+            </div>
+
+            <div id="main-content">
+                <div class="noticia">
+
+                    <link rel="stylesheet" type="text/css" href="bubble_cloud.css">
+
+                    <!--[if lte IE 8]>
+                    <img src="fallback.png" alt="bubble chart">
+                    <div class="g-error">Para ver uma versão interativa deste gráfico, utilize um navegador com suporte a SVG, tal como <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/">Firefox</a>, <a href="http://www.apple.com/safari/download/">Safari</a> ou a última versão do <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a>.</div>
+                    <![endif]-->
+
+                    <!--[if gt IE 8]><!-->
+                    <div id="g-chart">
+                        <svg class="g-nodes" width="512" height="512"></svg>
+                        <div class="g-labels"></div>
+                    </div>
+
+                    <div class="g-mentions left"></div>
+                    <div class="g-mentions right"></div>
+
+                    <br clear="all" />
+
+                    <div id="trendline-tooltip"></div>
+                    <svg id="g-trendline" width="512" height="80"></svg>
+
+                    <script src="d3.v2.js"></script>
+                    <script src="bubble_cloud.js"></script>
+                    <!--<![endif]-->
+
+                    <div id="g-footer">Powered by <a href="http://dmir.inesc-id.pt/project/Reaction">REACTION</a></div>
+
+
+                    <p>
+                        Entre o total de tweets partilhados na sexta-feira, 567 mensagens referiram directamente o primeiro-ministro, fora as que discutiram o assunto sem menção a Passos Coelho. Olhando com detalhe para o número de tweets partilhados ao longo do dia, percebe-se que o pico ocorreu  entre as 22h e as 23h (111 mensagens) – já passavam mais de duas horas depois da transmissão da mensagem. As contas começavam a ser feitas e discutia-se na “twittosfera” o impacto das medidas anunciadas.<br/><br/>Durante os 15 minutos do anúncio, as mensagens espalharam-se. Em duas horas (entre as 18h e as 20h), foram 118 as mensagens com menções directas a Passos Coelho. Foi a partir do meio-dia de sexta-feira que o fluxo de tweets com menções ao primeiro-ministro e à austeridade aumentou. <br/><br/>Já no sábado, a discussão manteve-se activa ao longo de todo o dia, com um total de 24.060 tweets recolhidos, dos quais 646 mencionavam Passos Coelho, com picos registados às 13h e às 23h. Neste domingo, a mensagem que o primeiro-ministro publicou no Facebook, assim como os comentários deixados na sua página, têm sido alvo de vários tweets: 479 mensagens até às 17h, de acordo com os dados do TwitterEcho, uma plataforma de recolha e análise de dados do Twitter. <br/><br/>“O TwitterEcho foi configurado para efectuar uma recolha de tweets focada em utilizadores portugueses”, explica Eduarda Mendes Rodrigues, investigadora e professora auxiliar do departamento de Engenharia Informática da Faculdade de Engenharia da Universidade do Porto (FEUP). “A identificação da comunidade portuguesa no Twitter é feita de forma automática através de técnicas de detecção de linguagem e de análise do perfil dos utilizadores e da respectiva rede social”. <br/><br/>Por dia, a plataforma recolhe uma média de 30 mil novos tweets e monitoriza 100833 utilizadores portugueses, valores que não representam, no entanto, a totalidade exacta da “twittosfera” portuguesa. A recolha dos tweets é feita ao minuto, ficando registada, o que permite depois fazer uma comparação do fluxo de mensagens partilhadas na rede social em vários intervalos de tempo e com base em termos de pesquisa e diferentes hashtags – palavras-chave que identificam temas, por exemplo. A plataforma permite ainda saber quais os utilizadores portugueses mais activos do Twitter.<br/><br/>Esta ferramenta foi já utilizada para contabilizar os tweets partilhados durante a campanha das eleições legislativas de 2011 (Twitómetro - http://legislativas.sapo.pt/2011/twitometro/) e, mais recentemente, durante o Euro 2012 (Twitteuro – http://twitteuro.sapo.pt/).<br/><br/>O TwitterEcho resulta da colaboração das equipas da Universidade Técnica de Lisboa (INESC-ID), da Universidade do Porto (FEUP e LIACC), do Centro de Investigação Media e Jornalismo (CIMJ), dos Labs Sapo (UP e Picoas) e do PÚBLICO, no âmbito do projecto de investigação REACTION, em jornalismo computacional, apoiado pela Fundação para a Ciência e Tecnologia (FCT), ao abrigo do programa UTAustin-Portugal. <br/><br/><b>Facebook: um mural do protesto político</b><br/><br/>A maior rede social do planeta, o Facebook, também continua a fervilhar por causa do <a href="http://economia.publico.pt/noticia/passos-1562130">novo pacote de austeridade</a> que o primeiro-ministro <a href="http://economia.publico.pt/Noticia/a-comunicacao-de-passos-coelho-ao-pais-na-integra-1562138">anunciou na sexta-feira</a>, e cujos efeitos <a href="http://economia.publico.pt/noticia/corte-de-um-salario-vai-ser-permanente-para-todos-1562263">se prometem eternizar.</a><br/><br/>
+                        </p>
+                </div>
+
+                <ul class="multiplas_pags">
+
+                    <li class="on">
+                        1</li>
+
+                    <li><a href="?p=2" title="">
+                        2</a></li>
+                    <li><a href="?p=2"
+                        class="seguinte" title="">Página seguinte »</a></li>
+                    <li><a href="?all=1" class="textocompleto" title="">Ver texto completo</a></li>
+                </ul>
+
+                <div class="options">
+                    <ul class="options-action">
+                        <li class="option-corrigir"><a class="option-enviar" href="/send/?opt=1" title="Corrigir">
+                            Corrigir</a></li>
+                        <li class="option-provedor"><a class="option-enviar" href="/send/?opt=2" title="Provedor do Leitor">
+                            Provedor do Leitor</a></li>
+                        <li class="option-feedback"><a class="option-enviar" href="/send/?opt=3" title="Feedback">
+                            Feedback</a></li>
+                    </ul>
+                    <ul class="options-textsize">
+                        <li class="option-textsmaller"><a href="javascript:void(0);" title="Diminuir">Diminuir</a></li>
+                        <li class="option-textbigger"><a href="javascript:void(0);" title="Aumentar">Aumentar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="sec-content" class="noticia-meta">
+                <script type="text/javascript">
+                    Publico.Scripts.Tops.GetSharesCount(1562316, 'uh', 'Passos Coelho pôs as redes sociais a ferver', document.location.href);
+                </script>
+                <div class="noticiastats box">
+                    <h2>Estatísticas</h2>
+                    <ul>
+                        <li>13392 leitores</li>
+                        <li>15 coment&aacute;rios</li>
+                    </ul>
+                    <ul class="facebook">
+                        <div id="fb_data_value"></div>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                Publico.Scripts.Facebook_v1.getPostCount('');
+                            });
+                        </script>
+                    </ul>
+                </div>
+                <div class="box redessociais">
+                    <h2>
+                        SIGA-NOS</h2>
+                    <ul class="redessociaisul">
+                        <li><a href="http://www.twitter.com/publico">
+                            <img alt="Twitter" title="Twitter" src="http://static.publico.pt/files/home/images/twitter.png?t=1347896586,7313"
+                                width="45" height="45" />
+                            Twitter </a></li>
+                        <li><a href="http://www.facebook.com/publico">
+                            <img alt="Facebook" title="Facebook" src="http://static.publico.pt/files/home/images/facebook.png?t=1347896586,7313"
+                                width="45" height="45" />
+                            Facebook </a></li>
+                        <li class="nomargin"><a href="http://static.publico.pt/homepage/site/rss/">
+                            <img alt="RSS" title="RSS" src="http://static.publico.pt/files/home/images/rss.png?t=1347896586,7313"
+                                width="45" height="45" />
+                            RSS </a></li>
+                    </ul>
+                </div>
+                <div class="box funcionalidades">
+                    <h2>
+                        Funcionalidades</h2>
+                    <ul class="options-textsize">
+                        <li class="option-textsmaller"><a href="javascript:void(0);" title="Diminuir">Diminuir</a></li>
+                        <li class="option-textbigger"><a href="javascript:void(0);" title="Aumentar">Aumentar</a></li>
+                    </ul>
+                    <ul class="options-action">
+                        <li class="option-comment"><a href="#Comente" title="#">Comentar</a></li>
+                        <li class="option-print"><a href="javascript:window.print();" title="#">Imprimir</a></li>
+                        <li class="option-enviar"><a class="option-enviar" href="/send/" title="Enviar a um amigo">
+                            Enviar</a></li>
+                    </ul>
+                    <ul class="options-action">
+                        <li class="option-corrigir"><a class="option-enviar" href="/send/?opt=1" title="Corrigir">
+                            Corrigir</a></li>
+                        <li class="option-provedor"><a class="option-enviar" href="/send/?opt=2" title="Provedor do Leitor">
+                            Provedor</a></li>
+                        <li class="option-feedback"><a class="option-enviar" href="/send/?opt=3" title="Feedback">
+                            Feedback</a></li>
+                        <li><a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4a7c30230855409b"
+                            class="addthis_button_compact"><b>Partilhar</b></a>
+
+                            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=xa-4a7c30230855409b"></script>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="noticiaurl box">
+                    <h2>
+                        URL desta Not&iacute;cia</h2>
+                    <p>
+                        <a href="http://publico.pt/1562316">http://publico.pt/1562316</a></p>
+                </div>
+                <div class="comentariotop box">
+                    <h2>
+                        Coment&aacute;rio + votado</h2>
+                    <h3>
+                        <a href="#">
+                            Facebook</a></h3>
+                    <p>
+                        O homem teve necessidade de colocar há 16 horas uma mensagem no facebook em que até meteu lá os ...</p>
+                    <p class="author">
+                        Jorge Carlos</p>
+                    <p class="date">
+                        09.09.2012 17:25</p>
+                </div>
+
+            </div>
+            <div id="extra-content">
+                <div class="tw_widget" id="tw_link_widget" style="width: 660px">
+                </div>
+                <div class="options subscriptions box">
+                	<h2><span class="titlebar-title">Assinaturas</span></h2>
+                	<p><a target="_blank" href="http://loja.publico.pt/categories.php?category=Assinaturas">Assine o Público Digital a partir de <strong>2,30 €</strong> euros e aceda a todos os conteúdos exclusivos que temos para si.</a></p>
+                </div>
+                <a name="Comentarios"></a>
+                <div style="width: 675px;" id="commentsArea">
+                </div>
+                <script type="text/javascript">
+				    Publico.Scripts.Comments.Load(1562316, 1, 'commentsArea', "SCRIPTOR");
+                </script>
+            </div>
+
+            <script type="text/javascript" language="javascript">
+                var newsTitle = 'Passos Coelho pôs as redes sociais a ferver';
+                try {
+                        Publico.Scripts.Utils.setCounter('1562316', 'SCRIPTOR', 'LIDO', 'ULTIMAHORA', newsTitle);
+                        //setCounter('1562316', 'SCRIPTOR', 'LIDO', 'ULTIMAHORA', newsTitle);
+                } catch (e) {}
+                try{
+                    doReload = false;
+                    clearTimeout(timerRefresh);
+                }catch(e) {}
+            </script>
+
+
+        </div>
+        <div id="sidebar">
+
+
+<div class="box box-float-container no-margin-bottom">
+
+</div><div class="pub" id="main300x250">
+	<h2>Pub</h2>
+	<script type="text/javascript">
+//		try{ Comunique.tag('PublicoHomepage300x250');} catch(e){}
+		try{ Comunique.tag('PublicoUltimaHora300x250');} catch(e){}
+	</script>
+</div><div id="Tops">
+    <script type="text/javascript">
+        Publico.Scripts.Tops.Load(10, '', 10, 'Tops');
+    </script>
+</div>
+<div class="pub">
+        <h2>Pub</h2>
+        <script language="JavaScript" type="text/javascript">
+            getPub();
+	</script>
+</div>
+<link href="http://static.publico.pt/files/assinaturas/assinaturas.css?1=4" rel="Stylesheet" type="text/css" />
+<script type='text/javascript'><!--    //<![CDATA[
+    var m3_u = (location.protocol == 'https:' ? 'https://ads.clix.pt/www/delivery/ajs.php' : 'http://ads.clix.pt/www/delivery/ajs.php');
+    var m3_r = Math.floor(Math.random() * 99999999999);
+    if (!document.MAX_used) document.MAX_used = ',';
+    document.write("<scr" + "ipt type='text/javascript' src='" + m3_u);
+    document.write("?zoneid=2892");
+    document.write('&amp;cb=' + m3_r);
+    if (document.MAX_used != ',') document.write("&amp;exclude=" + document.MAX_used);
+    document.write(document.charset ? '&amp;charset=' + document.charset : (document.characterSet ? '&amp;charset=' + document.characterSet : ''));
+    document.write("&amp;loc=" + escape(window.location));
+    if (document.referrer) document.write("&amp;referer=" + escape(document.referrer));
+    if (document.context) document.write("&context=" + escape(document.context));
+    if (document.mmm_fo) document.write("&amp;mmm_fo=1");
+    document.write("'><\/scr" + "ipt>");
+//]]>--></script><noscript><a href='http://ads.clix.pt/www/delivery/ck.php?n=a9808a1c&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.clix.pt/www/delivery/avw.php?zoneid=2892&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a9808a1c' border='0' alt='' /></a></noscript>
+<div class="box" id="subscriber-content">
+    <h2><span class="titlebar-title">Exclusivo Assinantes</span></h2>
+    <div class="subscriber-content-wrapper clearfix">
+	    <ul class="ultimasnoticias-lista">
+
+            <li>
+	            <div class="featured clearfix">
+                    <img alt="" src="http://imagens.publico.pt/imagens.aspx/83616?tp=EI&db=IMAGES&w=95">
+
+					<p class="category-type">DESTAQUE</p>
+					<h3><a target="_blank" href="http://jornal.publico.pt/noticia/17-09-2012/mantemse-bracode-ferro-entre-psd-e-cds-por-causa-da-tsu-25258802.htm">Mantém-se braço-de- -ferro entre PSD e CDS por causa da TSU</a></h3>
+                </div>
+	        </li>
+	        <li>
+	            <a href="http://jornal.publico.pt/noticia/17-09-2012/o-momento-europeu-25257462.htm">
+
+                    <span class="category-type">OPINIÃO <span class="author">João Carlos Espada</span></span>
+                    <span class="title">O momento europeu</span>
+
+                </a>
+	        </li>
+	        <li>
+	            <a href="http://jornal.publico.pt/noticia/17-09-2012/o-segredo-do-sucesso-portugues-nao-esta-nos-precos-baixos-25251081.htm">
+
+                    <span class="category-type">ECONOMIA <span class="author">Samuel Silva</span></span>
+                    <span class="title">O segredo do sucesso português não está nos preços baixos</span>
+
+                </a>
+	        </li>
+
+	        <li>
+	        	<div class="clearfix">
+
+				        <a href="http://jornal.publico.pt"><img width="180" style="float: none; display: block; margin: 4px auto;" class="edicaoimpressa1" src="http://imagens.publico.pt/imagens.aspx/fd69d54c-1eaf-4c34-9b14-50da42af663a?tp=EI&amp;db=EDITIONS&amp;w=180" alt="Capa P1" title="Capa P1"></a>
+
+                </div>
+	        </li>
+	    </ul>
+	    <!--<p class="callout">Assine o Público Digital a partir de <strong>2,30 €</strong> e aceda a todos os conteúdos exclusivos que temos para si.</p>-->
+	    <p><a title="Assine o Público" class="signup" href="http://www.publico.pt/assinaturas/digital.aspx">Assinar</a><span class="visuallyhidden">.</span> Já é assinante? <a href="http://jornal.publico.pt/">Faça login.</a></p>
+    </div>
+</div>			<div class="pub pub-textads">
+				<h2>Pub</h2>
+                <script type="text/javascript"><!--
+                    var sas_affiliate_id = '63';
+                    var sas_site_id = '433';
+                    var sas_position_id = '349';
+                    var sas_cluster = '1';
+                    var sas_ad_width = '300';
+                    var sas_ad_height = '250';
+                    var sas_ad_format = '300x250_publico';
+                    var sas_c = '4';
+                    var sas_ad_type = 'text';
+                    var sas_location_id = '3';
+                    var sas_color_border = 'ffffff';
+                    var sas_color_link = '666666';
+                    var sas_color_bg = 'FFFFFF';
+                    var sas_color_text = '999999';
+                    var sas_color_url = '999999';
+                    var sas_ic = '50b8bae10570cef61b88ea376d502567';
+                    var sas_medium = '0';
+                //-->
+                </script><script type="text/javascript" src="http://js.sl.pt/Snippets/SAS.js"></script>
+			</div><!-- .pub -->
+
+<div class="imobiliario box">
+	<h2><span class="titlebar-title">Imobili&aacute;rio</span></h2>
+	<div class="box-float-container" id="box-Imobiliario">
+
+        <a href="http://www.publico.clix.pt/Homepage/Includes/Imobiliario/imob/Imobiliario.pdf"><img src="http://imagens.publico.pt/imagens.aspx/714418?tp=UH&amp;db=IMAGENS&amp;w=140&t=1347896586,7313" alt="Imobili�rio" /></a>
+        <h3></h3>
+
+	</div>
+</div>
+
+<div id="Inquerito-Box">
+
+<span></span>
+
+</div>
+<span></span>
+
+<div class="cargaetransportes box newslist" id="box-CargaTransporte">
+	<h2><span class="titlebar-title"><a href="http://static.publico.pt/carga_transportes/">Carga e Transportes</a></span></h2>
+
+	<ul>
+		<li>
+			<p class="category-type">Saídas bissemanais de Frankfurt para Lisboa</p>
+			<h3><a href="http://www.publico.pt/carga_transportes/Noticia/1563341">GEFCO com nova linha de transporte terrestre Portugal/Alemanha</a></h3>
+		</li>
+		<li>
+			<p class="category-type">AVE ganha quota de mercado e liga toda a Espanha</p>
+			<h3><a href="http://www.publico.pt/carga_transportes/Noticia/1563337">Madrid e Barcelona utilizados igualmente por avião e comboio de alta velocidade</a></h3>
+		</li>
+		<li>
+			<p class="category-type">E já é Operador Económico Autorizado</p>
+			<h3><a href="http://www.publico.pt/carga_transportes/Noticia/1563335">Chronopost certificada na qualidade e ambiente</a></h3>
+		</li>
+	</ul>
+
+</div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            loadNews('Tecnologia', 20);
+        });
+    </script>
+
+    <script language="javascript" type="text/javascript">
+        var WRP_ID = 294353;
+        var WRP_SECTION = 'UH';
+        var WRP_SUBSECTION = 'UH NOTICIA';
+        var WRP_CONTENT = 'Noticia';
+        var WRP_CHANNEL = "Tecnologia";
+        wreport_ok = 0;
+        var WRP_ACC;
+    </script>
+
+    <script language="javascript" src="http://www.publico.pt/includes/JS/netscope2.js"
+        type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript">
+        if (wreport_ok == 1) {
+            var w_counter = new wreport_counter(WRP_SECTION, WRP_SUBSECTION, WRP_ID, WRP_ACC, WRP_CHANNEL);
+            w_counter.add_content(WRP_CONTENT);
+            w_counter.count();
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        window.___gcfg = { lang: 'pt-PT' };
+
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+	</script>
+
+
+
+    <div id="footer" class="wrap">
+        <div class="pub pub-wide pub-textads" style="text-align:center">
+		    <h2>Pub</h2>
+            <script type="text/javascript"><!--
+                var sas_affiliate_id = '63';
+                var sas_site_id = '433';
+                var sas_position_id = '337';
+                var sas_cluster = '1';
+                var sas_ad_width = '728';
+                var sas_ad_height = '90';
+                var sas_ad_format = '728x90_publico';
+                var sas_c = '4';
+                var sas_ad_type = 'text';
+                var sas_location_id = '8';
+                var sas_color_border = 'ffffff';
+                var sas_color_link = '666666';
+                var sas_color_bg = 'FFFFFF';
+                var sas_color_text = '999999';
+                var sas_color_url = '999999';
+                var sas_ic = '0d71a40cba1e047f44f3564dc5a2350f';
+                var sas_medium = '0';
+            //--></script>
+            <script type="text/javascript" src="http://js.sl.pt/Snippets/SAS.js"></script>
+        </div>
+        <div class="category-features" id="category-features">
+			<div class="box-float-container">
+				<div id="category-Política" class="category-politica category-box box newslist box-float">
+					<h2><span class="titlebar-title">Pol&iacute;tica</span> <span class="titlebar-url"><a href="/Política" title="Política">mais</a></span></h2>
+				</div>
+				<div id="category-Mundo" class="category-mundo category-box box newslist box-float">
+					<h2><span class="titlebar-title">Mundo</span> <span class="titlebar-url"><a title="Mundo" href="/Mundo">mais</a></span></h2>
+				</div>
+				<div id="category-Desporto" class="category-desporto category-box box newslist box-float">
+					<h2><span class="titlebar-title">Desporto</span> <span class="titlebar-url"><a title="Desporto" href="http://desporto.publico.pt">mais</a></span></h2>
+				</div>
+				<div id="category-Economia" class="category-economia category-box box newslist box-float box-float-last">
+					<h2><span class="titlebar-title">Economia</span> <span class="titlebar-url"><a title="Economia" href="http://economia.publico.pt">mais</a></span></h2>
+				</div>
+			</div>
+			<div class="box-float-container">
+				<div id="category-Educação" class="category-educacao category-box box newslist box-float">
+					<h2><span class="titlebar-title">Educa&ccedil;&atilde;o</span> <span class="titlebar-url"><a href="/Educação" title="Educação">mais</a></span></h2>
+				</div>
+				<div id="category-Sociedade" class="category-sociedade category-box box newslist box-float">
+					<h2><span class="titlebar-title">Sociedade</span> <span class="titlebar-url"><a title="Sociedade" href="/Sociedade">mais</a></span></h2>
+				</div>
+				<div id="category-Ecosfera" class="category-ecosfera category-box box newslist box-float">
+					<h2><span class="titlebar-title">Ecosfera</span> <span class="titlebar-url"><a title="Ecosfera" href="http://ecosfera.publico.pt">mais</a></span></h2>
+				</div>
+				<div id="category-Ciências" class="category-ciencias category-box box newslist box-float box-float-last">
+					<h2><span class="titlebar-title">Ci&ecirc;ncias</span> <span class="titlebar-url"><a title="Ciência" href="/Ciências">mais</a></span></h2>
+				</div>
+			</div>
+			<div class="box-float-container">
+				<div id="category-Local" class="category-local category-box box newslist box-float">
+					<h2><span class="titlebar-title">Local</span> <span class="titlebar-url"><a title="Local" href="/local">mais</a></span></h2>
+				</div>
+				<div id="category-Cultura" class="category-cultura category-box box newslist box-float">
+					<h2><span class="titlebar-title">Cultura</span> <span class="titlebar-url"><a title="Cultura" href="/Cultura">mais</a></span></h2>
+				</div>
+				<div id="category-Tecnologia" class="category-tecnologia category-box box newslist box-float">
+					<h2><span class="titlebar-title">Tecnologia</span> <span class="titlebar-url"><a title="Tecnologia" href="/Tecnologia">mais</a></span></h2>
+				</div>
+				<div id="category-Media" class="category-media category-box box newslist box-float box-float-last">
+					<h2><span class="titlebar-title">Media</span> <span class="titlebar-url"><a title="Media" href="/Media">mais</a></span></h2>
+				</div>
+			</div>
+		</div>
+
+<link rel="stylesheet" href="http://static.publico.pt/digital/css/rodape.css" />
+<!--<script type="text/javascript" src="http://static.publico.pt/files/framework/js/libs/jquery-1.6.1.min.js"></script>-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#digital-opcoes').children().hover(function () {
+            $(this).siblings().stop().fadeTo(500, 0.5);
+        }, function () {
+            $(this).siblings().stop().fadeTo(500, 1);
+        });
+    });
+</script>
+<div id="digital-rodape">
+	<a id="home" href="http://static.publico.pt/digital/" title="P&uacute;blico Digital" target="_blank">P&uacute;blico<span>Digital</span></a>
+	<div class="clearfix"></div>
+    <ul id="digital-opcoes" class="clearfix">
+    	<li>
+        	<a href="http://static.publico.pt/digital/publico-mobile.php" target="_blank">
+				<img src="http://static.publico.pt/digital/img/rodape/01.png" width="52" height="98" alt="Sites Mobile" />
+            <h2>Sites Mobile</h2>
+                <p>Aceda ao P&uacuteblico atrav&eacute;s do<br />
+                seu telem&oacute;vel ou smartphone.</p>
+            </a>
+        </li>
+        <li>
+        	<a href="http://static.publico.pt/digital/publico-iphone.php" target="_blank">
+				<img src="http://static.publico.pt/digital/img/rodape/02.png" width="49" height="98" alt="Aplica&ccedil&otilde;es Mobile" />
+        <h2>Aplica&ccedil&otilde;es Mobile</h2>
+                <p>N&atilde;o perca toda a actualidade<br />
+                na palma da sua m&atilde;o.</p>
+            </a>
+        </li>
+		<li>
+        	<a href="http://static.publico.pt/digital/publico-ipad.php" target="_blank">
+				<img src="http://static.publico.pt/digital/img/rodape/03.png" width="123" height="98" alt="Tablet" />
+        <h2>Tablet</h2>
+                <p>Toda a informa&ccedil&atilde;o ao minuto<br />
+                de forma din&acirc;mica e interactiva</p>
+            </a>
+        </li>
+		<li>
+        	<a href="http://static.publico.pt/digital/publico-kindle.php" target="_blank">
+				<img src="http://static.publico.pt/digital/img/rodape/04.png" width="58" height="98" alt="Kindle" style="margin-top:3px;" />
+        <h2>Kindle</h2>
+                <p>Receba o seu jornal di&aacute;rio<br />
+                sem fios</p>
+            </a>
+        </li>
+		<li class="last">
+        	<a href="http://static.publico.pt/assinaturas/digital.aspx" target="_blank">
+				<img src="http://static.publico.pt/digital/img/rodape/05.png" width="154" height="98" alt="Assinaturas" style="margin-top:6px;" />
+        <h2>Assinaturas</h2>
+                <p>Subscreva o P&uacuteblico a partir<br />
+                de 2,30&euro; por semana.</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="copyright">
+	<p>&copy; 2012 P&Uacute;BLICO Comunica&ccedil;&atilde;o Social SA -
+	Directora: <a class="option-enviar iframe" href="http://www.publico.pt/send.aspx?opt=5&amp;id=70">Bárbara Reis</a> -
+	Directora executiva: <a class="option-enviar iframe" href="http://www.publico.pt/send.aspx?opt=5&amp;id=509">Simone Duarte</a> -
+	Editores: <a class="option-enviar iframe" href="http://www.publico.pt/send.aspx?opt=5&amp;id=510">Luciano Alvarez</a>, <a class="option-enviar iframe" href="http://www.publico.pt/send.aspx?opt=5&amp;id=516">Victor Ferreira</a>
+    <br />Editor de plataformas e multimédia: <a class="option-enviar iframe" href="http://www.publico.pt/send.aspx?opt=5&amp;id=492">S&eacute;rgio B. Gomes</a>
+	 -
+	Webmaster: <a class="option-enviar iframe" href="http://www.publico.pt/send.aspx?opt=5&amp;id=314">Paulo Almeida</a> -
+    <a href="http://static.publico.pt/publicidade/online/">Publicidade Online</a> -
+	<a href="http://static.publico.pt/homepage/publicidade/default.aspx">Publicidade</a> -
+	<a class="option-enviar iframe" href="http://www.publico.pt/send.aspx?opt=5&amp;id=448">Webdesign</a> -
+	<a class="option-enviar iframe" href="http://www.publico.pt/send.aspx?opt=5&amp;id=501">Provedor dos Leitores</a></p>
+</div>
+
+    </div>
+
+
+    <script type="text/javascript">
+//        _uacct = "UA-554722-1";
+//        _udn = "clix.pt";
+//        _userv = 2;
+//        urchinTracker();
+        var doNewsRefresh = true;
+        doNewsRefresh = false;doNewsRefresh = false;
+    </script>
+    <script src="/Scripts/Publico.js?id=8" type="text/javascript"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15474788-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+
+    <div style="margin: 0 auto; width: 990px;">
+       <script language="JavaScript" type="text/javascript">
+           //ord = Math.random() * 10000000000000000;
+           //document.write('<script language="JavaScript" src="http://ad.pt.doubleclick.net/adj/ppt_ulthora/Seccao_4870;dcopt=ist;sz=1x1;ord=' + ord + '?" type="text/javascript"><\/script>');
+           try { Comunique.tag("PublicoUltimaHora1x1"); } catch (e) { }
+        </script>
+        </div>
+
+
+    <script src="http://data.publico.pt/content/scripts/FacebookV3.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+//            $(".pub").each(function () {
+//                if ($(this).eq(0).height() <= 14)
+//                    $(this).hide();
+//            });
+
+            if ($("#verMapa").length > 0) {
+                $("#verMapa").fancybox({
+                    'frameWidth': 990,
+                    'frameHeight': 590,
+                    'hideOnContentClick': false
+                });
+            }
+        });
+
+        $(document).ready(function () {
+            $("#topbar").find("#sim").click(function () {
+                this.style.behavior = 'url(#default#homepage)'; this.setHomePage('http://www.publico.pt')
+                $('#topbar').hide(100);
+                var exdate = new Date();
+                exdate.setDate(exdate.getDate() + 365);
+                var c_value = escape(1) + ((7 == null) ? "" : "; expires=" + exdate.toUTCString());
+                document.cookie = "PUBLICO_HOMEPAGE=" + c_value;
+            });
+            $("#topbar").find("#nao").click(function () {
+                $('#topbar').hide(100);
+
+                var exdate = new Date();
+                exdate.setDate(exdate.getDate() + 7);
+                var c_value = escape(1) + ((7 == null) ? "" : "; expires=" + exdate.toUTCString());
+                document.cookie = "PUBLICO_HOMEPAGE=" + c_value;
+            });
+            $("#topbar").find("#close").click(function () {
+                $('#topbar').hide(100);
+            });
+        });
+
+    </script>
+
+</body>
+</html>
