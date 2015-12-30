@@ -8,18 +8,40 @@ from sklearn.decomposition import LatentDirichletAllocation
 
 import os
 
-def print_top_words(model, feature_names, n_top_words):
+def print_top_words(model, feature_names, n_top_words, dictionary):
+    file = csv.writer(open('lda_topics.csv', 'wb'))
+
     for topic_idx, topic in enumerate(model.components_):
         print("Topic #%d:" % topic_idx)
-        print(" ".join([feature_names[i]
-                        for i in topic.argsort()[:-n_top_words - 1:-1]]))
+        topic_words = " ".join([feature_names[i] for i in topic.argsort()[:-n_top_words - 1:-1]])
+        print(topic_words)
+        array_to_write = dictionary[topic_idx]
+        for item in topic_words.split(" "):
+            array_to_write.append(item)
+        file.writerow(array_to_write)
     print()
+
+
+entity_day_dict = dict()
 
 corpus = []
 tfidif_top_topics = csv.reader(open("tfidf_scores.csv", 'rb'), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
+i = 0
 for row in tfidif_top_topics:
-    corpus.append(row[0].split(",")[2:])
+    document = ''
+    split_row = row[0].split(",")
+    entity_day_dict[i] = split_row[:2]
+    for item in split_row[2:]:
+        document += item + ' '
+    corpus.append(document)
+    i += 1
+
+#for row in corpus:
+#    print (row)
+
+#raise SystemExit(0)
+
 
 #entity_day_dict = dict()
 
@@ -36,8 +58,8 @@ for row in tfidif_top_topics:
 #    i += 1
 
 n_features = 10000
-n_topics = 30
-n_top_words = 25
+n_topics = len(corpus)
+n_top_words = 10
 
 # Use tf (raw term count) features for LDA.
 print("Extracting tf features for LDA...")
@@ -57,4 +79,4 @@ print("done in %0.3fs." % (time() - t0))
 
 print("\nTopics in LDA model:")
 tf_feature_names = tf_vectorizer.get_feature_names()
-print_top_words(lda, tf_feature_names, n_top_words)
+print_top_words(lda, tf_feature_names, n_top_words, entity_day_dict)
