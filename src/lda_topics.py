@@ -4,25 +4,25 @@ from time import time
 import csv
 
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.decomposition import LatentDirichletAllocation
 
-import os
+import numpy as np
+import lda
+
 import logging
+
+import matplotlib.pyplot as plt
 
 logging.basicConfig(filename='lda_analyser.log', level=logging.DEBUG)
 
-def print_top_words(model, feature_names, n_top_words, dictionary):
+def print_top_words(model, doc_topic, feature_names, n_top_words, dictionary):
     file = csv.writer(open('lda_topics.csv', 'wb'))
 
-    for topic_idx, topic in enumerate(model.components_):
-        logging.info("Topic #%d:" % topic_idx)
-        topic_words = " ".join([feature_names[i] for i in topic.argsort()[:-n_top_words - 1:-1]])
-        logging.info(topic_words)
-        array_to_write = dictionary[topic_idx]
-        for item in topic_words.split(" "):
-            array_to_write.append(item)
-        file.writerow(array_to_write)
-    #print()
+    for i, topic_dist in enumerate(model):
+        topic_words = np.array(feature_names)[np.argsort(topic_dist)][:-n_top_words:-1]
+        info_to_write = dictionary[i]
+        info_to_write.extend(topic_words)
+        logging.info(info_to_write)
+        file.writerow(info_to_write)
 
 
 entity_day_dict = dict()
@@ -46,22 +46,8 @@ for row in tfidif_top_topics:
 #raise SystemExit(0)
 
 
-#entity_day_dict = dict()
-
-# read all files and store their contents on a dictionary
-#for i in os.listdir(os.getcwd() + "/filtered_tweets"):
-#    for filename in os.listdir(os.getcwd() + "/filtered_tweets" + "/" + i):
-#        entity_day_dict[i+" "+filename] = open(os.getcwd() + "/filtered_tweets" + "/" + i + "/" + filename, 'r').read()
-
-#entity_day_key_index = dict()
-#i = 0
-#for key in entity_day_dict:
-#    entity_day_key_index[i] = key
-#    corpus.append(entity_day_dict[key])
-#    i += 1
-
 n_features = 10000
-n_topics = len(corpus)
+n_topics = 30
 n_top_words = 10
 
 # Use tf (raw term count) features for LDA.
@@ -73,13 +59,15 @@ tf = tf_vectorizer.fit_transform(corpus)
 logging.info("done in %0.3fs." % (time() - t0))
 
 logging.info("Fitting LDA models with tf")
-lda = LatentDirichletAllocation(n_topics=n_topics, max_iter=5,
-                                learning_method='online', #learning_offset=50.,
-                                random_state=0)
+model = lda.LDA(n_topics=n_topics, n_iter=1500, random_state=1)
+    #LatentDirichletAllocation(n_topics=n_topics, max_iter=5, learning_method='online', #learning_offset=50., random_state=0)
 t0 = time()
-lda.fit(tf)
+model.fit(tf)
 logging.info("done in %0.3fs." % (time() - t0))
 
+
+topic_word = model.topic_word_
+doc_topic = model.doc_topic_
 logging.info("\nTopics in LDA model:")
 tf_feature_names = tf_vectorizer.get_feature_names()
-print_top_words(lda, tf_feature_names, n_top_words, entity_day_dict)
+print_top_words(topic_word, doc_topic, tf_feature_names, n_top_words, entity_day_dict)
