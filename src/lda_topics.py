@@ -10,8 +10,6 @@ import lda
 
 import logging
 
-import matplotlib.pyplot as plt
-
 logging.basicConfig(filename='lda_analyser.log', level=logging.DEBUG)
 
 def print_top_words(model, doc_topic, feature_names, n_top_words, dictionary):
@@ -47,7 +45,7 @@ for row in tfidif_top_topics:
 
 
 n_features = 10000
-n_topics = 30
+n_topics = len(corpus)
 n_top_words = 10
 
 # Use tf (raw term count) features for LDA.
