@@ -1,7 +1,7 @@
-
 from __future__ import print_function
 from time import time
 import csv
+import sys
 
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -10,19 +10,27 @@ import lda
 
 import logging
 
+start_time = str(time())
 logging.basicConfig(filename='lda_analyser.log', level=logging.DEBUG)
 corpus = []
-
-write_file = open("lda_topics" + str(time()) + ".csv", "wb")
+topics_write_file = csv.writer(open("lda_topics" + start_time + ".csv", "wb"), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
+write_file = csv.writer(open("lda_topics_mapping" + start_time + ".csv", "wb"), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
 
 def print_top_words(model, doc_topic, feature_names, n_top_words, dictionary):
     for i, topic_dist in enumerate(model):
         topic_words = np.array(feature_names)[np.argsort(topic_dist)][:-n_top_words:-1]
-        write_file.write('Topic {}: {}\n'.format(i, ' '.join(topic_words)))
+        #write_file.write('Topic {}: {}\n'.format(i, ' '.join(topic_words)))
+
+        topic_row = [str(i)]
+        topic_row.extend(topic_words)
+        topics_write_file.writerow(topic_row)
 
     for i in range(len(corpus)):
-        write_file.write("{} (top topic: {})\n".format(corpus[i], doc_topic[i].argmax()))
+        document_row = [dictionary[i][0], dictionary[i][1]]
+        document_row.append(doc_topic[i].argmax())
+        document_row.append(corpus[i])
+        write_file.writerow(document_row)
 
 
 entity_day_dict = dict()
@@ -47,7 +55,7 @@ for row in tfidif_top_topics:
 
 
 n_features = 10000
-n_topics = 200
+n_topics = sys.argv[1]
 n_top_words = 10
 
 # Use tf (raw term count) features for LDA.
@@ -56,6 +64,7 @@ tf_vectorizer = CountVectorizer(max_df=0.95, min_df=2, max_features=n_features,
                                 stop_words='english')
 t0 = time()
 tf = tf_vectorizer.fit_transform(corpus)
+
 logging.info("done in %0.3fs." % (time() - t0))
 
 logging.info("Fitting LDA models with tf")
