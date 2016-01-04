@@ -11,21 +11,23 @@ import lda
 import logging
 
 logging.basicConfig(filename='lda_analyser.log', level=logging.DEBUG)
+corpus = []
+
+write_file = open("lda_topics" + str(time()) + ".csv", "wb")
+
 
 def print_top_words(model, doc_topic, feature_names, n_top_words, dictionary):
-    file = csv.writer(open('lda_topics.csv', 'wb'))
-
     for i, topic_dist in enumerate(model):
         topic_words = np.array(feature_names)[np.argsort(topic_dist)][:-n_top_words:-1]
-        info_to_write = dictionary[i]
-        info_to_write.extend(topic_words)
-        logging.info(info_to_write)
-        file.writerow(info_to_write)
+        write_file.write('Topic {}: {}\n'.format(i, ' '.join(topic_words)))
+
+    for i in range(len(corpus)):
+        write_file.write("{} (top topic: {})\n".format(corpus[i], doc_topic[i].argmax()))
 
 
 entity_day_dict = dict()
 
-corpus = []
+
 tfidif_top_topics = csv.reader(open("tfidf_scores.csv", 'rb'), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
 i = 0
@@ -45,7 +47,7 @@ for row in tfidif_top_topics:
 
 
 n_features = 10000
-n_topics = len(corpus)
+n_topics = 200
 n_top_words = 10
 
 # Use tf (raw term count) features for LDA.
