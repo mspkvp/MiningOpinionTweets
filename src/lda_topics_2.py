@@ -55,7 +55,7 @@ for row in tfidif_top_topics:
 
 
 n_features = 10000
-n_topics = sys.argv[1]
+n_topics = int(sys.argv[1])
 n_top_words = 10
 
 # Use tf (raw term count) features for LDA.
