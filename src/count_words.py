@@ -15,7 +15,6 @@ for i in os.listdir(os.getcwd() + "/filtered_tweets"):
         entity_day_dict[i+" "+filename.split('.', 1)[0]] = open(os.getcwd() + "/filtered_tweets" + "/" + i + "/" + filename, 'r').read()
 
 
-
 for entity_day in entity_day_dict:
     entity_day_values = entity_day.split(' ', 1)
 
@@ -27,7 +26,11 @@ for entity_day in entity_day_dict:
     word_count = dict()
     tf_vectorizer = CountVectorizer()
 
-    tf = tf_vectorizer.fit_transform([test])
+    try:
+        tf = tf_vectorizer.fit_transform([test])
+    except ValueError:
+        print(test)
+        continue
 
     cx = coo_matrix(tf)
     words = tf_vectorizer.get_feature_names()
