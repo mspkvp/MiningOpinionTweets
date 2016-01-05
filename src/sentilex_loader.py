@@ -91,9 +91,9 @@ def sentilex_analisys():
         #write polarities in files
         entity_date = e_day.split(' ')[0]
         entity_name = e_day.split(' ')[1].split('.',1)[0]
-        positive_file = csv.writer(open('newPositives'+'_'+entity_name+'_'+entity_date+'.csv', 'wb'))
-        negative_file = csv.writer(open('newNegatives'+'_'+entity_name+'_'+entity_date+'.csv', 'wb'))
-        neutral_file = csv.writer(open('newNeutrals'+'_'+entity_name+'_'+entity_date+'.csv', 'wb'))
+        positive_file = csv.writer(open(os.getcwd() + '/sentiment/'+'newPositives'+'_'+entity_name+'_'+entity_date+'.csv', 'wb'))
+        negative_file = csv.writer(open(os.getcwd() + '/sentiment/'+'newNegatives'+'_'+entity_name+'_'+entity_date+'.csv', 'wb'))
+        neutral_file = csv.writer(open(os.getcwd() + '/sentiment/'+'newNeutrals'+'_'+entity_name+'_'+entity_date+'.csv', 'wb'))
         
         for word, tup in positiveHits.items():
             to_write = [word, tup[0]]
