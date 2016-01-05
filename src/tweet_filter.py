@@ -82,7 +82,7 @@ for filename in os.listdir(read_path):
         #tokens = tokens - set(en_stopwords) #remove english stopwords
 
         if row[3] != previous_timestamp:
-            current_write_file = open(write_path + "/" + current_timestamp + "/" + entity_codename + ".txt", 'w')
+            current_write_file = open(write_path + "/" + current_timestamp + "/" + entity_codename + ".txt", 'a')
         
         current_write_file.write(" ")
         tokens_string = " ".join(tokens)
