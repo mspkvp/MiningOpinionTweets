@@ -28,11 +28,19 @@
   fill: #FF847C;
 }
 
+.g-node.g-hover.neutral {
+  fill: #23C6FC;
+}
+
+
 .g-node.g-selected.positive {
   fill: #99B898;
 }
 .g-node.g-selected.negative {
   fill: #FF847C;
+}
+.g-node.g-selected.neutral {
+  fill: #23C6FC;
 }
 
 a.g-label {
@@ -120,6 +128,10 @@ a.g-label {
   border-color: #FF847C;
 }
 
+.g-mention a.neutral {
+  border-color: #23C6FC;
+}
+
 .g-mention a.g-hover,
 .g-mention a.active {
   border-radius: 2px;
@@ -133,12 +145,20 @@ a.g-label {
   background-color: #FF847C;
 }
 
+.g-mention a.neutral.g-hover {
+  background-color: #23C6FC;
+}
+
 .g-mention a.positive.active {
   background-color: #99B898;
 }
 
 .g-mention a.negative.active {
   background-color: #FF847C;
+}
+
+.g-mention a.neutral.active {
+  background-color: #23C6FC;
 }
 
 

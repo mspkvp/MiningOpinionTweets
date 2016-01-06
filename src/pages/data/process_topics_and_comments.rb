@@ -1,9 +1,13 @@
 require 'rubygems'
 require 'json'
+require 'fileutils'
+
+entity = "cristiano_ronaldo"
+day = "2014-01-02"
 
 ### Load original data ###
-topics = JSON.parse(open('topics.json') {|f| f.read })
-comments = JSON.parse(open('comments.json') {|f| f.read }) #[0..10]
+topics = JSON.parse(open('raw/topics/' + entity + '/' + day + '.json') {|f| f.read })
+comments = JSON.parse(open('raw/comments/' + entity + '/' + day + '.json') {|f| f.read }) #[0..10]
 
 
 ### Process data ###
@@ -75,10 +79,12 @@ end
 # p "COMMENTS-------------------------------"
 # p comments
 
+FileUtils.mkpath 'processed/topics/' + entity
+FileUtils.mkpath 'processed/comments/' + entity
 ### Write data ###
-File.open("topics_processed.json", 'w') { |file| file.write(JSON.pretty_generate(topics)) }
+File.open('processed/topics/' + entity + '/' + day + '.json', 'w') { |file| file.write(JSON.pretty_generate(topics)) }
 p "#{topics.count} topics processed and written"
 
-File.open("comments_processed.json", 'w') { |file| file.write(JSON.pretty_generate(comments)) }
+File.open('processed/comments/' + entity + '/' + day + '.json', 'w') { |file| file.write(JSON.pretty_generate(comments)) }
 p "#{comments.count} comments processed and written"
 

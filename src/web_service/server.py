@@ -26,7 +26,7 @@ def get_entity_info(entity_code):
                                        quotechar='|',
                                        quoting=csv.QUOTE_MINIMAL)
 
-    result = dict(tweets=[], trends=[], queries=extracted_tweets_file.next())
+    result = dict(docs=[], trends=[], queries=extracted_tweets_file.next())
     tweet_count = dict()
 
     for row in extracted_tweets_file:
@@ -40,7 +40,7 @@ def get_entity_info(entity_code):
         else:
             tweet_count[date_day] = 0
 
-        result["tweets"].append(dict(id=tweet_id, text=text, date=date))
+        result["docs"].append(dict(id=tweet_id, text=text, created_at=date))
 
     for date, value in sorted(tweet_count.iteritems()):
         result["trends"].append({"timestamp": date + "T00:00:00Z", "value": value})
@@ -74,4 +74,4 @@ def get_topics(entity_code, date):
         return "No tweets for this entity on this day", 404
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

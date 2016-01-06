@@ -1,0 +1,163 @@
+[
+  {
+    "name": "falto",
+    "count": 54,
+    "forms": "falta",
+    "sentiment": "negative",
+    "id": 0
+  },
+  {
+    "name": "especial",
+    "count": 27,
+    "forms": "especial",
+    "sentiment": "positive",
+    "id": 1
+  },
+  {
+    "name": "real",
+    "count": 16,
+    "forms": "real",
+    "sentiment": "positive",
+    "id": 2
+  },
+  {
+    "name": "preferir",
+    "count": 12,
+    "forms": "preferem",
+    "sentiment": "neutral",
+    "id": 3
+  },
+  {
+    "name": "vitoria",
+    "count": 10,
+    "forms": "vitorias",
+    "sentiment": "positive",
+    "id": 4
+  },
+  {
+    "name": "inimigo",
+    "count": 8,
+    "forms": "inimigo",
+    "sentiment": "negative",
+    "id": 5
+  },
+  {
+    "name": "apoiar",
+    "count": 7,
+    "forms": "apoiaram",
+    "sentiment": "neutral",
+    "id": 6
+  },
+  {
+    "name": "melhor",
+    "count": 6,
+    "forms": "melhor",
+    "sentiment": "positive",
+    "id": 7
+  },
+  {
+    "name": "conquistar",
+    "count": 5,
+    "forms": "conquistar",
+    "sentiment": "positive",
+    "id": 8
+  },
+  {
+    "name": "bem",
+    "count": 5,
+    "forms": "bem",
+    "sentiment": "positive",
+    "id": 9
+  },
+  {
+    "name": "bom",
+    "count": 5,
+    "forms": "bom",
+    "sentiment": "positive",
+    "id": 10
+  },
+  {
+    "name": "honrar",
+    "count": 4,
+    "forms": "honrado",
+    "sentiment": "positive",
+    "id": 11
+  },
+  {
+    "name": "vivo",
+    "count": 4,
+    "forms": "viva",
+    "sentiment": "positive",
+    "id": 12
+  },
+  {
+    "name": "grande",
+    "count": 4,
+    "forms": "grande",
+    "sentiment": "neutral",
+    "id": 13
+  },
+  {
+    "name": "feliz",
+    "count": 3,
+    "forms": "feliz",
+    "sentiment": "positive",
+    "id": 14
+  },
+  {
+    "name": "fascinante",
+    "count": 3,
+    "forms": "fascinante",
+    "sentiment": "positive",
+    "id": 15
+  },
+  {
+    "name": "maluco",
+    "count": 3,
+    "forms": "malucos",
+    "sentiment": "negative",
+    "id": 16
+  },
+  {
+    "name": "fa",
+    "count": 3,
+    "forms": "fa",
+    "sentiment": "neutral",
+    "id": 17
+  },
+  {
+    "name": "ganhar",
+    "count": 2,
+    "forms": "ganha",
+    "sentiment": "positive",
+    "id": 18
+  },
+  {
+    "name": "rapido",
+    "count": 2,
+    "forms": "rapido",
+    "sentiment": "positive",
+    "id": 19
+  },
+  {
+    "name": "amigo",
+    "count": 2,
+    "forms": "amigo",
+    "sentiment": "positive",
+    "id": 20
+  },
+  {
+    "name": "santo",
+    "count": 2,
+    "forms": "santos",
+    "sentiment": "positive",
+    "id": 21
+  },
+  {
+    "name": "metido",
+    "count": 2,
+    "forms": "metido",
+    "sentiment": "negative",
+    "id": 22
+  }
+]
