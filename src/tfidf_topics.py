@@ -4,6 +4,8 @@ from collections import defaultdict
 import csv
 
 logging.basicConfig(filename='tfidf_analyzer.log', level=logging.DEBUG)
+
+
 def retrieve_tfidf_scores():
 
     entity_day_dict = dict()

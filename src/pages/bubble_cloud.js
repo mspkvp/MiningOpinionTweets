@@ -6,8 +6,8 @@
  * http://www.nytimes.com/interactive/2012/08/28/us/politics/convention-word-counts.html
  */
 
-var entity = 'cristiano_ronaldo'
-var day = '2014-01-02'
+var entity = 'paulo_bento'
+var day = '2014-02-28'
 /**
  * Data
  */
