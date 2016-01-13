@@ -36,8 +36,8 @@ dates.each do |day|
       
       #p comment["text"]
       #p offset
-      while match = re.match(comment["text"], offset) do
-        # while match = re.match(comment["text"]) do
+      #while match = re.match(comment["text"], offset) do
+      while match = re.match(comment["text"]) do
 
         match.captures.each_index do |i|
           # Add the current match
