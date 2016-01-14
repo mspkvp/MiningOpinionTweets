@@ -6,14 +6,14 @@
  * http://www.nytimes.com/interactive/2012/08/28/us/politics/convention-word-counts.html
  */
 
-var entity = 'paulo_bento'
-var day = '2014-02-28'
+
+
+
+function update(entity, day) {
 /**
  * Data
  */
 var data = {};
-
-(function() {
 
 $.getJSON('data/processed/topics/' + entity + '/' + day + '.json', function(topics_response){
   data.topics = topics_response;
@@ -546,9 +546,35 @@ $.getJSON('data/processed/topics/' + entity + '/' + day + '.json', function(topi
 
 });
 
-})();
+}
 
 
-/**
- * Bubble Cloud visualization
- */
+
+$(document).ready(function(){
+  var entity = 'passos_coelho';
+  var day = '2015-01-01';
+
+  $('#day').val(day);
+  $('#entity_select').val(entity).change();
+
+  //update(entity, day);
+
+  $.getJSON('data/entities.json', function(entities_response){
+    entities_response.forEach(function(entity){
+      $('#entity_select')
+         .append($("<option></option>")
+         .attr("value", entity['code'])
+         .text(entity['name']));
+    });
+  });
+
+  $('#entity_select').on('change', function() {
+    entity = this.value
+    update(entity, day);
+  });
+
+  $('#day').on('change', function() {
+    day = this.value
+    update(entity, day);
+  });
+});
