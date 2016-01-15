@@ -1,22 +1,27 @@
-/**
- * By Nuno Baldaia (@nunobaldaia) for REACTION project
- *
- * Based on the work by Mike Bostock (@mbostock) for the
- * New York Times interactive visualization: "At the Republican Convention, the Words Being Used"
- * http://www.nytimes.com/interactive/2012/08/28/us/politics/convention-word-counts.html
- */
-
-
-
 
 function update(entity, day) {
+
+$.getJSON('data/raw/lda_topics/' + entity + '/' + day + '.json', function(lda_topics_response){
+  $('#lda_topic')
+         .html("");
+  lda_topics_response.words.forEach(function(word){
+    
+    $('#lda_topic')
+         .append($("<li></li>")
+         .text(word));
+  }); 
+});
+
 /**
  * Data
  */
 var data = {};
 
 $.getJSON('data/processed/topics/' + entity + '/' + day + '.json', function(topics_response){
+  $("#no-results").hide();
   data.topics = topics_response;
+
+  if(data.topics.length == 0) $("#no-results").show();
 
   // Topic index for a faster access
   data.topicIndex = {};
@@ -493,14 +498,14 @@ $.getJSON('data/processed/topics/' + entity + '/' + day + '.json', function(topi
             trendsDict[timestamp] = trend;
           });
 
-          var timeFormat = d3.time.format("%e %b %H:%M")
+          var timeFormat = d3.time.format("%e %b %y")
           var maxTrend = trends.reduce(function(prevTrend, currentTrend) {
             return !prevTrend || currentTrend.value > prevTrend.value ? currentTrend : prevTrend;
           });
 
           function setMarker(timestamp) {
             var value = trendsDict[timestamp].value,
-                tooltipText = value+" comentários/hora, "+timeFormat(timestamp);
+                tooltipText = value+" tweets, "+timeFormat(timestamp);
             marker.attr("cx", xScale(timestamp)).attr("cy", -yScale(value));
             d3.select("#trendline-tooltip").html(tooltipText);
             highlightEvent(".event[data-timestamp='"+timestamp+"']");
@@ -548,16 +553,14 @@ $.getJSON('data/processed/topics/' + entity + '/' + day + '.json', function(topi
 
 }
 
+function noResultsFound(){
+  $("#no-results").show()
+};
 
 
 $(document).ready(function(){
-  var entity = 'passos_coelho';
+  var entity = 'paulo_bento';
   var day = '2015-01-01';
-
-  $('#day').val(day);
-  $('#entity_select').val(entity).change();
-
-  //update(entity, day);
 
   $.getJSON('data/entities.json', function(entities_response){
     entities_response.forEach(function(entity){
@@ -566,6 +569,9 @@ $(document).ready(function(){
          .attr("value", entity['code'])
          .text(entity['name']));
     });
+
+    $('#day').val(day);
+    $('#entity_select').val(entity).change();
   });
 
   $('#entity_select').on('change', function() {

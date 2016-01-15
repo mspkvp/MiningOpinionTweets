@@ -10,4 +10,4 @@ for line in read:
 	code = values[1]
 	entities.append({'name': name, 'code': code})
 
-print(json.dump(entities, write))
+json.dump(entities, write)

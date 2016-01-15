@@ -42,8 +42,9 @@ for filename in os.listdir(read_path):
     previous_timestamp = ""
     queries = current_read_file.next()
     i = 0
+    query_tokens = []
     for query in queries:
-        queries[i] = remove_diacritic(query.decode('utf-8'))
+        query_tokens.extend(remove_diacritic(query.decode('utf-8')).split(" ")) 
         i += 1
 
     for row in current_read_file:
@@ -72,8 +73,8 @@ for filename in os.listdir(read_path):
         tokens = [remove_nonalphanumeric(token) for token in tokens if not token.startswith("http:") and not token.startswith("https:")] #remove links and alphanumerics
 
 
-        logging.info("Removing queries")
-        tokens = [token for token in tokens if not token in queries and not token in pt_stopwords and not token in en_stopwords]
+        logging.info("Removing queries and stopwords")
+        tokens = [token for token in tokens if not token in query_tokens and not token in pt_stopwords and not token in en_stopwords]
         #tokens = set(tokens) - set(queries) #remove the queries use to search
 
 

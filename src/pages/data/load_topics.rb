@@ -18,8 +18,11 @@ raw_topics_dir = "raw/topics/"
 
 ### Load all topics fom CSV files ###
 def load_topics_from_csv(topics, path, sentiment)
+  p "Path"
+  p path
   CSV.foreach(path) do |row|
-    
+    p "Row"
+    p row
     if(row[1].to_i >= 2)
       topics << {
         "name" => row[0],
@@ -32,19 +35,25 @@ def load_topics_from_csv(topics, path, sentiment)
   end
 end
 
-dates = Dir.entries(filtered_tweets_dir).select {|entry| File.directory? File.join(filtered_tweets_dir,entry) and !(entry =='.' || entry == '..') }
-
+#dates = Dir.entries(filtered_tweets_dir).select {|entry| File.directory? File.join(filtered_tweets_dir,entry) and !(entry =='.' || entry == '..') }
+dates = ['2014-01-10']
 dates.each do |day|
   curDir = filtered_tweets_dir + "/" + day + "/*"
-  entityFiles = Dir.glob(curDir)
-
+  #entityFiles = Dir.glob(curDir)
+  entityFiles = ['paulo_bento.txt']
   entityFiles.each do |ef|
     entity = File.basename(ef, ".txt")
     
     topics = []
     load_topics_from_csv(topics, sentimentDir + "newPositives_" + entity + "_" + day + ".csv", "positive")
+    p "topics after positive"
+    p topics
     load_topics_from_csv(topics, sentimentDir + "newNegatives_" + entity + "_" + day + ".csv", "negative")
+    p "topics after negative"
+    p topics
     load_topics_from_csv(topics, sentimentDir + "newNeutrals_" + entity + "_" + day + ".csv", "neutral")
+    p "topics after neutral"
+    p topics
     topics.sort! {|x, y| y["count"] <=> x["count"] }
     total_topics_count = topics.count
 

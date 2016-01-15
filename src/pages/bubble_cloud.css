@@ -167,3 +167,10 @@ a.g-label {
   color: #444;
   font-size: 80%;
 }
+
+#lda_topic {
+  list-style-type: none;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
