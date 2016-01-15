@@ -21,6 +21,9 @@ def load_sentilex(filepath):
         word = remove_diacritic(word.decode('utf-8'))
         canonical_word = remove_diacritic(canonical_word.decode('utf-8'))
         polarity = row_split[3].split('=',1)[1]
+        if row_split[4].split(':',1)[0] == 'POL': 
+            if row_split[4].split('=',1)[1] != polarity:
+                continue
         sentilex[word] = (canonical_word, polarity)
     
     return sentilex
