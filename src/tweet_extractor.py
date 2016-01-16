@@ -7,7 +7,7 @@ url = "http://reaction.fe.up.pt/portugal/tweets/select"
 username = "popstar_pedrosaleiro"
 password = "p3dr0@2013!"
 rowsPerRequest = 1000
-baseQuery = "created_at:[\"2014-01-01T00:00:00Z\" TO *] AND text:({})"
+baseQuery = "created_at:[\"2014-01-01T00:00:00Z\" TO \"2015-12-31T00:00:00Z\"] AND text:({})"
 logging.basicConfig(filename='retriever.log', level=logging.DEBUG)
 
 if not os.path.exists("extracted_tweets"):
