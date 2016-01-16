@@ -77,6 +77,5 @@ def process_entity(entity_line):
 with open("entities.txt") as entities_file:
     for line in entities_file:
         process_entity(line)
-        break
 
     json.dump(stats, open('tweet_extractor_report.json', "wb"), indent=4)
