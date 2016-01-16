@@ -2,6 +2,7 @@ import requests
 import csv
 import os
 import logging
+import json
 
 url = "http://reaction.fe.up.pt/portugal/tweets/select"
 username = "popstar_pedrosaleiro"
@@ -13,6 +14,7 @@ logging.basicConfig(filename='retriever.log', level=logging.DEBUG)
 if not os.path.exists("extracted_tweets"):
     os.makedirs("extracted_tweets")
 
+stats = {}
 
 def get_tweets(page, q):
     data = {
@@ -51,11 +53,14 @@ def process_entity(entity_line):
     json_response = get_tweets(current_page, query)
 
     number_of_results = json_response['numFound']
+    stats[entity_attributes[1]] = {"count": number_of_results}
 
+    print(stats)
     print("Found {} tweets for {} with query {}".format(number_of_results, entity_attributes[0], query))
     logging.info("Found {} tweets for {} with query {}".format(number_of_results, entity_attributes[0], query))
 
     tweets = json_response['docs']
+
     tweet_counter = len(tweets)
     write_tweets(tweets, current_entity_file)
 
@@ -72,3 +77,6 @@ def process_entity(entity_line):
 with open("entities.txt") as entities_file:
     for line in entities_file:
         process_entity(line)
+        break
+
+    json.dump(stats, open('tweet_extractor_report.json', "wb"), indent=4)
