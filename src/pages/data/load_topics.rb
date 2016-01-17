@@ -18,11 +18,7 @@ raw_topics_dir = "raw/topics/"
 
 ### Load all topics fom CSV files ###
 def load_topics_from_csv(topics, path, sentiment)
-  p "Path"
-  p path
   CSV.foreach(path) do |row|
-    p "Row"
-    p row
     if(row[1].to_i >= 2)
       topics << {
         "name" => row[0],
