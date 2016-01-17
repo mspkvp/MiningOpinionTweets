@@ -3,6 +3,7 @@ import csv
 import os
 import logging
 import json
+import sys
 
 url = "http://reaction.fe.up.pt/portugal/tweets/select"
 username = "popstar_pedrosaleiro"
@@ -74,7 +75,14 @@ def process_entity(entity_line):
         logging.info("Done reading {}/{} tweets for {}".format(tweet_counter, number_of_results, entity_attributes[0]))
 
 
-with open("entities.txt") as entities_file:
+
+file_target = "entities.txt"
+
+if(len(sys.argv) > 1):
+    file_target = sys.argv[1]
+
+
+with open(file_target) as entities_file:
     for line in entities_file:
         process_entity(line)
 
