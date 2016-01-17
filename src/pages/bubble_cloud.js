@@ -1,5 +1,6 @@
 
 function update(entity, day) {
+$("#g-trendline").empty();
 
 $.getJSON('data/raw/lda_topics/' + entity + '/' + day + '.json', function(lda_topics_response){
   $('#lda_topic')
