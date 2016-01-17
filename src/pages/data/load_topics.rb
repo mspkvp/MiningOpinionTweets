@@ -41,14 +41,8 @@ dates.each do |day|
     
     topics = []
     load_topics_from_csv(topics, sentimentDir + "newPositives_" + entity + "_" + day + ".csv", "positive")
-    p "topics after positive"
-    p topics
     load_topics_from_csv(topics, sentimentDir + "newNegatives_" + entity + "_" + day + ".csv", "negative")
-    p "topics after negative"
-    p topics
     load_topics_from_csv(topics, sentimentDir + "newNeutrals_" + entity + "_" + day + ".csv", "neutral")
-    p "topics after neutral"
-    p topics
     topics.sort! {|x, y| y["count"] <=> x["count"] }
     total_topics_count = topics.count
 
