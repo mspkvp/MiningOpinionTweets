@@ -35,12 +35,11 @@ def load_topics_from_csv(topics, path, sentiment)
   end
 end
 
-#dates = Dir.entries(filtered_tweets_dir).select {|entry| File.directory? File.join(filtered_tweets_dir,entry) and !(entry =='.' || entry == '..') }
-dates = ['2014-01-10']
+dates = Dir.entries(filtered_tweets_dir).select {|entry| File.directory? File.join(filtered_tweets_dir,entry) and !(entry =='.' || entry == '..') }
+
 dates.each do |day|
   curDir = filtered_tweets_dir + "/" + day + "/*"
-  #entityFiles = Dir.glob(curDir)
-  entityFiles = ['paulo_bento.txt']
+  entityFiles = Dir.glob(curDir)
   entityFiles.each do |ef|
     entity = File.basename(ef, ".txt")
     
