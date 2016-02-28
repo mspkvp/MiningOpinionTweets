@@ -4,6 +4,8 @@ import csv
 import unicodedata
 import re
 import logging
+import operator
+from collections import Counter
 
 logging.basicConfig(filename='filter.log', level=logging.DEBUG)
 read_path = "extracted_tweets"
@@ -30,6 +32,7 @@ def remove_nonalphanumeric(x):
 
 pt_stopwords, en_stopwords = load_stopwords()
 
+small_words = {}
 
 if not os.path.exists(write_path):
     os.makedirs(write_path)
@@ -39,6 +42,7 @@ for filename in os.listdir(read_path):
 
     current_read_file = csv.reader(open(read_path + "/" + filename, 'rb'), delimiter="\t", quotechar='|',
                                    quoting=csv.QUOTE_MINIMAL)
+
     previous_timestamp = ""
     queries = current_read_file.next()
     i = 0
@@ -69,6 +73,10 @@ for filename in os.listdir(read_path):
         
         tokens = text.split(" ")
         
+        
+
+
+
         logging.info("Removing links")
         tokens = [remove_nonalphanumeric(token) for token in tokens if not token.startswith("http:") and not token.startswith("https:")] #remove links and alphanumerics
 
@@ -85,7 +93,18 @@ for filename in os.listdir(read_path):
         if row[3] != previous_timestamp:
             current_write_file = open(write_path + "/" + current_timestamp + "/" + entity_codename + ".txt", 'a')
         
+        for token in tokens:
+            if len(token) <= 3:
+                small_words[token] = small_words.get(token, 0) + 1
+                
         current_write_file.write(" ")
         tokens_string = " ".join(tokens)
         current_write_file.write(tokens_string)
         logging.info("Converted to :" + tokens_string)
+
+small_words_file = csv.writer(open("small_words.csv", 'w'))
+
+sorted_small_words = sorted(small_words.items(), key=operator.itemgetter(1), reverse = True)
+
+for key, value in sorted_small_words:
+    small_words_file.writerow([key, value])
