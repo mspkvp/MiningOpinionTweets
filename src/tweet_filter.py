@@ -32,7 +32,7 @@ def remove_nonalphanumeric(x):
 
 pt_stopwords, en_stopwords = load_stopwords()
 
-small_words = {}
+small_words_whitelist = open("small_words_whitelist.txt", "r").readlines()
 
 if not os.path.exists(write_path):
     os.makedirs(write_path)
@@ -72,39 +72,27 @@ for filename in os.listdir(read_path):
         text = remove_diacritic(text)  # remove diacritics
         
         tokens = text.split(" ")
-        
-        
-
-
 
         logging.info("Removing links")
         tokens = [remove_nonalphanumeric(token) for token in tokens if not token.startswith("http:") and not token.startswith("https:")] #remove links and alphanumerics
 
 
-        logging.info("Removing queries and stopwords")
-        tokens = [token for token in tokens if not token in query_tokens and not token in pt_stopwords and not token in en_stopwords]
+        logging.info("Removing queries, stopwords and small words")
+        tokens = [token for token in tokens 
+        if not token in query_tokens 
+        and not token in pt_stopwords 
+        and not token in en_stopwords
+        and not (len(token) <= 3 and token not in small_words_whitelist)]
         #tokens = set(tokens) - set(queries) #remove the queries use to search
 
-
-        logging.info("Removing stopwords")
-        #tokens = tokens - set(pt_stopwords) #remove portuguese stopwords
-        #tokens = tokens - set(en_stopwords) #remove english stopwords
 
         if row[3] != previous_timestamp:
             current_write_file = open(write_path + "/" + current_timestamp + "/" + entity_codename + ".txt", 'a')
         
-        for token in tokens:
-            if len(token) <= 3:
-                small_words[token] = small_words.get(token, 0) + 1
+        
                 
         current_write_file.write(" ")
         tokens_string = " ".join(tokens)
         current_write_file.write(tokens_string)
         logging.info("Converted to :" + tokens_string)
 
-small_words_file = csv.writer(open("small_words.csv", 'w'))
-
-sorted_small_words = sorted(small_words.items(), key=operator.itemgetter(1), reverse = True)
-
-for key, value in sorted_small_words:
-    small_words_file.writerow([key, value])
