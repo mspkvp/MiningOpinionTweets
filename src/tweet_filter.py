@@ -78,20 +78,19 @@ for filename in os.listdir(read_path):
 
         logging.info("Removing queries, stopwords and small words")
 
-        tokens = [token for token in tokens
-        if (token not in query_tokens)
-        and (token not in pt_stopwords)
-        and (token not in en_stopwords)
-        and not (len(token) <= 3 and token not in small_words_whitelist)]
+        tokens_clone = tokens
+        blacklist = []
+        blacklist.extend(query_tokens)
+        blacklist.extend(pt_stopwords)
+        blacklist.extend(en_stopwords)
 
-        #tokens = set(tokens) - set(queries) #remove the queries use to search
+        tokens = [token for token in tokens if token not in blacklist]
 
+        tokens = [token for token in tokens if len(token) > 3 or token in small_words_whitelist]
 
         if row[3] != previous_timestamp:
             current_write_file = open(write_path + "/" + current_timestamp + "/" + entity_codename + ".txt", 'a')
-        
-        
-                
+
         current_write_file.write(" ")
         tokens_string = " ".join(tokens)
         current_write_file.write(tokens_string)
