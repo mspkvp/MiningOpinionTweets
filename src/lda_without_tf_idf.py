@@ -12,14 +12,17 @@ import lda
 import logging
 logging.basicConfig(filename='lda_analyser.log', level=logging.DEBUG)
 
+if not os.path.exists("results"):
+    os.makedirs("results")
+
 for n_topics in [10, 20, 50, 100]:
     n_features = 10000
     n_top_words = int(sys.argv[2]) + 1
 
     
     corpus = []
-    topics_write_file = csv.writer(open("lda_topics_{}topics_{}words.csv".format(n_topics, n_top_words - 1), "wb"), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    write_file = csv.writer(open("lda_topics_{}topics_{}words_mapping.csv".format(n_topics, n_top_words - 1), "wb"), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    topics_write_file = csv.writer(open("results/lda_topics_{}topics_{}words.csv".format(n_topics, n_top_words - 1), "wb"), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    write_file = csv.writer(open("results/lda_topics_{}topics_{}words_mapping.csv".format(n_topics, n_top_words - 1), "wb"), delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
 
 

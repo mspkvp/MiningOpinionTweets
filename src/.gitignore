@@ -3,3 +3,4 @@ extracted_tweets
 filtered_tweets
 /tweet_filter_old.py
 *.log
+results

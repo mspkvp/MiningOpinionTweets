@@ -34,16 +34,19 @@ entities = ['jose_mourinho',
             'futebol_porto',
             'sporting']
 
+if not os.path.exists("results"):
+    os.makedirs("results")
+
 for n_topics in [10, 20, 50, 100]:
     n_features = 10000
     n_top_words = int(sys.argv[1]) + 1
 
     corpus = []
-    topics_write_file = csv.writer(open("lda_topics_{}topics_{}words_{}.csv".format(n_topics,
+    topics_write_file = csv.writer(open("results/lda_topics_{}topics_{}words_{}.csv".format(n_topics,
                                                                                     n_top_words - 1,
                                                                                     "sports"), "wb"),
                                    delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    write_file = csv.writer(open("lda_topics_{}topics_{}words_mapping_{}.csv".format(n_topics,
+    write_file = csv.writer(open("results/lda_topics_{}topics_{}words_mapping_{}.csv".format(n_topics,
                                                                                      n_top_words - 1,
                                                                                      "sports"), "wb"),
                                     delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -80,7 +83,6 @@ for n_topics in [10, 20, 50, 100]:
         entity_day_key_index[i] = key.split(" ")
         corpus.append(entity_day_dict[key])
         i += 1
-
 
 
     # Use tf (raw term count) features for LDA.

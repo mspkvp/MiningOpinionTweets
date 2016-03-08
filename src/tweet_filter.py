@@ -32,7 +32,7 @@ def remove_nonalphanumeric(x):
 
 pt_stopwords, en_stopwords = load_stopwords()
 
-small_words_whitelist = open("small_words_whitelist.txt", "r").readlines()
+small_words_whitelist = map(str.strip, open("small_words_whitelist.txt", "r").readlines())
 
 if not os.path.exists(write_path):
     os.makedirs(write_path)
@@ -76,13 +76,14 @@ for filename in os.listdir(read_path):
         logging.info("Removing links")
         tokens = [remove_nonalphanumeric(token) for token in tokens if not token.startswith("http:") and not token.startswith("https:")] #remove links and alphanumerics
 
-
         logging.info("Removing queries, stopwords and small words")
-        tokens = [token for token in tokens 
-        if not token in query_tokens 
-        and not token in pt_stopwords 
-        and not token in en_stopwords
+
+        tokens = [token for token in tokens
+        if (token not in query_tokens)
+        and (token not in pt_stopwords)
+        and (token not in en_stopwords)
         and not (len(token) <= 3 and token not in small_words_whitelist)]
+
         #tokens = set(tokens) - set(queries) #remove the queries use to search
 
 
