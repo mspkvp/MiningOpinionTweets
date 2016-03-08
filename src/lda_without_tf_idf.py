@@ -17,7 +17,7 @@ if not os.path.exists("results"):
 
 for n_topics in [10, 20, 50, 100]:
     n_features = 10000
-    n_top_words = int(sys.argv[2]) + 1
+    n_top_words = int(sys.argv[1]) + 1
 
     
     corpus = []
