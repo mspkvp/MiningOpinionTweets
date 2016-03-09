@@ -16,12 +16,12 @@ if not os.path.exists("results"):
     os.makedirs("results")
 
 entity_code = sys.argv[1]
-n_topics = sys.argv[2]
+n_topics = int(sys.argv[2])
 n_features = 10000
 n_top_words = int(sys.argv[2]) + 1
 
 corpus = []
-topics_write_file = csv.writer(open("lda_topics_{}topics_{}words_{}.csv".format(n_topics,
+topics_write_file = csv.writer(open("results/lda_topics_{}topics_{}words_{}.csv".format(n_topics,
                                                                                 n_top_words - 1,
                                                                                 entity_code), "wb"),
                                delimiter="\t", quotechar='|', quoting=csv.QUOTE_MINIMAL)
