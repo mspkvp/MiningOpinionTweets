@@ -18,7 +18,7 @@ if not os.path.exists("results"):
 entity_code = sys.argv[1]
 n_topics = int(sys.argv[2])
 n_features = 10000
-n_top_words = int(sys.argv[2]) + 1
+n_top_words = int(sys.argv[3]) + 1
 
 corpus = []
 topics_write_file = csv.writer(open("results/lda_topics_{}topics_{}words_{}.csv".format(n_topics,
