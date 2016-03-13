@@ -12,27 +12,23 @@ import lda
 import logging
 logging.basicConfig(filename='lda_analyser.log', level=logging.DEBUG)
 
-entities = ['jose_mourinho',
-            'cristiano_ronaldo',
-            'ruben_neves',
-            'pinto_da_costa',
-            'jorge_jesus',
-            'lionel_messi',
-            'eusebio',
-            'luisao',
-            'paulo_bento',
-            'iker_casillas',
-            'joao_moutinho',
-            'jorge_mendes',
-            'julen_lopetegui',
-            'rui_vitoria',
-            'ricardo',
-            'luis_figo',
+entities = ['passos_coelho',
             'jose_socrates',
             'antonio_costa',
-            'benfica',
-            'futebol_porto',
-            'sporting']
+            'paulo_portas',
+            'cavaco_silva',
+            'barack_obama',
+            'vladimir_putin',
+            'donald_trump',
+            'catarina_martins',
+            'jeronimo_sousa',
+            'marcelo_rebelo_sousa',
+            'partido_socialista',
+            'partido_social_democrata',
+            'partido_popular',
+            'bloco_esquerda',
+            'partido_comunista'
+            ]
 
 if not os.path.exists("results"):
     os.makedirs("results")
